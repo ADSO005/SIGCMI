@@ -103,7 +103,7 @@ All entities use **UUID as primary key**.
 ## 🌱 Branch Strategy
 
 \`\`\`bash
-master      → Production
+main      → Production
 release     → Stable versions
 develop     → Main development branch
 feature/*   → New features
@@ -114,10 +114,13 @@ feature/*   → New features
 
 SIGCMI/
 │
-├── frontend/
+├── .github
 ├── backend/
 ├── database/
 ├── docs/
+├── frontend/
+├── .gitignore
+├── LICENSE
 └── README.md
 
 ## 🛠️ Installation (Backend Example)
