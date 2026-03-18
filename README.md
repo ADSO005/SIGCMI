@@ -157,13 +157,13 @@ Includes:
 ---
 ## 📌 Development Team
 
-|Name                 |Email                          |Number Phone |Roles      |
-|---------------------|-------------------------------|-------------|-----------|
-|Juan Esteban Montoya |montoyajuanes11@gmail.com      |3137498332   |Full-stack |
-|Santiago Galindo     |hernnadezsantiago.00@gmail.com |3105212658   |Front-end  |
-|Cristians Marmolejo  |CFMR25886781@soy.sena.edu.co   |3046184021   |Back-end   |
-|Karen Yulieth Herrera|herrerayulieth254@gmail.com    |3132369317   |Analyst    |
-|Karen Daniela Tamayo |kdaniela0731@gmail.com         |3174035244   |Full-stack |
+|Name |Email |Number Phone |Roles |User|
+|---------------------|----------------------------|-------------|-----------|-----------|
+|Juan Esteban Montoya |montoyajuanes11@gmail.com |3137498332 |Full-stack |<a href="https://github.com/DeltaG8109" style="text-decoration: none;">@DeltaG8109</a>|
+|Santiago Galindo |hernnadezsantiago.00@gmail.com |3105212658 |Back-end |<a href="https://github.com/SANTIAGO-HERNANDEZ-1089" style="text-decoration: none;">@SANTIAGO-HERNANDEZ-1089</a>|
+|Cristians Marmolejo |CFMR25886781@soy.sena.edu.co |3046184021 |Back-end |<a href="https://github.com/CristiansMarmolejo2412" style="text-decoration: none;">@CristiansMarmolejo2412</a>|
+|Karen Yulieth Herrera|herrerayulieth254@gmail.com |3132369317 |Analyst/Fronted|<a href="https://github.com/herrerayulieth254-star" style="text-decoration: none;">@herrerayulieth254-star</a>|
+|Karen Daniela Tamayo |kdaniela0731@gmail.com |3174035244 |Full-stack |<a href="https://github.com/kdaniela0731-droid" style="text-decoration: none;">@kdaniela0731-droid</a>|
 
 ## 📜 License
 
