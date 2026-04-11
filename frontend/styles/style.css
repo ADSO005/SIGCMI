@@ -267,3 +267,29 @@ button[type="submit"]:hover {
     border:1px solid #ccc;
 }
 
+/* CONTENEDOR BOTONES */
+.modal-footer{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+}
+
+.modal-footer.center{
+    justify-content:center;
+}
+
+/* BOTONES */ 
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    background: linear-gradient(160deg, #3a4fd4 0%, #4a5bdc 60%, #5a6be8 100%);
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.cancelar{
+    background:#b5b5b5;
+    color: #333;
+}

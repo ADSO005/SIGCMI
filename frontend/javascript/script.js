@@ -14,3 +14,8 @@ function abrirModal(id){
 function cerrarModal(id){
     document.getElementById(id).style.display = "none";
 }
+
+function siguiente(actual, siguiente){
+    cerrarModal(actual);
+    abrirModal(siguiente);
+}
