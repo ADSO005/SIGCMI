@@ -5,54 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login SIGCMI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <div class="header">
-            <div class="minHeader">
-                <h1>SIGCMI</h1>
-                <p>Sistema Integral de Gestión<br>de Citas Médicas</p>
-            </div>
-            <img src="img/CurvaTerrestre.png" alt="">
+    <div class="header">
+        <div class="minHeader">
+            <h1>SIGCMI</h1>
+            <p>Sistema Integral de Gestión<br>de Citas Médicas</p>
         </div>
-
-        <div class="tarjeta">
-            <h2>Iniciar Sesión</h2>
-            <p class="subtitulo">Ingresa a tu cuenta para continuar</p>
-
-            <form>
-                <label>Correo Electronico*</label>
-                <div class="input-box">
-                    <img src="img/email.svg" class="icon" alt="email">
-                    <input type="email" placeholder="correro@ejemplo.com">
-                </div>
-
-                <label>Contraseña*</label>
-                <div class="input-box">
-                    <img src="img/lock.svg" class="icon" alt="contraseña">
-                    <input type="password" placeholder="*********">
-                </div>
-                <button type="submit">Iniciar Sesión</button>
-
-            </form>
-              <p class="registro">¿No tienes cuenta? <a href="#">Regístrate</a></p>
-            <p class="olvido">¿Olvidaste tu contraseña?</p>
-        </div>
-
-        <div class="whatsapp">
-            <img src="img/whatsapp.svg" alt="WhatsApp" width="28" height="28">
-        </div>
-
-                </div>
-
-
-
+        <img src="imgSIGCMI/img/CurvaTerrestre.png" class="curva">
     </div>
 
-</body>
+    <div class="tarjeta">
+        <h2>Iniciar Sesión</h2>
+        <p class="subtitulo">Ingresa a tu cuenta para continuar</p>
 
+        <form>
+            <label>Correo Electronico*</label>
+            <div class="input-box">
+                <img src="imgSIGCMI/img/email.svg" class="icon" alt="email">
+                <input type="email" placeholder="correro@ejemplo.com">
+            </div>
+
+            <label>Contraseña*</label>
+            <div class="input-box">
+                <img src="imgSIGCMI/img/lock.svg" class="icon" alt="contraseña">
+                <input type="password" placeholder="*********">
+            </div>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div class="links">
+        <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+        <p id="abrirRecuperar">¿Olvidaste tu contraseña?</p>
+    </div>
+
+    <div class="whatsapp">
+        <img src="imgSIGCMI/img/WhatsApp.svg.png" alt="WhatsApp">
+    </div>
+</div>
+
+
+</body>
 </html>
