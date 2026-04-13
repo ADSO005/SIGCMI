@@ -15,6 +15,7 @@ body {
 
 /* contenedor principal */
 .container {
+  position:relative;
   width: 300px;
   height: 570px;
   background: #f0f2fb;
