@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGCMI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar" aria-label="Menú lateral de navegación">
+            
+            <div class="logo">
+                <span class="logo-text">SIGCMI</span>
+                
+                <button id="toggleBtn" aria-label="Abrir o cerrar menú">
+                    ☰
+                </button>
+            </div>
+
+            <hr class="line-1" aria-hidden="true">
+            
+            <div class="user" aria-label="Información del usuario">
+                <p>Bienvenido</p>
+                <h4>montoyajuanes11</h4>
+                <span>Administrador</span>
+            </div>
+
+            <hr class="line-2" aria-hidden="true">
+
+            <nav aria-label="Opciones principales">
+                <a href="#" class="active" aria-label="Ir al Dashboard">
+                    <img src="img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere" alt="Icono Dashboard">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" aria-label="Ir a Citas">
+                    <img src="img/Calendar.png" alt="Icono Citas">
+                    <span>Citas</span>
+                </a>
+
+                <a href="#" aria-label="Ir a Pacientes">
+                    <img src="img/Users.png" alt="Icono Pacientes">
+                    <span>Pacientes</span>
+                </a>
+
+                <a href="#" aria-label="Ir a Médicos">
+                    <img src="img/image 86.png" alt="Icono Médicos">
+                    <span>Médicos</span>
+                </a>
+
+                <a href="#" aria-label="Ir a WhatsApp">
+                    <img src="img/chat_bubble.png" alt="Icono WhatsApp">
+                    <span>WhatsApp</span>
+                </a>
+            </nav>
+
+            <hr class="line-3" aria-hidden="true">
+
+            <div class="logout" role="button" tabindex="0" aria-label="Cerrar sesión">
+                <img src="img/Log out.png" class="log-out" alt="Icono cerrar sesión">
+                <span class="sesionlogout">Cerrar Sesión</span>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
