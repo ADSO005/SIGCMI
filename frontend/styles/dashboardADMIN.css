@@ -24,7 +24,6 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     position: fixed;
 }
 
@@ -160,9 +159,6 @@ nav a:hover {
     margin-left: -5px;
 }
 
-nav nav span:nth-child(3) {
-    border: 1px solid red;
-}
 
 .logout {
     display: flex;
