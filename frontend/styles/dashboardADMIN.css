@@ -25,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
+    z-index: 1000;
 }
 
 .sidebar.collapsed {
@@ -426,12 +427,13 @@ nav a:hover {
     /* fondo oscuro */
     justify-content: center;
     align-items: center;
+    z-index: 1001;
 }
 
 /* CONTENIDO DEL MODAL */
 .modal-content {
     width: 350px;
-    background: #d9d9d9;
+    background: white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
@@ -439,7 +441,7 @@ nav a:hover {
 
 /* HEADER */
 .modal-header {
-    background: linear-gradient(90deg, #465DE5, #5E9CF5);
+    background: #465DE5;
     color: white;
     padding: 15px 20px;
 
@@ -470,8 +472,8 @@ nav a:hover {
 
 /* StateModal */
 .stateModalAppointment {
-    background: rgba(37, 211, 102, 0.35);
-    color: #25D366;
+    background: #E8E8E8;
+    color: #000;
     padding: 5px 10px;
     border-radius: 10px;
     font-weight: bold;
@@ -492,13 +494,13 @@ nav a:hover {
 
 /* BLUE BUTTON */
 .btn-blue {
-    background: linear-gradient(90deg, #465DE5, #5E9CF5);
+    background: #465DE5;
     color: white;
 }
 
 /* RED BUTTON */
 .btn-red {
-    background: #ff3b3b;
+    background: #F84346;
     color: white;
 }
 
