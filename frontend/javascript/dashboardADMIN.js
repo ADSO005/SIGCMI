@@ -92,3 +92,41 @@ function saveChanges() {
   // close modal
   document.getElementById("modalRepro").style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ==================== MODAL ====================
+  const modal = document.getElementById("modalSheduleA");
+  const btnOpen = document.getElementById("openModalSheduleA");
+  const btnClose = document.getElementById("closeModalSheduleA");
+  const btnCancel = document.getElementById("cancelModalSheduleA");
+
+  // Opne modal
+  if (btnOpen) {
+    btnOpen.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+  }
+
+  // Close con X
+  if (btnClose) {
+    btnClose.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close with cancelar
+  if (btnCancel) {
+    btnCancel.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close by clicking outside
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+});
