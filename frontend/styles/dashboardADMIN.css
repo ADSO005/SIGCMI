@@ -338,3 +338,62 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* ====================== ACTIONS ======================*/
+.acciones {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.acciones h3 {
+    color: black;
+    font-size: 30px;
+    padding: 20px 0 30px 0;
+}
+
+.btnActions {
+    width: 100%;
+    height: 64px;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 12px 0 12px 0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3S;
+}
+
+.btnActions:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.329);
+    color: black;
+    box-shadow: 1px 5px 10px black;
+    border: solid black;
+}
+
+.azul {
+    background: #4f5bd5;
+}
+
+.verde {
+    background: #22c55e;
+}
+
+.morado {
+    background: #a855f7;
+}
+
+.oscuro {
+    background: #4c1d95;
+}
+
+.cyan {
+    background: #06b6d4;
+}
+
+.naranja {
+    background: #f97316;
+}
+
