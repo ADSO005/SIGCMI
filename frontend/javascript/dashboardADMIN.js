@@ -129,4 +129,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
+  // ==================== FORM ====================
+  const form = document.getElementById("formCita");
+  const message = document.getElementById("messageModalSheduleA");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const pacient = document.getElementById("pacienteModalSheduleA").value;
+    const doctor = document.getElementById("medicoModalSheduleA").value;
+    const date = document.getElementById("dateModalSheduleA").value;
+    const time = document.getElementById("timeModalSheduleA").value;
+    const reason = document.getElementById("reasonModalSheduleA").value;
+
+    if (!pacient || !doctor || !date || !time || !reason) {
+      mostrarMensaje("⚠️ Debes llenar todos los campos obligatorios", "errorModalSheduleA");
+    } else {
+      mostrarMensaje("Cita agendada con éxito.", "successModalSheduleA");
+
+      modal.style.display = "none";
+      form.reset();
+    }
+  });
+
+  function mostrarMensaje(texto, tipo) {
+    message.textContent = texto;
+    message.className = "messageModalSheduleA show " + tipo;
+
+    setTimeout(() => {
+      message.classList.remove("show");
+    }, 3000);
+  }
+
 });
