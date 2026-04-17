@@ -7,7 +7,7 @@ btn.onclick = () => {
 
   btn.style.marginLeft =
     sidebar.classList.contains("collapsed") ? "9px" : "5%";
-    main.classList.toggle("collapsed");
+  main.classList.toggle("collapsed");
 };
 
 //====================MODAL CLICK TO MANAGE====================
@@ -57,13 +57,34 @@ cancelRepro.onclick = () => {
   modalRepro.style.display = "none";
 };
 
+
+//==================BUTTON SAVE CHANGES AND VERIFICATION INPUTS===================
 function saveChanges() {
   const mesaggeSaveChanges = document.getElementById("mesaggeSaveChanges");
+
+  const dateRepro = document.getElementById("dateRepro").value;
+  const timeRepro = document.getElementById("timeRepro").value;
+  const errorMessageRepro = document.getElementById("errorMessageRepro");
+
+  // VALIDATION
+  if (dateRepro === "" || timeRepro === "") {
+    errorMessageRepro.style.display = "block";
+    errorMessageRepro.textContent = "⚠️ Debes llenar todos los campos obligatorios";
+
+    // hide after 3s
+    setTimeout(() => {
+      errorMessageRepro.style.display = "none";
+    }, 3000);
+
+    return;
+  }
+
+  // HIDE ERROR
+  errorMessageRepro.style.display = "none";
 
   // show message
   mesaggeSaveChanges.classList.add("show");
 
-  // hide after 3 seconds
   setTimeout(() => {
     mesaggeSaveChanges.classList.remove("show");
   }, 3000);

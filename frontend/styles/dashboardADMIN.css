@@ -522,7 +522,8 @@ nav a:hover {
     border-radius: 10px;
     border: 1px solid #aaa;
 }
-.dateRepro{
+
+.dateRepro {
     color: black;
 }
 
@@ -547,31 +548,48 @@ nav a:hover {
 
 .mesaggeSaveChanges {
     position: fixed;
-    height: 45px;
-    bottom: 20px;
-    top: 20px;
-    right: 40%;
-    background: #25D366;
-    color: white;
+    top: 30px;
+    left: 50%;
+
+    height: 50px;
+    width: 300px;
+
     padding: 12px 20px;
-    border-radius: 10px;
     font-weight: bold;
+    background: #25D366;
+    border-radius: 10px;
+    color: white;
+    font-size: clamp(12px, 2.5vw, 14px);
+
     opacity: 0;
-    transform: translateY(20px);
     transition: 0.3s ease;
-    z-index: 2000;
+    z-index: 1002;
 }
 
 .mesaggeSaveChanges.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(-50%, -50%);
 }
 
 .errorMessageRepro {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 50px;
+    width: 300px;
+
+    padding: 12px 20px;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    font-size: clamp(12px, 2.5vw, 14px);
+
     display: none;
+    transition: 0.3s ease;
+    z-index: 1002;
 }
 
 @keyframes appear {
