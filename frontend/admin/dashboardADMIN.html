@@ -149,7 +149,7 @@
                         </div>
                         <div class="right">
                             <span class="state greyState">Pendiente</span>
-                            <button class="btnManageAppointment" onclick="abrirModal()">Click para gestionar</button>
+                            <button class="btnManageAppointment" onclick="openModal()">Click para gestionar</button>
                         </div>
                     </div>
 
@@ -172,7 +172,7 @@
 
             </section>
 
-            <!-- =================================MODAL================================= -->
+            <!-- =================================MODAL MANAGE APPOINMENT================================= -->
             <div class="modal" id="modal">
 
                 <!-- Modal container -->
@@ -205,13 +205,32 @@
                         
 
                         <!-- BUTTONS -->
-                        <button class="btn btn-blue">Reprogramar Cita</button>
+                        <button class="btn btn-blue" onclick="abrirReprogramar()">Reprogramar Cita</button>
                         <button class="btn btn-red">Cancelar Cita</button>
 
                     </div>
                 </div>
             </div>
 
+            <!-- MODAL REPROGRAMING -->
+            <div class="modal" id="modalRepro">
+
+                <div class="modal-content">
+
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <h2>Reprogramar Cita</h2>
+                        <span class="close" id="closeRepro">X</span>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+
+                        
+
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 

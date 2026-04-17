@@ -17,7 +17,7 @@ const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
 
 // Function Open
-function abrirModal() {
+function openModal() {
   modal.style.display = "flex";
 }
 
@@ -31,4 +31,28 @@ window.onclick = (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
+};
+
+//====================MODAL CLICK REPROGRAMAR====================
+
+// modal nuevo
+const modalReprogramar = document.getElementById("modalRepro");
+
+// botones cerrar
+const closeReprogramar = document.getElementById("closeRepro");
+const cancelReprogramar = document.getElementById("cancelRepro");
+
+// abrir modal reprogramar
+function abrirReprogramar() {
+  modal.style.display = "none"; // cerrar el primero
+  modalReprogramar.style.display = "flex"; // abrir el nuevo
+}
+
+// cerrar modal reprogramar
+closeReprogramar.onclick = () => {
+  modalReprogramar.style.display = "none";
+};
+
+cancelReprogramar.onclick = () => {
+  modalReprogramar.style.display = "none";
 };
