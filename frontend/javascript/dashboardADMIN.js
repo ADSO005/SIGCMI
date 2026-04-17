@@ -25,3 +25,10 @@ function abrirModal() {
 closeModal.onclick = () => {
   modal.style.display = "none";
 };
+
+// Close if clicked outside the modal
+window.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
