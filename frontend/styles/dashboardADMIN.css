@@ -373,27 +373,37 @@ nav a:hover {
     border: solid black;
 }
 
-.azul {
-    background: #4f5bd5;
+.btnActionBlue {
+    background: #465DE5;
 }
 
-.verde {
-    background: #22c55e;
+.btnActionGreen {
+    background: #25D366;
 }
 
-.morado {
-    background: #a855f7;
+.btnActionPurple {
+    background: #C346FE;
 }
 
-.oscuro {
-    background: #4c1d95;
+.btnActionDark {
+    background: #5428D8;
 }
 
-.cyan {
-    background: #06b6d4;
+.btnActionCyan{
+    background: #25CDD3;
 }
 
-.naranja {
-    background: #f97316;
+.btnActionOrange {
+    background: #F25614;
 }
 
+/* 📱 RESPONSIVE */
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
