@@ -33,26 +33,26 @@ window.onclick = (e) => {
   }
 };
 
-//====================MODAL CLICK REPROGRAMAR====================
+//====================MODAL CLICK REPRO====================
 
-// modal nuevo
-const modalReprogramar = document.getElementById("modalRepro");
+// Modal New
+const modalRepro = document.getElementById("modalRepro");
 
-// botones cerrar
-const closeReprogramar = document.getElementById("closeRepro");
-const cancelReprogramar = document.getElementById("cancelRepro");
+// Buttons clos
+const closeRepro = document.getElementById("closeRepro");
+const cancelRepro = document.getElementById("cancelRepro");
 
-// abrir modal reprogramar
-function abrirReprogramar() {
+// Open modal repro
+function openRepro() {
   modal.style.display = "none"; // cerrar el primero
-  modalReprogramar.style.display = "flex"; // abrir el nuevo
+  modalRepro.style.display = "flex"; // abrir el nuevo
 }
 
-// cerrar modal reprogramar
-closeReprogramar.onclick = () => {
-  modalReprogramar.style.display = "none";
+// Close modal repro
+closeRepro.onclick = () => {
+  modalRepro.style.display = "none";
 };
 
-cancelReprogramar.onclick = () => {
-  modalReprogramar.style.display = "none";
+cancelRepro.onclick = () => {
+  modalRepro.style.display = "none";
 };
