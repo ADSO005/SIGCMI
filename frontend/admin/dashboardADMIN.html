@@ -202,7 +202,7 @@
                             <strong>09:00</strong>
                         </div>
 
-                        
+
 
                         <!-- BUTTONS -->
                         <button class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
@@ -241,25 +241,29 @@
                             <strong>09:00</strong>
                         </div>
 
-                        
+
 
                         <!-- INPUT DATE -->
-                        <label class="dateRepro">Nueva Fecha</label>
-                        <input type="date" class="input">
+                        <label class="dateRepro">Nueva Fecha*</label>
+                        <input type="date" class="input" required>
 
                         <!-- INPUT HOUR -->
-                        <label class="dateRepro">Nueva Hora</label>
-                        <input type="time" class="input">
+                        <label class="dateRepro">Nueva Hora*</label>
+                        <input type="time" class="input" required>
 
                         <!-- BUTTONS -->
                         <div class="btn-group">
-                            <button class="btn btn-blue">Guardar Cambios</button>
+                            <button class="btn btn-blue" onclick="saveChanges()">Guardar Cambios</button>
                             <button class="btn btn-gray" id="cancelRepro">Cancelar</button>
                         </div>
 
                     </div>
                 </div>
             </div>
+
+            <!--SHOW MESSAGE SAVE WITH EXIT-->
+            <div id="mesaggeSaveChanges" class="mesaggeSaveChanges">Cambios guardados con éxito.</div>
+
         </main>
     </div>
 

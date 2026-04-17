@@ -56,3 +56,18 @@ closeRepro.onclick = () => {
 cancelRepro.onclick = () => {
   modalRepro.style.display = "none";
 };
+
+function saveChanges() {
+  const mesaggeSaveChanges = document.getElementById("mesaggeSaveChanges");
+
+  // show message
+  mesaggeSaveChanges.classList.add("show");
+
+  // hide after 3 seconds
+  setTimeout(() => {
+    mesaggeSaveChanges.classList.remove("show");
+  }, 3000);
+
+  // close modal
+  document.getElementById("modalRepro").style.display = "none";
+}

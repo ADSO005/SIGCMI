@@ -545,7 +545,27 @@ nav a:hover {
     font-size: 14px;
 }
 
+.mesaggeSaveChanges {
+    position: fixed;
+    height: 45px;
+    bottom: 20px;
+    top: 20px;
+    right: 40%;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+    z-index: 2000;
+}
 
+.mesaggeSaveChanges.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @keyframes appear {
     from {
