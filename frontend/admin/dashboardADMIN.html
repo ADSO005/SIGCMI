@@ -158,7 +158,7 @@
                 <!-- ========================ACTIONS======================== -->
                 <div class="actions">
                     <h3>Acciones Rápidas</h3>
-                    <button class="btnActions btnActionBlue">+ Nueva Cita</button>
+                    <button class="btnActions btnActionBlue" id="openModalSheduleA">+ Nueva Cita</button>
                     <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
                     <button class="btnActions btnActionPurple">Gestionar Citas</button>
                     <button class="btnActions btnActionDark">Ver Métricas</button>
@@ -244,7 +244,7 @@
 
 
                         <!-- INPUT DATE -->
-                        <label class="dateRepro" >Nueva Fecha*</label>
+                        <label class="dateRepro">Nueva Fecha*</label>
                         <input type="date" id="dateRepro" class="input" required>
 
                         <!-- INPUT HOUR -->
@@ -266,6 +266,53 @@
 
             <!--It displays an error if the date and time inputs are empty. -->
             <p id="errorMessageRepro" class="errorMessageRepro"></p>
+
+
+            <!--MODAL SHEDULE APPOINMENT-->
+            <div id="modalSheduleA" class="modalSheduleA">
+                <div class="modalSheduleA-content">
+
+                    <div class="modalSheduleA-header">
+                        <h2>Nueva Cita</h2>
+                        <span id="closeModalSheduleA">X</span>
+                    </div>
+                    <hr class="lineModalSheduleA">
+                    <form id="formCita">
+
+                        <label class="data">Paciente:</label>
+                        <select id="pacienteModalSheduleA">
+                            <option value="">Seleccionar</option>
+                            <option>Juan</option>
+                            <option>Maria</option>
+                        </select>
+
+                        <label class="data">Médico:</label>
+                        <select id="medicoModalSheduleA">
+                            <option value="">Seleccionar</option>
+                            <option>Dr. Perez</option>
+                            <option>Dr. Lopez</option>
+                        </select>
+
+                        <label class="data">Fecha:</label>
+                        <input type="date" id="dateModalSheduleA">
+
+                        <label class="data">Hora:</label>
+                        <select id="timeModalSheduleA">
+                            <option value="">Seleccionar</option>
+                            <option>08:00</option>
+                            <option>09:00</option>
+                        </select>
+
+                        <label class="data">Motivo de consulta:</label>
+                        <textarea id="reasonModalSheduleA" placeholder="Ej: Consulta..."></textarea>
+
+                        
+
+                    </form>
+                </div>
+            </div>
+
+            
         </main>
     </div>
 
