@@ -306,6 +306,7 @@ nav a:hover {
 }
 
 .state {
+    margin-top: 10px;
     width: 104px;
     font-weight: bold;
     padding: 4px;
@@ -339,13 +340,13 @@ nav a:hover {
 }
 
 /* ====================== ACTIONS ======================*/
-.acciones {
+.actions {
     background: white;
     padding: 20px;
     border-radius: 10px;
 }
 
-.acciones h3 {
+.actions h3 {
     color: black;
     font-size: 30px;
     padding: 20px 0 30px 0;
@@ -389,7 +390,7 @@ nav a:hover {
     background: #5428D8;
 }
 
-.btnActionCyan{
+.btnActionCyan {
     background: #25CDD3;
 }
 
@@ -397,13 +398,123 @@ nav a:hover {
     background: #F25614;
 }
 
+.whatsAppNoti {
+    color: black;
+    font-size: 20px;
+}
+
+.whatsAppNoti h2 {
+    font-weight: bold;
+}
+
+.whatsAppNoti h2 span {
+    color: #25D366;
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
+
+    .header {
+        color: black;
+    }
+
+    .header span {
+        font-size: 12px;
+    }
+
+    .main.collapsed {
+        width: calc(100% -80px);
+        float: right;
+        transition: 0.3s;
+    }
+
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
 
     .content {
         grid-template-columns: 1fr;
+    }
+
+    .main {
+        width: 100%;
+        float: none;
+        padding: 15px;
+    }
+
+    .actions h3 {
+        font-size: 18px;
+    }
+
+    .btnActions {
+        font-size: 15px;
+    }
+
+    .whatsAppNoti h2,.whatsAppNoti p{
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .header {
+        color: black;
+    }
+
+    .header h1 {
+        font-size: 12px;
+    }
+
+    .main.collapsed {
+        width: calc(100% -80px);
+        float: right;
+        transition: 0.3s;
+    }
+
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    .card img {
+        width: 20%;
+    }
+
+    .btnActions {
+        font-size: 12p;
+    }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .appointments h3 {
+        font-size: 20px;
+    }
+
+    .appointment span {
+        font-size: 15px;
+    }
+
+    .appointment .left h4 {
+        font-size: 12px;
+    }
+
+    .appointment .left p {
+        font-size: 12px;
+    }
+
+    .appointment .right .state {
+        font-size: 10px;
+        width: 65px;
+        margin-top: 10px;
+    }
+
+    .btnManageAppointment {
+        font-size: 10px;
     }
 }
