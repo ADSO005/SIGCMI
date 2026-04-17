@@ -650,6 +650,53 @@ nav a:hover {
     cursor: pointer;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.data {
+    color: black;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.buttonsModalSheduleA {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.createModalSheduleA:hover,
+.cancelModalSheduleA:hover {
+    transform: scale(1.05);
+}
+
+.createModalSheduleA,
+.cancelModalSheduleA {
+    flex: 1; /* 🔥 ocupan mismo espacio */
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+
 
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
