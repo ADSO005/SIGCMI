@@ -705,7 +705,7 @@ textarea {
 /* 🔥 MESSAGE  MESSAGE OR WARNING*/
 .messageModalSheduleA {
     position: fixed;
-    top: 30px;
+    top: 30000px;
     left: 50%;
     transform: translateX(-50%);
     padding: 12px 20px;
@@ -717,6 +717,7 @@ textarea {
 }
 
 .messageModalSheduleA.show {
+    top: 30px;
     opacity: 1;
 }
 
