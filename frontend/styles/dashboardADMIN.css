@@ -522,6 +522,28 @@ nav a:hover {
     border-radius: 10px;
     border: 1px solid #aaa;
 }
+.dateRepro{
+    color: black;
+}
+
+/* GRUP BUTTONS */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-blue {
+    background: #465DE5;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* BUTTON GREY */
+.btn-gray {
+    background: #E8E8E8;
+    color: black;
+    font-size: 14px;
+}
 
 
 
