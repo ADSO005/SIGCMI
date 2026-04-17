@@ -696,6 +696,12 @@ textarea {
     transition: 0.3s ease;
 }
 
+.createModalSheduleA{
+    background: #465DE5;
+    color: white;
+    font-weight: bold;
+}
+
 /* 🔥 MESSAGE  MESSAGE OR WARNING*/
 .messageModalSheduleA {
     position: fixed;
