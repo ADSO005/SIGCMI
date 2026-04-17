@@ -624,8 +624,8 @@ nav a:hover {
 }
 
 .lineModalSheduleA {
-    width: 100%;
-    max-width: 670px;
+    width: 670px;
+    margin-left: -25px;
     margin-bottom: 20px;
 }
 
@@ -636,7 +636,7 @@ nav a:hover {
     width: 100%;
     max-width: 670px;
     border-radius: 15px;
-
+    overflow: hidden;
 }
 
 .modalSheduleA-header {
