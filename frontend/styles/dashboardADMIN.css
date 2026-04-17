@@ -190,10 +190,10 @@ nav a:hover {
     width: calc(100% - 352px);
     float: right;
     transition: 0.3s;
-    
+
 }
 
-.main.collapsed{
+.main.collapsed {
     width: calc(100% - 80px);
     transition: 0.3s;
 }
@@ -205,7 +205,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.header h1{
+.header h1 {
     color: black;
 }
 
@@ -223,22 +223,23 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.card p{
+.card p {
     color: black;
     font-size: 24px;
     margin-left: 50px;
 }
 
-.card div{
+.card div {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.card div img{
+
+.card div img {
     padding-top: 0;
 }
 
-.card h2{
+.card h2 {
     color: black;
     font-size: 48px;
 }
@@ -250,37 +251,90 @@ nav a:hover {
     gap: 20px;
 }
 
-/* CITAS */
-.citas {
+/* ====================== appointments ======================*/
+.appointments {
     background: white;
     padding: 20px;
     border-radius: 10px;
 }
 
-.cita {
+.appointments h3 {
+    color: black;
+    font-size: 30px;
+}
+
+.appointment {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background: #eee;
+    justify-content: space-between;
+    background: rgba(217, 217, 217, 0.2);
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-.estado {
-    padding: 5px 10px;
-    border-radius: 20px;
+
+.left,
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.verde {
-    background: lightgreen;
+.hour {
+    font-size: 24px;
+    color: black;
+    background: rgba(94, 156, 245, 0.35);
+    border-radius: 10px;
+    padding: 8px;
 }
 
-.amarillo {
-    background: khaki;
+.appointment div h4 {
+    font-size: 20px;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
-.gris {
-    background: lightgray;
+.appointment div p {
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    padding: 0;
+
+}
+
+.state {
+    width: 104px;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.greenState {
+    background: rgba(21, 204, 88, 0.26);
+    color: #25D366;
+}
+
+.yellowState {
+    background: rgba(245, 245, 94, 0.35);
+    color: black;
+}
+
+.greyState {
+    background: rgba(195, 197, 200, 0.35);
+    color: black;
+}
+
+.btnManageAppointment {
+    border: none;
+    transition: 0.3s;
+    float: inline-end;
+}
+
+.btnManageAppointment:hover {
+    transform: scale(1.10);
+    cursor: pointer;
 }
 
