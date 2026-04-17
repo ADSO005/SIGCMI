@@ -513,6 +513,17 @@ nav a:hover {
     animation: appear 0.3s ease;
 }
 
+@keyframes appear {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 /* INPUTS */
 .input {
@@ -592,17 +603,7 @@ nav a:hover {
     z-index: 1002;
 }
 
-@keyframes appear {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
