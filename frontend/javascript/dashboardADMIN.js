@@ -49,6 +49,24 @@ window.onclick = (e) => {
   }
 };
 
+const btnCancel = document.getElementById("btnCancel");
+
+btnCancel.addEventListener("click", () => {
+  
+  const confirmacion = confirm("¿Seguro que deseas cancelar la cita?");
+  
+  if (confirmacion) {
+    alert("Cita cancelada correctamente");
+
+    // Aquí puedes hacer más cosas:
+    // 1. Cambiar estado en la tabla
+    // 2. Guardar en base de datos
+    // 3. Actualizar UI
+
+    modal.style.display = "none"; // cerrar modal
+  }
+
+});
 //====================MODAL CLICK REPRO====================
 
 // Modal New
