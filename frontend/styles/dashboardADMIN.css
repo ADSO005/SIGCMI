@@ -798,7 +798,7 @@ textarea {
     border-radius: 6px;
 }
 
-.table-container {
+.tableContainer {
     margin-top: 20px;
     background: #fff;
     border-radius: 10px;
@@ -852,19 +852,19 @@ textarea {
     font-weight: 500;
 }
 
-.view {
+.viewTableContainer {
     color: #2563eb;
 }
 
-.edit {
+.editTableContainer {
     color: #16a34a;
 }
 
-.complete {
+.completeTableContainer {
     color: #9333ea;
 }
 
-.cancel {
+.cancelTableContainer {
     color: red;
 }
 
