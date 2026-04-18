@@ -1,15 +1,15 @@
 /*Selecting 'a of nav' turns the background blue */
 
-const items = document.querySelectorAll("a");
+const items = document.querySelectorAll(".nav-link");
 
 items.forEach(item => {
   item.addEventListener("click", () => {
 
     // remove activate all
-    items.forEach(i => i.classList.remove("active"));
+    items.forEach(i => i.classList.remove("preActive"));
 
     // put active the one you clicked
-    item.classList.add("active");
+    item.classList.add("preActive");
 
   });
 });
@@ -198,3 +198,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+const links = document.querySelectorAll(".nav-link");
+const views = document.querySelectorAll(".view");
+
+links.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // 🔹 Quitar active a todos
+    links.forEach(l => l.classList.remove("active"));
+
+    // 🔹 Activar el clickeado
+    link.classList.add("active");
+
+    // 🔹 Cambiar vista
+    const viewId = link.dataset.view;
+
+    views.forEach(v => v.classList.remove("active"));
+    document.getElementById(viewId).classList.add("active");
+  });
+});

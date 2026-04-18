@@ -34,34 +34,33 @@
             <hr class="line-2" aria-hidden="true">
 
             <nav aria-label="Opciones principales">
-                <a href="#" class="dashboard active nav-link" id="dashboard" onclick="showView('dashboard')"
-                    aria-label="Ir al Dashboard" data-view="dashboard">
+                <a href="#" class="dashboard active nav-link" id="dashboard" aria-label="Ir al Dashboard"
+                    data-view="dashboardADMIN">
                     <img src="../imgSIGCMI/img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere"
                         alt="Icono Dashboard">
                     <div class="nav-item">Dashboard</div>
                 </a>
 
-                <a href="#" class="appointmentsDash nav-link" id="appointmentsDash" onclick="showView('appointmentsDash')"
-                    aria-label="Ir a Citas" data-view="appointmentsDash">
+                <a href="#" class="nav-link" id="appointmentsDash" aria-label="Ir a Citas"
+                    data-view="appointmentsADMIN">
                     <img src="../imgSIGCMI/img/Calendar.png" alt="Icono Citas">
                     <div class="nav-item">Citas</div>
                 </a>
 
-                <a href="#" class="pacientsDashboard nav-link" id="pacientsDashboard" onclick="showView('pacients')"
-                    aria-label="Ir a Pacientes" data-view="pacients">
+                <a href="#" class="nav-link" id="pacientsDashboard" aria-label="Ir a Pacientes"
+                    data-view="pacientsADMIN">
                     <img src="../imgSIGCMI/img/Users.png" alt="Icono Pacientes">
                     <div class="nav-item">Pacientes</div>
                 </a>
 
-                <a href="#" class="doctorsDashboard nav-link" id="doctorsDashboard" onclick="showView('doctors')"
-                    aria-label="Ir a Médicos" data-view="doctors">
+                <a href="#" class="nav-link" id="doctorsDashboard" aria-label="Ir a Médicos" data-view="medicsADMIN">
                     <img src="../imgSIGCMI/img/image_86.png" alt="Icono Médicos">
                     <div class="nav-item">Medicos</div>
                 </a>
 
-                <a href="#" aria-label="Ir a WhatsApp" class="whatsAppDashboard nav-link" onclick="showView('whatsApp')" data-view="whatsApp">
+                <a href="#" aria-label="Ir a WhatsApp" class="nav-link" data-view="whatsappADMIN">
                     <img src="../imgSIGCMI/img/chat_bubble.png" alt="Icono WhatsApp">
-                    <div class="nav-item" >WhatsApp</div>
+                    <div class="nav-item">WhatsApp</div>
                 </a>
             </nav>
 
@@ -76,264 +75,267 @@
         <!-- ========================MAIN======================== -->
         <main class="main">
 
-            <!-- HEADER -->
-            <header class="header">
-                <h1 aria-label="Sistema Integral de Gestión de Citas Médicas ">Sistema Integral de Gestión de Citas
-                    Médicas</h1>
-                <span aria-label="martes, 7 de abril de 2026">martes, 7 de abril de 2026</span>
-            </header>
+            <section id="dashboardADMIN" class="view active">
 
-            <!-- ========================CARDS======================== -->
-            <section class="cards">
-                <div class="card">
-                    <p aria-label="Cistas de Hoy">Citas Hoy</p>
-                    <div>
-                        <h2>24</h2>
-                        <img src="../imgSIGCMI/img/blueCalendar.png" alt="Imagen de Calendario">
-                    </div>
-                </div>
-                <div class="card">
-                    <p aria-label="Pacientes Activos">Pacientes Activos</p>
-                    <div>
-                        <h2>1248</h2>
-                        <img src="../imgSIGCMI/img/usderGreen.png" alt="Imagen de Pacientes Activos">
-                    </div>
-                </div>
-                <div class="card">
-                    <p>Médicos Disponibles</p>
-                    <div>
-                        <h2>18</h2>
-                        <img src="../imgSIGCMI/img/historyUser.png" alt="Imagen de Historias de Usuario">
-                    </div>
-                </div>
-                <div class="card">
-                    <p>Tiempo Promedio</p>
-                    <div>
-                        <h2>15 min</h2>
-                        <img src="../imgSIGCMI/img/clockUserADMIN.png" alt="Imagen de timpo promedio de consulta">
-                    </div>
-                </div>
-            </section>
+                <!-- HEADER -->
+                <header class="header">
+                    <h1 aria-label="Sistema Integral de Gestión de Citas Médicas ">Sistema Integral de Gestión de Citas
+                        Médicas</h1>
+                    <span aria-label="martes, 7 de abril de 2026">martes, 7 de abril de 2026</span>
+                </header>
 
-            <!-- CONTENIDO -->
-            <section class="content">
-
-                <!-- ========================APPOINMENTS======================== -->
-                <div class="appointments">
-                    <h3>Citas Hoy</h3>
-
-                    <div class="appointment">
-                        <div class="left">
-                            <span class="hour">09:00</span>
-                            <h4>María González</h4>
-                            <p><span>Dr.</span> Pérez</p>
-                        </div>
-
-                        <div class="right">
-                            <span class="state greenState">Completado</span>
+                <!-- ========================CARDS======================== -->
+                <section class="cards">
+                    <div class="card">
+                        <p aria-label="Cistas de Hoy">Citas Hoy</p>
+                        <div>
+                            <h2>24</h2>
+                            <img src="../imgSIGCMI/img/blueCalendar.png" alt="Imagen de Calendario">
                         </div>
                     </div>
-
-                    <div class="appointment">
-                        <div class="left">
-                            <span class="hour">10:00</span>
-                            <h4>Juan Martínez</h4>
-                            <p><span>Dr.</span> Pérez</p>
-                        </div>
-                        <div class="right">
-                            <span class="state yellowState">En curso</span>
+                    <div class="card">
+                        <p aria-label="Pacientes Activos">Pacientes Activos</p>
+                        <div>
+                            <h2>1248</h2>
+                            <img src="../imgSIGCMI/img/usderGreen.png" alt="Imagen de Pacientes Activos">
                         </div>
                     </div>
-
-                    <div class="appointment">
-                        <div class="left">
-                            <span class="hour">11:00</span>
-                            <h4>Ana Rodríguez</h4>
-                            <p><span>Dr.</span> Pérez</p>
-                        </div>
-                        <div class="right">
-                            <span class="state greyState">Pendiente</span>
-                            <button class="btnManageAppointment" onclick="openModal()">Click para gestionar</button>
+                    <div class="card">
+                        <p>Médicos Disponibles</p>
+                        <div>
+                            <h2>18</h2>
+                            <img src="../imgSIGCMI/img/historyUser.png" alt="Imagen de Historias de Usuario">
                         </div>
                     </div>
-
-                </div>
-
-                <!-- ========================ACTIONS======================== -->
-                <div class="actions">
-                    <h3>Acciones Rápidas</h3>
-                    <button class="btnActions btnActionBlue" id="openModalSheduleA">+ Nueva Cita</button>
-                    <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
-                    <button class="btnActions btnActionPurple">Gestionar Citas</button>
-                    <button class="btnActions btnActionDark">Ver Métricas</button>
-                    <button class="btnActions btnActionCyan">Ver Calendario</button>
-                    <button class="btnActions btnActionOrange">Enviar Recordatorios</button>
-                    <div class="whatsAppNoti">
-                        <h2>WhatsApp <span>Activo</span></h2>
-                        <p><span>24 </span>notificaciones enviadas hoy.</p>
+                    <div class="card">
+                        <p>Tiempo Promedio</p>
+                        <div>
+                            <h2>15 min</h2>
+                            <img src="../imgSIGCMI/img/clockUserADMIN.png" alt="Imagen de timpo promedio de consulta">
+                        </div>
                     </div>
-                </div>
+                </section>
 
-            </section>
+                <!-- CONTENIDO -->
+                <section class="content">
 
-            <!-- =================================MODAL MANAGE APPOINMENT================================= -->
-            <div class="modal" id="modal">
+                    <!-- ========================APPOINMENTS======================== -->
+                    <div class="appointments">
+                        <h3>Citas Hoy</h3>
 
-                <!-- Modal container -->
-                <div class="modal-content">
-
-                    <!-- HEADER -->
-                    <div class="modal-header">
-                        <h2>Gestionar Cita</h2>
-                        <span class="close" id="closeModal">X</span>
-                    </div>
-
-                    <!-- BODY -->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <span>Paciente:</span>
-                            <strong>Ana Rodríguez</strong>
-                        </div>
-
-                        <div class="row">
-                            <span>Médico:</span>
-                            <strong>Dr. Pérez</strong>
-                        </div>
-
-                        <div class="row">
-                            <span>Hora:</span>
-                            <strong>09:00</strong>
-                        </div>
-
-
-
-                        <!-- BUTTONS -->
-                        <button class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
-                        <button class="btn btn-red" id="btnCancel">Cancelar Cita</button>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- MODAL REPROGRAMING -->
-            <div class="modal" id="modalRepro">
-
-                <div class="modal-content">
-
-                    <!-- HEADER -->
-                    <div class="modal-header">
-                        <h2>Reprogramar Cita</h2>
-                        <span class="close" id="closeRepro">X</span>
-                    </div>
-
-                    <!-- BODY -->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <span>Paciente:</span>
-                            <strong>María González</strong>
-                        </div>
-
-                        <div class="row">
-                            <span>Médico:</span>
-                            <strong>Dr. Pérez</strong>
-                        </div>
-
-                        <div class="row">
-                            <span>Hora:</span>
-                            <strong>09:00</strong>
-                        </div>
-
-
-
-                        <!-- INPUT DATE -->
-                        <label class="dateRepro">Nueva Fecha*</label>
-                        <input type="date" id="dateRepro" class="input" required>
-
-                        <!-- INPUT HOUR -->
-                        <label class="timeRepro">Nueva Hora*</label>
-                        <input type="time" id="timeRepro" class="input" required>
-
-                        <!-- BUTTONS -->
-                        <div class="btn-group">
-                            <button class="btn btn-blue" onclick="saveChanges()">Guardar Cambios</button>
-                            <button class="btn btn-gray" id="cancelRepro">Cancelar</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!--SHOW MESSAGE SAVE WITH EXIT-->
-            <div id="mesaggeSaveChanges" class="mesaggeSaveChanges">Cambios guardados con éxito.</div>
-
-            <!--It displays an error if the date and time inputs are empty. -->
-            <p id="errorMessageRepro" class="errorMessageRepro"></p>
-
-
-            <!--MODAL SHEDULE APPOINMENT-->
-            <div id="modalSheduleA" class="modalSheduleA">
-                <div class="modalSheduleA-content">
-
-                    <div class="modalSheduleA-header">
-                        <h2>Nueva Cita</h2>
-                        <span id="closeModalSheduleA">X</span>
-                    </div>
-                    <hr class="lineModalSheduleA">
-                    <form id="formCita">
-
-                        <label class="data">Paciente:</label>
-                        <select id="pacienteModalSheduleA">
-                            <option value="">Seleccionar</option>
-                            <option>Juan</option>
-                            <option>Maria</option>
-                        </select>
-
-                        <label class="data">Médico:</label>
-                        <select id="medicoModalSheduleA">
-                            <option value="">Seleccionar</option>
-                            <option>Dr. Perez</option>
-                            <option>Dr. Lopez</option>
-                        </select>
-
-                        <label class="data">Fecha:</label>
-                        <input type="date" id="dateModalSheduleA">
-
-                        <label class="data">Hora:</label>
-                        <select id="timeModalSheduleA">
-                            <option value="">Seleccionar</option>
-                            <option>08:00</option>
-                            <option>09:00</option>
-                        </select>
-
-                        <label class="data">Motivo de consulta:</label>
-                        <textarea id="reasonModalSheduleA" placeholder="Ej: Consulta..."></textarea>
-
-                        <div class="buttonsModalSheduleA">
-                            <div>
-                                <button type="submit" class="createModalSheduleA" id="createModalSheduleA">Crear
-                                    Cita</button>
+                        <div class="appointment">
+                            <div class="left">
+                                <span class="hour">09:00</span>
+                                <h4>María González</h4>
+                                <p><span>Dr.</span> Pérez</p>
                             </div>
-                            <div>
-                                <button type="button" class="cancelModalSheduleA"
-                                    id="cancelModalSheduleA">Cancelar</button>
+
+                            <div class="right">
+                                <span class="state greenState">Completado</span>
                             </div>
                         </div>
 
-                    </form>
+                        <div class="appointment">
+                            <div class="left">
+                                <span class="hour">10:00</span>
+                                <h4>Juan Martínez</h4>
+                                <p><span>Dr.</span> Pérez</p>
+                            </div>
+                            <div class="right">
+                                <span class="state yellowState">En curso</span>
+                            </div>
+                        </div>
+
+                        <div class="appointment">
+                            <div class="left">
+                                <span class="hour">11:00</span>
+                                <h4>Ana Rodríguez</h4>
+                                <p><span>Dr.</span> Pérez</p>
+                            </div>
+                            <div class="right">
+                                <span class="state greyState">Pendiente</span>
+                                <button class="btnManageAppointment" onclick="openModal()">Click para gestionar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ========================ACTIONS======================== -->
+                    <div class="actions">
+                        <h3>Acciones Rápidas</h3>
+                        <button class="btnActions btnActionBlue" id="openModalSheduleA">+ Nueva Cita</button>
+                        <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
+                        <button class="btnActions btnActionPurple">Gestionar Citas</button>
+                        <button class="btnActions btnActionDark">Ver Métricas</button>
+                        <button class="btnActions btnActionCyan">Ver Calendario</button>
+                        <button class="btnActions btnActionOrange">Enviar Recordatorios</button>
+                        <div class="whatsAppNoti">
+                            <h2>WhatsApp <span>Activo</span></h2>
+                            <p><span>24 </span>notificaciones enviadas hoy.</p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- =================================MODAL MANAGE APPOINMENT================================= -->
+                <div class="modal" id="modal">
+
+                    <!-- Modal container -->
+                    <div class="modal-content">
+
+                        <!-- HEADER -->
+                        <div class="modal-header">
+                            <h2>Gestionar Cita</h2>
+                            <span class="close" id="closeModal">X</span>
+                        </div>
+
+                        <!-- BODY -->
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <span>Paciente:</span>
+                                <strong>Ana Rodríguez</strong>
+                            </div>
+
+                            <div class="row">
+                                <span>Médico:</span>
+                                <strong>Dr. Pérez</strong>
+                            </div>
+
+                            <div class="row">
+                                <span>Hora:</span>
+                                <strong>09:00</strong>
+                            </div>
+
+
+
+                            <!-- BUTTONS -->
+                            <button class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
+                            <button class="btn btn-red" id="btnCancel">Cancelar Cita</button>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- MESSAGE SHEDULE APPOINMENT CONFIRMATION -->
-            <div id="messageModalSheduleA" class="messageModalSheduleA"></div>
+                <!-- MODAL REPROGRAMING -->
+                <div class="modal" id="modalRepro">
+
+                    <div class="modal-content">
+
+                        <!-- HEADER -->
+                        <div class="modal-header">
+                            <h2>Reprogramar Cita</h2>
+                            <span class="close" id="closeRepro">X</span>
+                        </div>
+
+                        <!-- BODY -->
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <span>Paciente:</span>
+                                <strong>María González</strong>
+                            </div>
+
+                            <div class="row">
+                                <span>Médico:</span>
+                                <strong>Dr. Pérez</strong>
+                            </div>
+
+                            <div class="row">
+                                <span>Hora:</span>
+                                <strong>09:00</strong>
+                            </div>
 
 
+
+                            <!-- INPUT DATE -->
+                            <label class="dateRepro">Nueva Fecha*</label>
+                            <input type="date" id="dateRepro" class="input" required>
+
+                            <!-- INPUT HOUR -->
+                            <label class="timeRepro">Nueva Hora*</label>
+                            <input type="time" id="timeRepro" class="input" required>
+
+                            <!-- BUTTONS -->
+                            <div class="btn-group">
+                                <button class="btn btn-blue" onclick="saveChanges()">Guardar Cambios</button>
+                                <button class="btn btn-gray" id="cancelRepro">Cancelar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--SHOW MESSAGE SAVE WITH EXIT-->
+                <div id="mesaggeSaveChanges" class="mesaggeSaveChanges">Cambios guardados con éxito.</div>
+
+                <!--It displays an error if the date and time inputs are empty. -->
+                <p id="errorMessageRepro" class="errorMessageRepro"></p>
+
+
+                <!--MODAL SHEDULE APPOINMENT-->
+                <div id="modalSheduleA" class="modalSheduleA">
+                    <div class="modalSheduleA-content">
+
+                        <div class="modalSheduleA-header">
+                            <h2>Nueva Cita</h2>
+                            <span id="closeModalSheduleA">X</span>
+                        </div>
+                        <hr class="lineModalSheduleA">
+                        <form id="formCita">
+
+                            <label class="data">Paciente:</label>
+                            <select id="pacienteModalSheduleA">
+                                <option value="">Seleccionar</option>
+                                <option>Juan</option>
+                                <option>Maria</option>
+                            </select>
+
+                            <label class="data">Médico:</label>
+                            <select id="medicoModalSheduleA">
+                                <option value="">Seleccionar</option>
+                                <option>Dr. Perez</option>
+                                <option>Dr. Lopez</option>
+                            </select>
+
+                            <label class="data">Fecha:</label>
+                            <input type="date" id="dateModalSheduleA">
+
+                            <label class="data">Hora:</label>
+                            <select id="timeModalSheduleA">
+                                <option value="">Seleccionar</option>
+                                <option>08:00</option>
+                                <option>09:00</option>
+                            </select>
+
+                            <label class="data">Motivo de consulta:</label>
+                            <textarea id="reasonModalSheduleA" placeholder="Ej: Consulta..."></textarea>
+
+                            <div class="buttonsModalSheduleA">
+                                <div>
+                                    <button type="submit" class="createModalSheduleA" id="createModalSheduleA">Crear
+                                        Cita</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="cancelModalSheduleA"
+                                        id="cancelModalSheduleA">Cancelar</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-- MESSAGE SHEDULE APPOINMENT CONFIRMATION -->
+                <div id="messageModalSheduleA" class="messageModalSheduleA"></div>
+
+
+            </section>
             <!--DASHBOARD ADMIN QUOTES SECTION -->
 
             <!-- CONTENIDO -->
-            <section class="containerDos" style="display:none;">
-
+            <section id="appointmentsADMIN" class="view containerDos">
+                
                 <div class="containerDosHeader">
                     <h2>Gestión de Citas</h2>
                     <button class="btn-primary">+ Nueva cita</button>
@@ -405,8 +407,9 @@
                     </table>
 
                 </div>
-            </section>
         </main>
+
+        </section>
     </div>
 
 
