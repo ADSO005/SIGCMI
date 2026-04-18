@@ -1,3 +1,19 @@
+/*Selecting 'a of nav' turns the background blue */
+
+const items = document.querySelectorAll("a");
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+
+    // remove activate all
+    items.forEach(i => i.classList.remove("active"));
+
+    // put active the one you clicked
+    item.classList.add("active");
+
+  });
+});
+
 const btn = document.getElementById("toggleBtn");
 const sidebar = document.getElementById("sidebar");
 let main = document.querySelector(".main");
