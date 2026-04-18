@@ -87,7 +87,7 @@ function renderizar() {
 
 // ── Cerrar ────
 document.getElementById('botonCerrar').onclick = () => {
-  alert('Horario guardado:\n' + JSON.stringify(horario, null, 2));
+  const confirmado = confirm('¿Deseas guardar los cambios en tu disponibilidad?');
+  if (confirmado) alert('✅ Horario guardado correctamente.');
 };
-
 renderizar();
