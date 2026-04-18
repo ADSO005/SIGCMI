@@ -217,6 +217,10 @@ nav a:hover {
     color: black;
 }
 
+.header span {
+    color: black;
+}
+
 /* CARDS */
 .cards {
     display: grid;
@@ -434,7 +438,7 @@ nav a:hover {
     /* fondo oscuro */
     justify-content: center;
     align-items: center;
-    z-index: 1001;
+    z-index: 100100;
 }
 
 /* CONTENIDO DEL MODAL */
@@ -444,6 +448,8 @@ nav a:hover {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 100100;
+
 }
 
 /* HEADER */
@@ -737,13 +743,23 @@ textarea {
     z-index: 1005;
 }
 
-/*DASHBOARD ADMIN QUOTES SECTION*/
+/*======================DASHBOARD ADMIN QUOTES SECTION=====================*/
 
 /* CONTENT */
 .containerDos {
     margin-top: 10px;
     padding: 20px;
     background-color: white;
+}
+
+.sectionDos h1,.sectionDos span{
+    color: #000;
+}
+
+.sectionDos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .containerDosHeader {
@@ -841,8 +857,8 @@ textarea {
 }
 
 .status.confirmed {
-    background: #dbeafe;
-    color: #2563eb;
+    background-color: rgba(37, 211, 102, 0.35);
+    color: #25D366;
 }
 
 /* ACTIONS */
@@ -871,7 +887,7 @@ textarea {
 .view {
     display: none;
     opacity: 0;
-    transition: 0.3s ease;
+    transition: 1s ease;
 }
 
 .view.active {

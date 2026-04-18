@@ -49,6 +49,13 @@ window.onclick = (e) => {
   }
 };
 
+
+document.querySelectorAll(".open-modal").forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+});
+
 const btnCancel = document.getElementById("btnCancel");
 
 btnCancel.addEventListener("click", () => {
