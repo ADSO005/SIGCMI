@@ -34,30 +34,34 @@
             <hr class="line-2" aria-hidden="true">
 
             <nav aria-label="Opciones principales">
-                <a href="#" class="dashboard active" id="dashboard" aria-label="Ir al Dashboard">
+                <a href="#" class="dashboard active nav-link" id="dashboard" onclick="showView('dashboard')"
+                    aria-label="Ir al Dashboard" data-view="dashboard">
                     <img src="../imgSIGCMI/img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere"
                         alt="Icono Dashboard">
-                    <div class="nav-item" onclick="showView('dashboard')">Dashboard</div>
+                    <div class="nav-item">Dashboard</div>
                 </a>
 
-                <a href="#" class="appointmentsDash" id="appointmentsDash" aria-label="Ir a Citas">
+                <a href="#" class="appointmentsDash nav-link" id="appointmentsDash" onclick="showView('appointmentsDash')"
+                    aria-label="Ir a Citas" data-view="appointmentsDash">
                     <img src="../imgSIGCMI/img/Calendar.png" alt="Icono Citas">
-                    <div class="nav-item" onclick="showView('citas')">Citas</div>
+                    <div class="nav-item">Citas</div>
                 </a>
 
-                <a href="#" class="pacientsDashboard" id="pacientsDashboard" aria-label="Ir a Pacientes">
+                <a href="#" class="pacientsDashboard nav-link" id="pacientsDashboard" onclick="showView('pacients')"
+                    aria-label="Ir a Pacientes" data-view="pacients">
                     <img src="../imgSIGCMI/img/Users.png" alt="Icono Pacientes">
-                    <div class="nav-item" onclick="showView('pacientes')">Pacientes</div>
+                    <div class="nav-item">Pacientes</div>
                 </a>
 
-                <a href="#" class="doctorsDashboard" id="doctorsDashboard" aria-label="Ir a Médicos">
+                <a href="#" class="doctorsDashboard nav-link" id="doctorsDashboard" onclick="showView('doctors')"
+                    aria-label="Ir a Médicos" data-view="doctors">
                     <img src="../imgSIGCMI/img/image_86.png" alt="Icono Médicos">
-                    <div class="nav-item" onclick="showView('medicos')">Medicos</div>
+                    <div class="nav-item">Medicos</div>
                 </a>
 
-                <a href="#" aria-label="Ir a WhatsApp">
+                <a href="#" aria-label="Ir a WhatsApp" class="whatsAppDashboard nav-link" onclick="showView('whatsApp')" data-view="whatsApp">
                     <img src="../imgSIGCMI/img/chat_bubble.png" alt="Icono WhatsApp">
-                    <div class="nav-item" onclick="showView('whatsApp')">WhatsApp</div>
+                    <div class="nav-item" >WhatsApp</div>
                 </a>
             </nav>
 
@@ -328,7 +332,7 @@
             <!--DASHBOARD ADMIN QUOTES SECTION -->
 
             <!-- CONTENIDO -->
-            <section class="containerDos">
+            <section class="containerDos" style="display:none;">
 
                 <div class="containerDosHeader">
                     <h2>Gestión de Citas</h2>
@@ -364,6 +368,43 @@
 
                 </div>
 
+                <div class="table-container">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Hora</th>
+                                <th>Paciente</th>
+                                <th>Médico</th>
+                                <th>Especialidad</th>
+                                <th>Motivo</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>APT-001</td>
+                                <td>09:00</td>
+                                <td>María González Pérez</td>
+                                <td>Dr. Carlos Pérez</td>
+                                <td><span class="badge">Medicina General</span></td>
+                                <td>Consulta de rutina y chequeo general</td>
+                                <td><span class="status confirmed">Confirmada</span></td>
+                                <td class="actions">
+                                    <span class="action view">Ver</span>
+                                    <span class="action edit">Editar</span>
+                                    <span class="action complete">Completar</span>
+                                    <span class="action cancel" id="btnCancelTable">Cancelar</span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
             </section>
         </main>
     </div>

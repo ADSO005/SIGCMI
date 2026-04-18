@@ -753,9 +753,10 @@ textarea {
     margin-bottom: 20px;
 }
 
-.containerDosHeader h2{
+.containerDosHeader h2 {
     color: #000;
-    font-size: 36px;
+    font-size: calc(11px, 1.5rem, 36px);
+
 }
 
 .btn-primary {
@@ -766,6 +767,9 @@ textarea {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+    width: 156px;
+    height: 51px;
+    font-size: 20px;
 }
 
 /* FILTERS */
@@ -788,12 +792,81 @@ textarea {
 
 .filter input,
 .filter select {
-    font-size: 20px;
+    font-size: calc(11px, 1.5rem, 15px);
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
 
+.table-container {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    color: #000;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #f5f5f5;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+/* BADGES */
+.badge {
+    background: #5E9CF5;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* STATUS */
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.status.confirmed {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/* ACTIONS */
+.actions .action {
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.view {
+    color: #2563eb;
+}
+
+.edit {
+    color: #16a34a;
+}
+
+.complete {
+    color: #9333ea;
+}
+
+.cancel {
+    color: red;
+}
 
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
@@ -839,6 +912,11 @@ textarea {
         font-size: 15px;
     }
 
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 450px) {
