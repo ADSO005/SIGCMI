@@ -37,27 +37,27 @@
                 <a href="#" class="dashboard active" id="dashboard" aria-label="Ir al Dashboard">
                     <img src="../imgSIGCMI/img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere"
                         alt="Icono Dashboard">
-                    <span>Dashboard</span>
+                    <div class="nav-item" onclick="showView('dashboard')">Dashboard</div>
                 </a>
 
                 <a href="#" class="appointmentsDash" id="appointmentsDash" aria-label="Ir a Citas">
                     <img src="../imgSIGCMI/img/Calendar.png" alt="Icono Citas">
-                    <span>Citas</span>
+                    <div class="nav-item" onclick="showView('citas')">Citas</div>
                 </a>
 
                 <a href="#" class="pacientsDashboard" id="pacientsDashboard" aria-label="Ir a Pacientes">
                     <img src="../imgSIGCMI/img/Users.png" alt="Icono Pacientes">
-                    <span>Pacientes</span>
+                    <div class="nav-item" onclick="showView('pacientes')">Pacientes</div>
                 </a>
 
                 <a href="#" class="doctorsDashboard" id="doctorsDashboard" aria-label="Ir a Médicos">
                     <img src="../imgSIGCMI/img/image_86.png" alt="Icono Médicos">
-                    <span>Médicos</span>
+                    <div class="nav-item" onclick="showView('medicos')">Medicos</div>
                 </a>
 
                 <a href="#" aria-label="Ir a WhatsApp">
                     <img src="../imgSIGCMI/img/chat_bubble.png" alt="Icono WhatsApp">
-                    <span>WhatsApp</span>
+                    <div class="nav-item" onclick="showView('whatsApp')">WhatsApp</div>
                 </a>
             </nav>
 
@@ -308,10 +308,12 @@
 
                         <div class="buttonsModalSheduleA">
                             <div>
-                                <button type="submit" class="createModalSheduleA" id="createModalSheduleA">Crear Cita</button>
+                                <button type="submit" class="createModalSheduleA" id="createModalSheduleA">Crear
+                                    Cita</button>
                             </div>
                             <div>
-                                <button type="button" class="cancelModalSheduleA" id="cancelModalSheduleA">Cancelar</button>
+                                <button type="button" class="cancelModalSheduleA"
+                                    id="cancelModalSheduleA">Cancelar</button>
                             </div>
                         </div>
 

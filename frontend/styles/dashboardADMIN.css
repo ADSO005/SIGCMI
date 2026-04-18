@@ -123,7 +123,7 @@ nav a:hover {
 
 }
 
-.sidebar.collapsed nav span {
+.sidebar.collapsed nav .nav-item {
     display: none;
 }
 
