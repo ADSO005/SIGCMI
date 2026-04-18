@@ -84,6 +84,7 @@ hr {
     background-color: rgba(94, 156, 245, 0.35);
     transition: 0.3s ease;
 }
+
 .user {
     margin-bottom: 20px;
 }
@@ -689,7 +690,8 @@ textarea {
 
 .createModalSheduleA,
 .cancelModalSheduleA {
-    flex: 1; /* 🔥 ocupan mismo espacio */
+    flex: 1;
+    /* 🔥 ocupan mismo espacio */
     width: 250px;
     padding: 10px;
     border: none;
@@ -700,7 +702,7 @@ textarea {
     transition: 0.3s ease;
 }
 
-.createModalSheduleA{
+.createModalSheduleA {
     background: #465DE5;
     color: white;
     font-weight: bold;
@@ -734,6 +736,64 @@ textarea {
     background: red;
     z-index: 1005;
 }
+
+/*DASHBOARD ADMIN QUOTES SECTION*/
+
+/* CONTENT */
+.containerDos {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.containerDosHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.containerDosHeader h2{
+    color: #000;
+    font-size: 36px;
+}
+
+.btn-primary {
+    background: #465DE5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FILTERS */
+.filters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter label {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.filter input,
+.filter select {
+    font-size: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
 
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
