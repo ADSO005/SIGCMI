@@ -14,7 +14,16 @@ function crearFranja(franja, i, j) {
   el.querySelector('.entrada').value = franja.entrada;
   el.querySelector('.salida').value  = franja.salida;
 
-  el.querySelector('.entrada').onchange = e => { horario[i].franjas[j].entrada = e.target.value; };
+  el.querySelector('.salida').onchange = e => {
+  const entrada = el.querySelector('.entrada').value;
+  const salida  = e.target.value;
+  if (salida <= entrada) {
+    alert('La hora de salida debe ser mayor que la de entrada');
+    e.target.value = horario[i].franjas[j].salida;
+    return;
+  }
+  horario[i].franjas[j].salida = salida;
+};
   el.querySelector('.salida').onchange  = e => { horario[i].franjas[j].salida  = e.target.value; };
 
   el.querySelector('.boton-eliminar-franja').onclick = () => {
