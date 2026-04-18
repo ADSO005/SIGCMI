@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Horario de Atención</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/availabilityDoctor.css" />
+</head>
+<body>
+  <div class="contenedor-app">
+    <div class="modal">
+
+      <div class="modal-encabezado">
+        <div class="encabezado-icono">
+          <img src="../imgSIGCMI/img/icono-calendario.svg" alt="Calendario" width="20" height="20" />
+        </div>
+        <div class="encabezado-texto">
+          <h1>Mi Horario de Atención</h1>
+          <p>Configura tus días y horarios disponibles</p>
+        </div>
+        <button class="boton-cerrar" id="botonCerrar" aria-label="Cerrar">
+          <img src="../imgSIGCMI/img/icono-cerrar.svg" alt="Cerrar" width="16" height="16" />
+        </button>
+      </div>
+
+      <div class="modal-cuerpo" id="contenedorDias">
+
+        <!-- Plantilla de tarjeta de día -->
+        <template id="tpl-tarjeta">
+          <div class="tarjeta-dia">
+            <div class="encabezado-dia">
+              <label class="interruptor">
+                <input type="checkbox" />
+                <span class="interruptor-pista"></span>
+              </label>
+              <span class="nombre-dia"></span>
+              <button class="boton-agregar-franja" title="Agregar franja">
+                <img src="../imgSIGCMI/img/icono-agregar.svg" width="16" height="16" alt="Agregar franja" />
+              </button>
+            </div>
+            <div class="contenedor-franjas"></div>
+            <button class="boton-eliminar-dia">
+              <img src="../imgSIGCMI/img/icono-eliminar.svg" width="13" height="13" alt="" /> Eliminar día
+            </button>
+          </div>
+        </template>
+
+        <!-- Plantilla de franja horaria -->
+        <template id="tpl-franja">
+          <div class="franja-horaria">
+            <span class="franja-icono-reloj">
+              <img src="../imgSIGCMI/img/icono-reloj.svg" width="16" height="16" alt="Hora" />
+            </span>
+            <div class="franja-inputs">
+              <div>
+                <label>Entrada</label>
+                <input type="time" class="input-hora entrada" />
+              </div>
+              <div>
+                <label>Salida</label>
+                <input type="time" class="input-hora salida" />
+              </div>
+            </div>
+            <button class="boton-eliminar-franja">
+              <img src="../imgSIGCMI/img/icono-eliminar.svg" width="13" height="13" alt="" /> Eliminar
+            </button>
+          </div>
+        </template>
+
+        <!-- Botón agregar día -->
+        <button class="boton-agregar-dia" id="botonAgregarDia">
+          <img src="../imgSIGCMI/img/icono-agregar.svg" width="16" height="16" alt="" /> Agregar día
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../javascript/availabilityDoctor.js"></script>
+</body>
+</html>
