@@ -66,27 +66,72 @@ botonesCancelar.forEach(btn => {
     if (confirmacion) {
       alert("Cita cancelada correctamente");
 
-      // 🔹 aquí puedes usar lógica dinámica
-      // ejemplo: cambiar estado en la fila
 
       document.getElementById("modal").style.display = "none";
     }
 
   });
 });
+
+document.addEventListener("click", (e) => {
+
+  if (!e.target.classList.contains("btnEstado")) return;
+
+  const fila = e.target.closest("tr");
+  const estado = fila.querySelector(".status");
+  const botones = fila.querySelectorAll(".btnEstado");
+
+  // ================= CANCEL =================
+  if (e.target.classList.contains("cancelTableContainer")) {
+
+    const confirmacion = confirm("¿Seguro que deseas cancelar la cita?");
+    if (!confirmacion) return;
+
+    estado.textContent = "Cancelado";
+    estado.className = "status cancelado";
+
+    // hide ALL buttons
+    botones.forEach(btn => btn.style.display = "none");
+  }
+
+  // ================= COMPLETAR =================
+  if (e.target.classList.contains("completeTableContainer")) {
+
+    estado.textContent = "Completado";
+    estado.className = "status completado";
+
+    // hide buttons (recommended)
+    botones.forEach(btn => btn.style.display = "none");
+  }
+
+  // ================= IN PROGRESS=================
+  if (e.target.classList.contains("editTableContainer")) {
+
+    estado.textContent = "En curso";
+    estado.className = "status encurso";
+
+    //hide all
+    botones.forEach(btn => btn.style.display = "none");
+
+    // ONLY show complete
+    const btnCompletar = fila.querySelector(".completeTableContainer");
+    if (btnCompletar) btnCompletar.style.display = "inline-block";
+  }
+
+});
 //====================MODAL CLICK REPRO====================
 
 // Modal New
 const modalRepro = document.getElementById("modalRepro");
 
-// Buttons clos
+// Buttons close
 const closeRepro = document.getElementById("closeRepro");
 const cancelRepro = document.getElementById("cancelRepro");
 
 // Open modal repro
 function openRepro() {
-  modal.style.display = "none"; // cerrar el primero
-  modalRepro.style.display = "flex"; // abrir el nuevo
+  modal.style.display = "none";
+  modalRepro.style.display = "flex"; 
 }
 
 // Close modal repro
@@ -137,7 +182,7 @@ function saveChanges() {
 document.addEventListener("DOMContentLoaded", () => {
 
   // ==================== MODAL ====================
- // 🔹 ABRIR MODAL (para TODOS los botones)
+  // OPEN MODAL (for ALL buttons)
   document.querySelectorAll("[data-open-modal]").forEach(btn => {
     btn.addEventListener("click", () => {
       const modalId = btn.dataset.openModal;
@@ -149,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 🔹 CERRAR MODAL (para TODOS los botones)
+  // CLOSE MODAL (for ALL buttons)
   document.querySelectorAll("[data-close-modal]").forEach(btn => {
     btn.addEventListener("click", () => {
       const modalId = btn.dataset.closeModal;
@@ -161,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 🔹 CERRAR AL HACER CLICK AFUERA (para TODOS los modales)
+  //CLOSE ON CLICK OUTSIDE (for ALL modals)
   window.addEventListener("click", (e) => {
     document.querySelectorAll(".modal").forEach(modal => {
       if (e.target === modal) {
@@ -190,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       mostrarMensaje("Cita agendada con éxito.", "successModalSheduleA");
 
-      modalSheduleA .style.display = "none";
+      modalSheduleA.style.display = "none";
       form.reset();
     }
   });
@@ -213,13 +258,13 @@ links.forEach(link => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // 🔹 Quitar active a todos
+    // Remove active from all
     links.forEach(l => l.classList.remove("active"));
 
-    // 🔹 Activar el clickeado
+    // Activate clicking
     link.classList.add("active");
 
-    // 🔹 Cambiar vista
+    // Change view
     const viewId = link.dataset.view;
 
     views.forEach(v => v.classList.remove("active"));

@@ -216,7 +216,7 @@
 
                         <!-- BUTTONS -->
                         <button class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
-                        <button class="btn btn-red btnCancel" id="btnCancel">Cancelar Cita</button>
+                        <button class="btn btn-red btnCancel btnEstado" id="btnCancel">Cancelar Cita</button>
 
                     </div>
                 </div>
@@ -408,12 +408,11 @@
                                     <td>Dr. Carlos Pérez</td>
                                     <td><span class="badge">Medicina General</span></td>
                                     <td>Consulta de rutina y chequeo general</td>
-                                    <td><span class="status canceled">Completada</span></td>
+                                    <td class="newStated"><span class="status completado">Completada</span></td>
                                     <td class="actions">
-                                        <button class="action viewTableContainer open-modal">Ver</button>
-                                        <button class="action editTableContainer">Editar</button>
-                                        <button class="action completeTableContainer">Completar</button>
-                                        <button class="action cancelTableContainer btnCancel" id="btnCancelTable">Cancelar</button>
+                                        <button class="btnEstado action viewTableContainer open-modal">Ver</button>
+                                        <button class="btnEstado action completeTableContainer">Completar</button>
+                                        <button class="btnEstado action cancelTableContainer" id="btnCancelTable">Cancelar</button>
                                     </td>
                                 </tr>
                             </tbody>

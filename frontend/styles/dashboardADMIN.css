@@ -856,17 +856,6 @@ textarea {
     font-size: 12px;
 }
 
-.status.confirmed {
-    background-color: rgba(37, 211, 102, 0.35);
-    color: #25D366;
-}
-
-.status.canceled {
-    content: "Cancel";
-    background-color: rgba(255, 0, 0, 0.35);
-    color: red;
-}
-
 /* ACTIONS */
 .actions .action {
     margin-right: 10px;
@@ -909,6 +898,33 @@ textarea {
 .view.active {
     display: block;
     opacity: 1;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.completado {
+    background: rgba(37, 211, 102, 0.2);
+    color: #25D366;
+}
+
+.status.cancelado {
+    background: rgba(248, 67, 70, 0.2);
+    color: #F84346;
+}
+
+.status.encurso {
+    background: rgba(245, 158, 11, 0.2);
+    color: #F59E0B;
+}
+
+.status.pendiente {
+    background: rgba(200, 200, 200, 0.3);
+    color: #555;
 }
 
 /* 📱 RESPONSIVE */
