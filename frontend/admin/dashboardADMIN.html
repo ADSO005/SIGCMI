@@ -163,7 +163,7 @@
                     <!-- ========================ACTIONS======================== -->
                     <div class="actions">
                         <h3>Acciones Rápidas</h3>
-                        <button class="btnActions btnActionBlue" id="openModalSheduleA">+ Nueva Cita</button>
+                        <button class="btnActions btnActionBlue" id="openModalSheduleA" data-open-modal="modalSheduleA">+ Nueva Cita</button>
                         <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
                         <button class="btnActions btnActionPurple">Gestionar Citas</button>
                         <button class="btnActions btnActionDark">Ver Métricas</button>
@@ -284,7 +284,7 @@
 
                     <div class="modalSheduleA-header">
                         <h2>Nueva Cita</h2>
-                        <span id="closeModalSheduleA">X</span>
+                        <span data-close-modal="modalSheduleA">X</span>
                     </div>
                     <hr class="lineModalSheduleA">
                     <form id="formCita">
@@ -323,7 +323,7 @@
                             </div>
                             <div>
                                 <button type="button" class="cancelModalSheduleA"
-                                    id="cancelModalSheduleA">Cancelar</button>
+                                    id="cancelModalSheduleA" data-close-modal="modalSheduleA">Cancelar</button>
                             </div>
                         </div>
 
@@ -348,7 +348,7 @@
                 <div class="containerDos">
                     <div class="containerDosHeader">
                         <h2>Gestión de Citas</h2>
-                        <button class="btn-primary">+ Nueva cita</button>
+                        <button class="btn-primary" id="btnSectionApp" data-open-modal="modalSheduleA">+ Nueva cita</button>
                     </div>
 
                     <!-- FILTERS -->
@@ -368,8 +368,12 @@
 
                         <div class="filter">
                             <label>Estado</label>
-                            <select>
+                            <select >
                                 <option>Todos</option>
+                                <option>Cancelado</option>
+                                <option>Completado</option>
+                                <option>Pendiente</option>
+                                <option>En curso</option>
                             </select>
                         </div>
 
@@ -407,9 +411,9 @@
                                     <td><span class="status confirmed">Completada</span></td>
                                     <td class="actions">
                                         <button class="action viewTableContainer open-modal">Ver</button>
-                                        <span class="action editTableContainer">Editar</span>
-                                        <span class="action completeTableContainer">Completar</span>
-                                        <span class="action cancelTableContainer" id="btnCancelTable">Cancelar</span>
+                                        <button class="action editTableContainer">Editar</button>
+                                        <button class="action completeTableContainer">Completar</button>
+                                        <button class="action cancelTableContainer" id="btnCancelTable">Cancelar</button>
                                     </td>
                                 </tr>
                             </tbody>

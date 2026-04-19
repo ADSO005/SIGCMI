@@ -137,41 +137,42 @@ function saveChanges() {
 document.addEventListener("DOMContentLoaded", () => {
 
   // ==================== MODAL ====================
-  const modalSheduleA = document.getElementById("modalSheduleA");
-  const btnOpen = document.getElementById("openModalSheduleA");
-  const btnClose = document.getElementById("closeModalSheduleA");
-  const btnCancel = document.getElementById("cancelModalSheduleA");
+ // 🔹 ABRIR MODAL (para TODOS los botones)
+  document.querySelectorAll("[data-open-modal]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.dataset.openModal;
+      const modal = document.getElementById(modalId);
 
-  // Opne modal
-  if (btnOpen) {
-    btnOpen.addEventListener("click", () => {
-      modalSheduleA.style.display = "flex";
+      if (modal) {
+        modal.style.display = "flex";
+      }
     });
-  }
+  });
 
-  // Close con X
-  if (btnClose) {
-    btnClose.addEventListener("click", () => {
-      modalSheduleA.style.display = "none";
+  // 🔹 CERRAR MODAL (para TODOS los botones)
+  document.querySelectorAll("[data-close-modal]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.dataset.closeModal;
+      const modal = document.getElementById(modalId);
+
+      if (modal) {
+        modal.style.display = "none";
+      }
     });
-  }
+  });
 
-  // Close with cancelar
-  if (btnCancel) {
-    btnCancel.addEventListener("click", () => {
-      modalSheduleA.style.display = "none";
-    });
-  }
-
-  // Close by clicking outside
+  // 🔹 CERRAR AL HACER CLICK AFUERA (para TODOS los modales)
   window.addEventListener("click", (e) => {
-    if (e.target === modalSheduleA) {
-      modalSheduleA.style.display = "none";
-    }
+    document.querySelectorAll(".modal").forEach(modal => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
   });
 
 
-  // ==================== FORM ====================
+
+  // ==================== FORM NEW APPIOINMETS====================
   const form = document.getElementById("formCita");
   const message = document.getElementById("messageModalSheduleA");
 
@@ -189,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       mostrarMensaje("Cita agendada con éxito.", "successModalSheduleA");
 
-      modal.style.display = "none";
+      modalSheduleA .style.display = "none";
       form.reset();
     }
   });

@@ -751,11 +751,12 @@ textarea {
     background-color: white;
 }
 
-.sectionDos h1,.sectionDos span{
+.sectionDos h1,
+.sectionDos span {
     color: #000;
 }
 
-.sectionDos{
+.sectionDos {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -865,10 +866,20 @@ textarea {
     margin-right: 10px;
     cursor: pointer;
     font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.action {
+    border: none;
+    background: none;
 }
 
 .viewTableContainer {
     color: #2563eb;
+}
+
+.action:hover {
+    transform: scale(1.25);
 }
 
 .editTableContainer {
