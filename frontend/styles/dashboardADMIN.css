@@ -861,6 +861,12 @@ textarea {
     color: #25D366;
 }
 
+.status.canceled {
+    content: "Cancel";
+    background-color: rgba(255, 0, 0, 0.35);
+    color: red;
+}
+
 /* ACTIONS */
 .actions .action {
     margin-right: 10px;

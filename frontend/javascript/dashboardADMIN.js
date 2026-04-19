@@ -56,23 +56,23 @@ document.querySelectorAll(".open-modal").forEach(btn => {
   });
 });
 
-const btnCancel = document.getElementById("btnCancel");
+const botonesCancelar = document.querySelectorAll(".btnCancel");
 
-btnCancel.addEventListener("click", () => {
+botonesCancelar.forEach(btn => {
+  btn.addEventListener("click", () => {
 
-  const confirmacion = confirm("¿Seguro que deseas cancelar la cita?");
+    const confirmacion = confirm("¿Seguro que deseas cancelar la cita?");
 
-  if (confirmacion) {
-    alert("Cita cancelada correctamente");
+    if (confirmacion) {
+      alert("Cita cancelada correctamente");
 
-    // Aquí puedes hacer más cosas:
-    // 1. Cambiar estado en la tabla
-    // 2. Guardar en base de datos
-    // 3. Actualizar UI
+      // 🔹 aquí puedes usar lógica dinámica
+      // ejemplo: cambiar estado en la fila
 
-    modal.style.display = "none"; // cerrar modal
-  }
+      document.getElementById("modal").style.display = "none";
+    }
 
+  });
 });
 //====================MODAL CLICK REPRO====================
 
