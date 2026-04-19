@@ -425,7 +425,7 @@ nav a:hover {
 
 /*==========================MODAL=========================*/
 
-/* FONDO OSCURO (overlay) */
+/* DARK BACKGROUND (overlay) */
 .modal {
     display: none;
     /* oculto por defecto */
@@ -441,7 +441,7 @@ nav a:hover {
     z-index: 1000;
 }
 
-/* CONTENIDO DEL MODAL */
+/* MODAL CONTENT */
 .modal-content {
     width: 350px;
     background: white;
@@ -463,7 +463,7 @@ nav a:hover {
     align-items: center;
 }
 
-/* BOTÓN X */
+/* BUTTON X */
 .close {
     cursor: pointer;
     font-weight: bold;
@@ -697,7 +697,6 @@ textarea {
 .createModalSheduleA,
 .cancelModalSheduleA {
     flex: 1;
-    /* 🔥 ocupan mismo espacio */
     width: 250px;
     padding: 10px;
     border: none;
@@ -714,7 +713,7 @@ textarea {
     font-weight: bold;
 }
 
-/* 🔥 MESSAGE  MESSAGE OR WARNING*/
+/*  MESSAGE  MESSAGE OR WARNING*/
 .messageModalSheduleA {
     position: fixed;
     top: 30000px;
