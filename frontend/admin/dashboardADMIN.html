@@ -163,7 +163,8 @@
                     <!-- ========================ACTIONS======================== -->
                     <div class="actions">
                         <h3>Acciones Rápidas</h3>
-                        <button class="btnActions btnActionBlue" id="openModalSheduleA" data-open-modal="modalSheduleA">+ Nueva Cita</button>
+                        <button class="btnActions btnActionBlue" id="openModalSheduleA"
+                            data-open-modal="modalSheduleA">+ Nueva Cita</button>
                         <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
                         <button class="btnActions btnActionPurple">Gestionar Citas</button>
                         <button class="btnActions btnActionDark">Ver Métricas</button>
@@ -322,8 +323,8 @@
                                     Cita</button>
                             </div>
                             <div>
-                                <button type="button" class="cancelModalSheduleA"
-                                    id="cancelModalSheduleA" data-close-modal="modalSheduleA" >Cancelar</button>
+                                <button type="button" class="cancelModalSheduleA" id="cancelModalSheduleA"
+                                    data-close-modal="modalSheduleA">Cancelar</button>
                             </div>
                         </div>
 
@@ -348,7 +349,8 @@
                 <div class="containerDos">
                     <div class="containerDosHeader">
                         <h2>Gestión de Citas</h2>
-                        <button class="btn-primary" id="btnSectionApp" data-open-modal="modalSheduleA">+ Nueva cita</button>
+                        <button class="btn-primary" id="btnSectionApp" data-open-modal="modalSheduleA">+ Nueva
+                            cita</button>
                     </div>
 
                     <!-- FILTERS -->
@@ -368,7 +370,7 @@
 
                         <div class="filter">
                             <label>Estado</label>
-                            <select >
+                            <select>
                                 <option>Todos</option>
                                 <option>Cancelado</option>
                                 <option>Completado</option>
@@ -412,7 +414,8 @@
                                     <td class="actions">
                                         <button class="btnEstado action viewTableContainer open-modal">Ver</button>
                                         <button class="btnEstado action completeTableContainer">Completar</button>
-                                        <button class="btnEstado action cancelTableContainer" id="btnCancelTable">Cancelar</button>
+                                        <button class="btnEstado action cancelTableContainer"
+                                            id="btnCancelTable">Cancelar</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -423,6 +426,134 @@
                 </div>
             </section>
 
+            <!--DASHBOARD ADMIN PACIENTS SECTION -->
+            <section id="pacientsADMIN" class="view">
+
+                <div class="patients">
+
+                    <!-- HEADER -->
+                    <div class="patients__header">
+                        <h1>Gestión de Pacientes</h1>
+                        <p>Administra el registro de pacientes del centro</p>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="patients__card">
+
+                        <h2>Registrar Personal</h2>
+
+                        <form class="patients__form">
+
+                            <!-- GRID FORM -->
+                            <div class="form-grid">
+
+                                
+                                <div class="form-group">
+                                    <label>Nombres*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Apellidos*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Correo*</label>
+                                    <input type="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Teléfono*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Fecha de nacimiento*</label>
+                                    <input type="date">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tipo Documento*</label>
+                                    <select></select>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label>Número Documento*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tipo de Sangre*</label>
+                                    <select></select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Alergias</label>
+                                    <input type="text">
+                                </div>
+
+                                
+                                <div class="form-group">
+                                    <label>Condición Médica</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Departamento*</label>
+                                    <select></select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Direccion de Residencia</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Ciudad*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nombres*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Apellidos*</label>
+                                    <input type="text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Telefono*</label>
+                                    <input type="tel">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Correo Electronico*</label>
+                                    <input type="email">
+                                </div>
+
+                                <div class="form-group full">
+                                    <label>Contraseña*</label>
+                                    <input type="password">
+                                </div>
+
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="form-actions">
+                                <button class="btn-primary">Guardar Cambios</button>
+                                <button class="btn-secondary">Cancelar</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
         </main>
 
     </div>
