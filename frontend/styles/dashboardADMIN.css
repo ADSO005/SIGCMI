@@ -927,6 +927,131 @@ textarea {
     color: #555;
 }
 
+.patients p,
+.patients h1,
+.patients h2,
+.patients label {
+    color: #000;
+}
+
+.patients__card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.patients__card h2 {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+/* ===================== CARDS ===================== */
+.cardsFrom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+/* ===================== CONTENT ===================== */
+.contentForm {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+/* GRID FORM */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.inputPassword {
+    width: 300px;
+}
+
+.pPassword {
+    margin-top: 20px;
+}
+
+
+.lineFormGrid {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+}
+
+.patients__form h3 {
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-family: sans-serif;
+    font-weight: normal;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+.patients__form input,
+.patients__form select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* BOTONES FORM */
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #22c55e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    width: 250px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+.btn-secondary {
+    background: #ddd;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    width: 200px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: scale(1.025);
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
 
@@ -1038,5 +1163,16 @@ textarea {
 
     .btnManageAppointment {
         font-size: 10px;
+    }
+
+
+    .inputPassword {
+        width: 200px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
     }
 }
