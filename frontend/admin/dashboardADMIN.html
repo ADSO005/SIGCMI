@@ -216,7 +216,7 @@
 
 
                         <!-- BUTTONS -->
-                        <button class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
+                        <button type="button" class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
                         <button class="btn btn-red btnCancel btnEstado" id="btnCancel">Cancelar Cita</button>
 
                     </div>
@@ -291,13 +291,13 @@
                     <form id="formCita">
 
                         <label class="data">Paciente:</label>
-                        <select id="pacienteModalSheduleA">
+                        <select id="pacienteModalSheduleA" required>
                             <option value="">Seleccionar</option>
                             <option>Juan</option>
                             <option>Maria</option>
                         </select>
 
-                        <label class="data">Médico:</label>
+                        <label class="data">Médico:</label required>
                         <select id="medicoModalSheduleA">
                             <option value="">Seleccionar</option>
                             <option>Dr. Perez</option>
@@ -308,7 +308,7 @@
                         <input type="date" id="dateModalSheduleA">
 
                         <label class="data">Hora:</label>
-                        <select id="timeModalSheduleA">
+                        <select id="timeModalSheduleA" required>
                             <option value="">Seleccionar</option>
                             <option>08:00</option>
                             <option>09:00</option>
@@ -431,13 +431,11 @@
 
                 <div class="patients">
 
-                    <!-- HEADER -->
                     <div class="patients__header">
                         <h1>Gestión de Pacientes</h1>
                         <p>Administra el registro de pacientes del centro</p>
                     </div>
 
-                    <!-- CARD -->
                     <div class="patients__card">
 
                         <h2>Registrar Personal</h2>
@@ -574,8 +572,9 @@
                             <div class="form-grid">
                                 <div class="form-group full">
                                     <label>Contraseña*</label>
-                                    <input  class="inputPassword" type="password" required>
-                                    <p class="pPassword">*Minimo 6 caracteres combinacion de letras, numeros y caracteres especiales.</p>
+                                    <input class="inputPassword" type="password" required>
+                                    <p class="pPassword">*Minimo 6 caracteres combinacion de letras, numeros y
+                                        caracteres especiales.</p>
                                 </div>
 
                             </div>
@@ -590,8 +589,289 @@
                         </form>
                     </div>
 
-                </div>
 
+                    <div class="patients-module">
+
+                        <!-- 🔍 BUSCADOR -->
+                        <div class="search-container">
+                            <label for="search" class="sr-only">Buscar pacientes</label>
+                            <input type="text" id="search"
+                                placeholder="Buscar por nombre, documento, teléfono, email, ciudad"
+                                aria-label="Buscar pacientes por nombre, documento, teléfono, correo o ciudad">
+                        </div>
+
+                        <!-- 🧾 TARJETAS -->
+                        <div class="cards-container" aria-label="Lista de pacientes">
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary"
+                                        aria-label="Ver historial del paciente">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary"
+                                        aria-label="Ver historial del paciente">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary"
+                                        aria-label="Ver historial del paciente">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary"
+                                        aria-label="Ver historial del paciente">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary"
+                                        aria-label="Ver historial del paciente">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary"
+                                        aria-label="Ver historial del paciente">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+                </div>
             </section>
         </main>
 

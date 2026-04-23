@@ -5,21 +5,26 @@
     font-family: Arial, sans-serif;
 }
 
+html,
+body {
+    min-height: 100vh;
+}
+
 body {
     background: #0f172a;
     color: #fff;
 }
 
 .container {
-    position: relative;
     width: 100%;
+    min-height: 100vh;
 }
 
 /* ====================== SIDEBAR ======================*/
 .sidebar {
     width: 352px;
     background: #465DE5;
-    height: 100vh;
+    min-height: 100vh;
     transition: 0.3s;
     padding: 20px;
     display: flex;
@@ -30,6 +35,7 @@ body {
 
 .sidebar.collapsed {
     width: 80px;
+    min-height: 100vh;
 }
 
 .logo {
@@ -198,12 +204,13 @@ nav a:hover {
     width: calc(100% - 352px);
     float: right;
     transition: 0.3s;
-
+    overflow-y: auto;
 }
 
 .main.collapsed {
     width: calc(100% - 80px);
     transition: 0.3s;
+    min-height: 100vh;
 }
 
 /* HEADER */
@@ -1022,7 +1029,7 @@ textarea {
 }
 
 .btn-primary {
-    background: #22c55e;
+    background: #465DE5;
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
@@ -1052,6 +1059,171 @@ textarea {
     transform: scale(1.025);
 }
 
+/* CONTENEDOR GENERAL */
+.patients-module {
+    padding: 10px;
+}
+
+/* ACCESIBILIDAD */
+.patients-module .sr-only {
+    color: #000;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+/* BUSCADOR */
+#search {
+    margin-top: 15px;
+}
+
+.patients-module .search-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.patients-module .search-container input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #eaeaea;
+    outline: none;
+}
+
+/* GRID */
+.patients-module .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    height: 480px;
+    gap: 20px;
+}
+
+/* CARD */
+
+.cardPacients li {
+    font-size: 14px;
+    color: black;
+
+}
+
+.iconEmail {
+    width: 10px;
+    height: 10px;
+}
+
+.patients-module .cardPacients {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 400px;
+    height: auto;
+}
+
+/* HEADER */
+.patients-module .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patients-module .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.patients-module .card-header h2 {
+    font-size: 16px;
+}
+
+.patients-module .code {
+    font-size: 12px;
+    color: gray;
+}
+
+/* AVATAR */
+.patients-module .avatar {
+    background: #465DE5;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* BADGE */
+.patients-module .badge {
+    background: #465DE5;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* INFO */
+.patients-module .info-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+/* STATUS */
+.patients-module .status {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.patients-module .status p {
+    color: black;
+}
+
+.patients-module .green,
+.patients-module .blue {
+    background: rgba(70, 93, 229, 0.5);
+    border: 1px solid #465DE5;
+}
+
+/* BOTONES */
+.patients-module .actionsModulePacients {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.patients-module .btnModulPacients {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.btnModulPacients:hover {
+    transform: scale(1.025);
+}
+
+.patients-module .primary {
+    background: #465DE5;
+    color: white;
+}
+
+.patients-module .outline {
+    border: 2px solid #465DE5;
+    background: transparent;
+    color: #465DE5;
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
 
@@ -1067,6 +1239,7 @@ textarea {
         width: calc(100% -80px);
         float: right;
         transition: 0.3s;
+        min-height: 100vh;
     }
 
     .cards {
@@ -1081,6 +1254,7 @@ textarea {
         width: 100%;
         float: none;
         padding: 15px;
+        min-height: 100vh;
     }
 
     .actions h3 {
@@ -1101,6 +1275,13 @@ textarea {
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    .patients-module .cards-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        height: 480px;
+        gap: 20px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1116,8 +1297,8 @@ textarea {
         width: calc(100% -80px);
         float: right;
         transition: 0.3s;
+        min-height: 100vh;
     }
-
 
     .card h2 {
         font-size: 20px;
@@ -1141,6 +1322,12 @@ textarea {
 
     .appointments h3 {
         font-size: 20px;
+    }
+
+    .filters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .appointment span {
@@ -1174,5 +1361,15 @@ textarea {
         display: grid;
         grid-template-columns: 1fr;
         gap: 35px;
+    }
+
+    .patients-module .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .patients-module .actions {
+        flex-direction: column;
     }
 }
