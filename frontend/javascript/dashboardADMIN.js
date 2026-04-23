@@ -309,3 +309,55 @@ btnNewPatient.addEventListener("click", () => {
   }
 
 });
+
+const colombia = {
+  "Amazonas": ["Leticia", "Puerto Nariño"],
+  "Antioquia": ["Medellín", "Bello", "Itagüí", "Envigado", "Rionegro"],
+  "Arauca": ["Arauca", "Saravena"],
+  "Atlántico": ["Barranquilla", "Soledad", "Malambo"],
+  "Bolívar": ["Cartagena", "Magangué", "Turbaco"],
+  "Boyacá": ["Tunja", "Duitama", "Sogamoso"],
+  "Caldas": ["Manizales", "Villamaría"],
+  "Caquetá": ["Florencia"],
+  "Casanare": ["Yopal"],
+  "Cauca": ["Popayán", "Santander de Quilichao"],
+  "Cesar": ["Valledupar", "Aguachica"],
+  "Chocó": ["Quibdó"],
+  "Córdoba": ["Montería", "Lorica"],
+  "Cundinamarca": ["Bogotá", "Soacha", "Chía", "Zipaquirá", "Facatativá"],
+  "Guainía": ["Inírida"],
+  "Guaviare": ["San José del Guaviare"],
+  "Huila": ["Neiva", "Pitalito"],
+  "La Guajira": ["Riohacha", "Maicao"],
+  "Magdalena": ["Santa Marta", "Ciénaga"],
+  "Meta": ["Villavicencio", "Acacías"],
+  "Nariño": ["Pasto", "Tumaco", "Ipiales"],
+  "Norte de Santander": ["Cúcuta", "Ocaña"],
+  "Putumayo": ["Mocoa", "Puerto Asís"],
+  "Quindío": ["Armenia", "Calarcá"],
+  "Risaralda": ["Pereira", "Dosquebradas"],
+  "San Andrés y Providencia": ["San Andrés"],
+  "Santander": ["Bucaramanga", "Floridablanca", "Girón"],
+  "Sucre": ["Sincelejo"],
+  "Tolima": ["Ibagué", "Espinal"],
+  "Valle del Cauca": ["Cali", "Palmira", "Buenaventura", "Tuluá"],
+  "Vaupés": ["Mitú"],
+  "Vichada": ["Puerto Carreño"]
+};
+
+const depto = document.getElementById("departamento");
+const ciudad = document.getElementById("ciudad");
+
+// cargar departamentos
+Object.keys(colombia).forEach(d => {
+  depto.innerHTML += `<option value="${d}">${d}</option>`;
+});
+
+// cambiar ciudades
+depto.addEventListener("change", () => {
+  ciudad.innerHTML = `<option>Seleccionar</option>`;
+
+  colombia[depto.value].forEach(c => {
+    ciudad.innerHTML += `<option value="${c}">${c}</option>`;
+  });
+});

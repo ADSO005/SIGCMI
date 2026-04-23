@@ -436,14 +436,15 @@
                         <p>Administra el registro de pacientes del centro</p>
                     </div>
 
-                    <div class="patients__card">
-                        <div class="patientCardHeader">
+                    <div class="patientCardHeader">
 
-                            <h2>Registrar Personal</h2>
-                            <button id="btnNewPatient">+ Nuevo Médico</button>
-                        </div>
+                        <h2>Registrar Personal</h2>
+                        <button id="btnNewPatient">+ Nuevo Médico</button>
+                    </div>
+                    <div class="patients__card" id="patientCard">
 
-                        <form class="patients__form" id="patientCard">
+
+                        <form class="patients__form">
 
                             <!-- GRID FORM -->
 
@@ -468,7 +469,10 @@
 
                                 <div class="form-group">
                                     <label>Genéro*</label>
-                                    <select></select required>
+                                    <select>
+                                        <option value="">Masculino</option>
+                                        <option value="">Femenino</option>
+                                    </select required>
                                 </div>
                             </div>
 
@@ -480,12 +484,18 @@
 
                                 <div class="form-group">
                                     <label>Tipo de Documento*</label>
-                                    <select></select required>
+                                    <select>
+                                        <option>Registro Civil de Nacimiento (RC)</option>
+                                        <option>Tarjeta de Identidad (TI)</option>
+                                        <option>Cédula de Ciudadanía (CC)</option>
+                                        <option>Cédula de Extranjería (CE)</option>
+                                        <option>Pasaporte (PP)</option>
+                                    </select required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Numero de Docuento*</label>
-                                    <input type="number" required>
+                                    <input type="text" required>
                                 </div>
                             </div>
 
@@ -505,13 +515,17 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Departamento*</label>
-                                    <select></select required>
+                                    <label for="departamento">Departamento*</label>
+                                    <select id="departamento" required>
+                                        <option value="">Seleccionar departamento</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Ciudad/Municipio*</label>
-                                    <select></select required>
+                                    <label for="ciudad">Ciudad/Municipio*</label>
+                                    <select id="ciudad" required>
+                                        <option value="">Seleccionar ciudad</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
@@ -527,7 +541,17 @@
 
                                 <div class="form-group">
                                     <label>Tipo de Sangre*</label>
-                                    <select></select required>
+                                    <select>
+                                        <option value="">Seleccionar tipo de sangre</option>
+                                        <option value="">O+</option>
+                                        <option value="">O-</option>
+                                        <option value="">A+</option>
+                                        <option value="">A-</option>
+                                        <option value="">B+</option>
+                                        <option value="">B-</option>
+                                        <option value="">AB+</option>
+                                        <option value="">AB-</option>
+                                    </select required>
                                 </div>
 
                                 <div class="form-group">
