@@ -1372,4 +1372,11 @@ textarea {
     .patients-module .actions {
         flex-direction: column;
     }
+
+    .patients-module .cards-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        height: 480px;
+        gap: 20px;
+    }
 }
