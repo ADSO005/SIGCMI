@@ -1225,6 +1225,209 @@ textarea {
     color: #465DE5;
 }
 
+/* ==================== MODAL ==================== */
+.modalHistory {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    color: #000;
+}
+
+.modalHistory-content {
+    width: 800px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* HEADER */
+.modalHistory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalHistory-header span {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* PATIENT INFO */
+.patient-info {
+    background: rgba(60, 248, 198, 0.08);
+    box-shadow: 1px 1px 3px black;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-header  h3{
+    font-size: 16px;
+}
+/* GRID */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-box {
+    background: white;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.info-box p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.info-box span{
+    font-weight: lighter;
+}
+
+.alert-box {
+    margin-top: 10px;
+    background: rgba(255, 0, 4, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.alert-box strong,.alert-box p{
+    color: #621A1B;
+    font-weight: 600;
+}
+
+/* HISTORY */
+.medical-history {
+    margin-top: 20px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-header span{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    color: #00000050;
+}
+
+.badgeHistoryModal {
+    background: rgba(164, 248, 96,0.37);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.history-item {
+    box-shadow: 1px 2px 3px black;
+    margin-top: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.history-date{
+    display: flex;
+    gap: 5px;
+}
+
+.history-date p{
+    font-weight: 600;
+}
+
+.history-date small{
+    background-color: rgba(218, 218, 218, 0.37);
+    font-size: 10px;
+    padding: 3px 5px 3px 5px;
+    border-radius: 10px;
+}
+/* BOXES */
+.history-box div div strong{
+    margin-left: 10px;
+}
+
+.history-box div div p{
+    margin-left: 10px;
+    color: black;
+}
+
+.history-box {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 65px;
+}
+
+.history-box div{
+    background-color: rgb(255, 255, 255);
+    margin-top: -10px;
+    padding: 0;
+    border-radius: 10px;
+    height: 65px;
+    width: 103%;
+}
+
+
+.line-4{
+    width: 100%;
+    margin-left: 0;
+}
+
+.history-box .diagnosisTransparent{
+    background-color: rgba(70, 94, 229, 0.15);
+    width: 98.5%;
+}
+
+.diagnosis {
+    background: #465DE5;
+}
+
+
+.treatment {
+    background: #25D366;
+}
+
+.history-box .treatmentTransparent{
+    background-color: rgba(37, 211, 102, 0.15);
+    width: 98.5%;
+}
+
+.prescription {
+    background: #8800FF;
+}
+
+.history-box .prescriptionTransparent{
+    background-color: rgba(136, 0, 255,0.15);
+    width: 98.5%;
+}
+
+.notes {
+    background: #FFA600;
+}
+
+.history-box .notesTransparent{
+    background-color: rgba(255, 166, 0, 0.15);
+    width: 98.5%;
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
 
