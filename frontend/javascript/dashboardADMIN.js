@@ -131,7 +131,7 @@ const cancelRepro = document.getElementById("cancelRepro");
 // Open modal repro
 function openRepro() {
   modal.style.display = "none";
-  modalRepro.style.display = "flex"; 
+  modalRepro.style.display = "flex";
 }
 
 // Close modal repro
@@ -295,4 +295,17 @@ window.addEventListener("click", (e) => {
   if (e.target === historyModal) {
     historyModal.style.display = "none";
   }
+});
+
+const btnNewPatient = document.getElementById("btnNewPatient");
+const patientCard = document.getElementById("patientCard");
+
+btnNewPatient.addEventListener("click", () => {
+
+  if (patientCard.style.display === "block") {
+    patientCard.style.display = "none";
+  } else {
+    patientCard.style.display = "block";
+  }
+
 });

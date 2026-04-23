@@ -946,10 +946,38 @@ textarea {
     padding: 20px;
     border-radius: 15px;
     margin-top: 20px;
+
 }
 
 .patients__card h2 {
     margin-bottom: 18px;
+}
+
+
+.patientCardHeader{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.patientCardHeader button{
+    float: inline-end;
+    border-radius: 10px;
+    background-color: #465DE5;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    transition: .3s ease;
+}
+
+.patientCardHeader button:hover{
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.patients__form{
+    display: none;
 }
 
 .form-group label {

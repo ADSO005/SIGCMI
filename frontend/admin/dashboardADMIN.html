@@ -437,10 +437,13 @@
                     </div>
 
                     <div class="patients__card">
+                        <div class="patientCardHeader">
 
-                        <h2>Registrar Personal</h2>
+                            <h2>Registrar Personal</h2>
+                            <button id="btnNewPatient">+ Nuevo Médico</button>
+                        </div>
 
-                        <form class="patients__form">
+                        <form class="patients__form" id="patientCard">
 
                             <!-- GRID FORM -->
 
@@ -683,8 +686,8 @@
                                 </div>
 
                                 <div class="actionsModulePacients">
-                                    <button class="btnModulPacients primary"
-                                        aria-label="Ver historial del paciente" onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
                                     <button class="btnModulPacients outline"
                                         aria-label="Editar paciente">Editar</button>
                                 </div>
@@ -727,8 +730,8 @@
                                 </div>
 
                                 <div class="actionsModulePacients">
-                                    <button class="btnModulPacients primary"
-                                        aria-label="Ver historial del paciente" onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
                                     <button class="btnModulPacients outline"
                                         aria-label="Editar paciente">Editar</button>
                                 </div>
@@ -771,8 +774,8 @@
                                 </div>
 
                                 <div class="actionsModulePacients">
-                                    <button class="btnModulPacients primary"
-                                        aria-label="Ver historial del paciente" onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
                                     <button class="btnModulPacients outline"
                                         aria-label="Editar paciente">Editar</button>
                                 </div>
@@ -815,8 +818,8 @@
                                 </div>
 
                                 <div class="actionsModulePacients">
-                                    <button class="btnModulPacients primary"
-                                        aria-label="Ver historial del paciente" onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
                                     <button class="btnModulPacients outline"
                                         aria-label="Editar paciente">Editar</button>
                                 </div>
@@ -859,8 +862,8 @@
                                 </div>
 
                                 <div class="actionsModulePacients">
-                                    <button class="btnModulPacients primary"
-                                        aria-label="Ver historial del paciente" onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
                                     <button class="btnModulPacients outline"
                                         aria-label="Editar paciente">Editar</button>
                                 </div>
@@ -954,12 +957,12 @@
                                 </div>
                             </div>
                             <div class="lineModalMD">
-                            <hr class="line-4">
+                                <hr class="line-4">
 
                             </div>
                             <!-- DIAGNOSIS -->
                             <div class="history-box diagnosis">
-                                
+
                                 <div>
                                     <div class="diagnosisTransparent">
                                         <strong>DIAGNOSTICO</strong>
