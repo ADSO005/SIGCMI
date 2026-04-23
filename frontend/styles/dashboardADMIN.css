@@ -1159,10 +1159,11 @@ textarea {
 
 /* BADGE */
 .patients-module .badge {
-    background: #465DE5;
+    background: rgba(70, 94, 229, 0.5);
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 12px;
+    color: black;
 }
 
 /* INFO */
