@@ -271,3 +271,28 @@ links.forEach(link => {
     document.getElementById(viewId).classList.add("active");
   });
 });
+
+
+// ==================== ELEMENTS ====================
+const historyModal = document.getElementById("patientHistoryModal");
+const closeHistoryModal = document.getElementById("closePatientHistoryModal");
+
+
+// ==================== OPEN MODAL FUNCTION ====================
+function openPatientHistory() {
+  historyModal.style.display = "flex";
+}
+
+
+// ==================== CLOSE MODAL ====================
+closeHistoryModal.addEventListener("click", () => {
+  historyModal.style.display = "none";
+});
+
+
+// ==================== CLOSE WHEN CLICK OUTSIDE ====================
+window.addEventListener("click", (e) => {
+  if (e.target === historyModal) {
+    historyModal.style.display = "none";
+  }
+});
