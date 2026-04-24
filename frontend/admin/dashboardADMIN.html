@@ -441,176 +441,168 @@
                         <h2>Registrar Personal</h2>
                         <button id="btnNewPatient">+ Nuevo Médico</button>
                     </div>
+
+                    <div id="mensajeGlobal" class="mensajeGlobal"></div>
+
                     <div class="patients__card" id="patientCard">
 
+                        <form class="patients__form" id="formPaciente">
 
-                        <form class="patients__form">
-
-                            <!-- GRID FORM -->
-
-                            <h3>Informacion Personal</h3>
+                            <!-- INFORMACIÓN PERSONAL -->
+                            <h3>Información Personal</h3>
                             <hr class="lineFormGrid">
-                            <div class="form-grid">
 
+                            <div class="form-grid">
                                 <div class="form-group">
                                     <label>Nombres*</label>
-                                    <input type="text" required>
+                                    <input type="text" name="nombres" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Apellidos*</label>
-                                    <input type="text" required>
+                                    <input type="text" name="apellidos" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Fecha de nacimiento*</label>
-                                    <input type="date" required>
+                                    <input type="date" name="fecha" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Genéro*</label>
-                                    <select>
-                                        <option value="">Masculino</option>
-                                        <option value="">Femenino</option>
-                                    </select required>
+                                    <label>Género*</label>
+                                    <select name="genero" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="femenino">Femenino</option>
+                                    </select>
                                 </div>
                             </div>
 
-
+                            <!-- DOCUMENTO -->
                             <h3>Documento de Identidad</h3>
                             <hr class="lineFormGrid">
+
                             <div class="form-grid">
-
-
                                 <div class="form-group">
                                     <label>Tipo de Documento*</label>
-                                    <select>
-                                        <option>Registro Civil de Nacimiento (RC)</option>
-                                        <option>Tarjeta de Identidad (TI)</option>
-                                        <option>Cédula de Ciudadanía (CC)</option>
-                                        <option>Cédula de Extranjería (CE)</option>
-                                        <option>Pasaporte (PP)</option>
-                                    </select required>
+                                    <select name="tipoDocumento" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="RC">Registro Civil</option>
+                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="CC">Cédula</option>
+                                        <option value="CE">Cédula Extranjería</option>
+                                        <option value="PP">Pasaporte</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Numero de Docuento*</label>
-                                    <input type="text" required>
+                                    <label>Número de Documento*</label>
+                                    <input type="text" name="documento" required>
                                 </div>
                             </div>
 
-                            <h3>Informacion Personal</h3>
+                            <!-- CONTACTO -->
+                            <h3>Información de Contacto</h3>
                             <hr class="lineFormGrid">
 
                             <div class="form-grid">
-
                                 <div class="form-group">
-                                    <label>Correo Electronico*</label>
-                                    <input type="email" required>
+                                    <label>Correo*</label>
+                                    <input type="email" name="correo" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Teléfono*</label>
-                                    <input type="text" required>
+                                    <input type="text" name="telefono" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="departamento">Departamento*</label>
-                                    <select id="departamento" required>
-                                        <option value="">Seleccionar departamento</option>
+                                    <label>Departamento*</label>
+                                    <select id="departamento" name="departamento" required>
+                                        <option value="">Seleccionar</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="ciudad">Ciudad/Municipio*</label>
-                                    <select id="ciudad" required>
-                                        <option value="">Seleccionar ciudad</option>
+                                    <label>Ciudad*</label>
+                                    <select id="ciudad" name="ciudad" required>
+                                        <option value="">Seleccionar</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Direccion de Residencia*</label>
-                                    <input type="text" required>
+                                    <label>Dirección*</label>
+                                    <input type="text" name="direccion" required>
                                 </div>
                             </div>
 
-                            <h3>Informacion Medica</h3>
+                            <!-- MÉDICA -->
+                            <h3>Información Médica</h3>
                             <hr class="lineFormGrid">
 
                             <div class="form-grid">
-
                                 <div class="form-group">
-                                    <label>Tipo de Sangre*</label>
-                                    <select>
-                                        <option value="">Seleccionar tipo de sangre</option>
-                                        <option value="">O+</option>
-                                        <option value="">O-</option>
-                                        <option value="">A+</option>
-                                        <option value="">A-</option>
-                                        <option value="">B+</option>
-                                        <option value="">B-</option>
-                                        <option value="">AB+</option>
-                                        <option value="">AB-</option>
-                                    </select required>
+                                    <label>Tipo de sangre*</label>
+                                    <select name="sangre" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Alergias</label>
-                                    <input type="text" required>
+                                    <input type="text" name="alergias">
                                 </div>
-
 
                                 <div class="form-group">
-                                    <label>Condición Médica</label>
-                                    <input type="text" required>
+                                    <label>Condición médica</label>
+                                    <input type="text" name="condicion">
                                 </div>
-
-
                             </div>
 
-
+                            <!-- EMERGENCIA -->
                             <h3>Contacto de Emergencia</h3>
                             <hr class="lineFormGrid">
-                            <div class="form-grid">
 
+                            <div class="form-grid">
                                 <div class="form-group">
                                     <label>Nombres</label>
-                                    <input type="text" required>
+                                    <input type="text" name="emergenciaNombre">
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Apellidos</label>
-                                    <input type="text" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Telefono</label>
-                                    <input type="tel" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Correo Electronico</label>
-                                    <input type="email" required>
+                                    <label>Teléfono</label>
+                                    <input type="tel" name="emergenciaTelefono">
                                 </div>
                             </div>
 
-                            <h3>Seguridad de la Cuenta</h3>
+                            <!-- SEGURIDAD -->
+                            <h3>Seguridad</h3>
                             <hr class="lineFormGrid">
+
                             <div class="form-grid">
                                 <div class="form-group full">
                                     <label>Contraseña*</label>
-                                    <input class="inputPassword" type="password" required>
-                                    <p class="pPassword">*Minimo 6 caracteres combinacion de letras, numeros y
-                                        caracteres especiales.</p>
+                                    <input type="password" name="password" required minlength="6">
                                 </div>
-
                             </div>
 
-                            <hr class="lineFormGrid">
                             <!-- BOTONES -->
                             <div class="form-actions">
-                                <button class="btn-primary">Guardar Cambios</button>
-                                <button class="btn-secondary">Cancelar</button>
+                                <button type="submit" id="btnGuardar" class="btn-primary" disabled>
+                                    Guardar Cambios
+                                </button>
+
+                                <button type="button" class="btn-secondary">
+                                    Cancelar
+                                </button>
                             </div>
 
                         </form>
@@ -619,7 +611,7 @@
 
                     <div class="patients-module">
 
-                        <!-- 🔍 BUSCADOR -->
+                        <!--  SHEARCH -->
                         <div class="search-container">
                             <label for="search" class="sr-only">Buscar pacientes</label>
                             <input type="text" id="search"
@@ -627,7 +619,7 @@
                                 aria-label="Buscar pacientes por nombre, documento, teléfono, correo o ciudad">
                         </div>
 
-                        <!-- 🧾 TARJETAS -->
+                        <!--  CARS-->
                         <div class="cards-container" aria-label="Lista de pacientes">
 
                             <!-- CARD -->

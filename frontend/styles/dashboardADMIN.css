@@ -954,13 +954,13 @@ textarea {
 }
 
 
-.patientCardHeader{
+.patientCardHeader {
     display: flex;
     justify-content: space-between;
 
 }
 
-.patientCardHeader button{
+.patientCardHeader button {
     float: inline-end;
     border-radius: 10px;
     background-color: #465DE5;
@@ -971,12 +971,12 @@ textarea {
     transition: .3s ease;
 }
 
-.patientCardHeader button:hover{
+.patientCardHeader button:hover {
     transform: scale(1.025);
     cursor: pointer;
 }
 
-.patients__card{
+.patients__card {
     display: none;
 }
 
@@ -1302,9 +1302,10 @@ textarea {
     gap: 10px;
 }
 
-.info-header  h3{
+.info-header h3 {
     font-size: 16px;
 }
+
 /* GRID */
 .info-grid {
     display: grid;
@@ -1320,12 +1321,12 @@ textarea {
     border-radius: 10px;
 }
 
-.info-box p{
+.info-box p {
     font-size: 14px;
     font-weight: 600;
 }
 
-.info-box span{
+.info-box span {
     font-weight: lighter;
 }
 
@@ -1337,7 +1338,8 @@ textarea {
     border: 1px solid rgba(255, 0, 0, 0.3);
 }
 
-.alert-box strong,.alert-box p{
+.alert-box strong,
+.alert-box p {
     color: #621A1B;
     font-weight: 600;
 }
@@ -1352,14 +1354,14 @@ textarea {
     justify-content: space-between;
 }
 
-.history-header span{
+.history-header span {
     color: rgba(0, 0, 0, 0.5);
     font-weight: 600;
     color: #00000050;
 }
 
 .badgeHistoryModal {
-    background: rgba(164, 248, 96,0.37);
+    background: rgba(164, 248, 96, 0.37);
     padding: 5px 10px;
     border-radius: 10px;
 }
@@ -1372,27 +1374,28 @@ textarea {
     border-radius: 15px;
 }
 
-.history-date{
+.history-date {
     display: flex;
     gap: 5px;
 }
 
-.history-date p{
+.history-date p {
     font-weight: 600;
 }
 
-.history-date small{
+.history-date small {
     background-color: rgba(218, 218, 218, 0.37);
     font-size: 10px;
     padding: 3px 5px 3px 5px;
     border-radius: 10px;
 }
+
 /* BOXES */
-.history-box div div strong{
+.history-box div div strong {
     margin-left: 10px;
 }
 
-.history-box div div p{
+.history-box div div p {
     margin-left: 10px;
     color: black;
 }
@@ -1404,7 +1407,7 @@ textarea {
     height: 65px;
 }
 
-.history-box div{
+.history-box div {
     background-color: rgb(255, 255, 255);
     margin-top: -10px;
     padding: 0;
@@ -1414,12 +1417,12 @@ textarea {
 }
 
 
-.line-4{
+.line-4 {
     width: 100%;
     margin-left: 0;
 }
 
-.history-box .diagnosisTransparent{
+.history-box .diagnosisTransparent {
     background-color: rgba(70, 94, 229, 0.15);
     width: 98.5%;
 }
@@ -1433,7 +1436,7 @@ textarea {
     background: #25D366;
 }
 
-.history-box .treatmentTransparent{
+.history-box .treatmentTransparent {
     background-color: rgba(37, 211, 102, 0.15);
     width: 98.5%;
 }
@@ -1442,8 +1445,8 @@ textarea {
     background: #8800FF;
 }
 
-.history-box .prescriptionTransparent{
-    background-color: rgba(136, 0, 255,0.15);
+.history-box .prescriptionTransparent {
+    background-color: rgba(136, 0, 255, 0.15);
     width: 98.5%;
 }
 
@@ -1451,7 +1454,7 @@ textarea {
     background: #FFA600;
 }
 
-.history-box .notesTransparent{
+.history-box .notesTransparent {
     background-color: rgba(255, 166, 0, 0.15);
     width: 98.5%;
 }
