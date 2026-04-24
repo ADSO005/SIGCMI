@@ -361,3 +361,65 @@ depto.addEventListener("change", () => {
     ciudad.innerHTML += `<option value="${c}">${c}</option>`;
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const formulary = document.getElementById("formPaciente");
+  const btnGuardar = document.getElementById("btnGuardar");
+  const mensaje = document.getElementById("mensajeGlobal");
+  const card = document.getElementById("patientCard");
+  const btnCancelar = document.getElementById("btnCancelar");
+
+  const campos = formulary.querySelectorAll("input[required], select[required]");
+
+  // ACTIVAR BOTÓN
+  function validar() {
+    let lleno = true;
+
+    campos.forEach(campo => {
+      if (campo.value.trim() === "") {
+        lleno = false;
+      }
+    });
+
+    btnGuardar.disabled = !lleno;
+  }
+
+  campos.forEach(campo => {
+    campo.addEventListener("input", validar);
+    campo.addEventListener("change", validar);
+  });
+
+  // GUARDAR
+  formulary.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!formulary.checkValidity()) {
+      mensaje.textContent = "⚠️ Completa todos los campos";
+      mensaje.style.background = "red";
+      mensaje.classList.add("show");
+
+      setTimeout(() => mensaje.classList.remove("show"), 3000);
+      return;
+    }
+
+    // ÉXITO
+    mensaje.textContent = "Guardado con éxito";
+    mensaje.style.background = "#25D366";
+    mensaje.classList.add("show");
+
+    formulary.reset();
+    btnGuardar.disabled = true;
+
+    setTimeout(() => {
+      mensaje.classList.remove("show");
+      card.style.display = "none";
+    }, 2000);
+  });
+
+  // CANCELAR
+  btnCancelar.addEventListener("click", () => {
+    card.style.display = "none";
+  });
+
+});

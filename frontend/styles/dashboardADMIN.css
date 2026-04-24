@@ -1459,6 +1459,30 @@ textarea {
     width: 98.5%;
 }
 
+#btnGuardar:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* MENSAJE */
+#mensajeGlobal {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#mensajeGlobal.show {
+    z-index: 1000;
+    top: 20px;
+}
+
 /* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
 
