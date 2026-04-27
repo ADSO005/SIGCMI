@@ -228,7 +228,6 @@ nav a:hover {
     float: right;
     transition: 0.3s;
     padding: 20px 24px;
-    color: black;
 }
 
 .main.collapsed {
@@ -352,6 +351,124 @@ nav a:hover {
     }
 }
 
+/* -------------------------- AGENDA -------------------- */
+.appointments {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.appointments h3 {
+    color: #1a202c;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* Cada bloque de cita */
+.appointment {
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+/* Fila superior de la cita (hora + nombre + estado) */
+.appointment .left,
+.appointment .right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Fila superior: left y right lado a lado */
+.appointment > .left,
+.appointment > .right {
+    display: inline-flex;
+}
+
+/* Usamos flex en el appointment para alinear left y right */
+.appointment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Fila del botón: ocupa todo el ancho */
+.btn-full-row {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* ---- Colores de fondo según estado ---- */
+.estado-completada {
+    background: rgba(220, 220, 220, 0.3);
+}
+
+.estado-encurso {
+    background: rgba(70, 93, 229, 0.12);
+    border: 1px solid rgba(70, 93, 229, 0.25);
+}
+
+.estado-pendiente {
+    background: rgba(220, 220, 220, 0.2);
+}
+
+/* Hora */
+.hour {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2b6cb0;
+    background: rgba(94, 156, 245, 0.2);
+    border-radius: 6px;
+    padding: 5px 8px;
+    white-space: nowrap;
+}
+
+.hour-encurso {
+    background: rgba(70, 93, 229, 0.2);
+    color: #465DE5;
+}
+
+.appointment .left h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.appointment .left p {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 1px;
+}
+
+/* Estado pills */
+.state {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.greenState {
+    background: rgba(21, 204, 88, 0.18);
+    color: #25D366;
+}
+
+.yellowState {
+    background: rgba(70, 93, 229, 0.15);
+    color: #465DE5;
+}
+
+.greyState {
+    background: rgba(195, 197, 200, 0.35);
+    color: #718096;
+}
+
 /* Botones de consulta (ancho completo) */
 .btn-consulta {
     width: 100%;
@@ -375,6 +492,89 @@ nav a:hover {
 
 .btn-consulta:hover {
     opacity: 0.85;
+}
+
+/* ----------------------- ACCIONES RÁPIDAS ---------------------------------- */
+.actions {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.actions h3 {
+    color: #1a202c;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Botones de acción */
+.btnActions {
+    width: 100%;
+    padding: 11px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnActions:hover {
+    opacity: 0.85;
+}
+
+.btnActionBlue  { background: #465DE5; }
+.btnActionGreen { background: #25D366; }
+
+/* Tarjeta Próxima Cita */
+.proxima-cita {
+    margin-top: 6px;
+    background: #465DE5;
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: white;
+}
+
+.proxima-cita-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 8px;
+}
+
+.proxima-icon {
+    width: 15px;
+    height: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.proxima-hora {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.proxima-paciente {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.proxima-motivo {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 2px;
 }
 
 /* ------------------- VISTA PACIENTES -------------------------------------- */

@@ -107,7 +107,63 @@
             </div>
           </div>
         </section>
+        <section class="content">
 
+          <!-- AGENDA DEL DÍA -->
+          <div class="appointments">
+            <h3>Mi Agenda de hoy</h3>
+
+            <!-- Cita 1: Completada -->
+            <div class="appointment estado-completada">
+              <div class="left">
+                <span class="hour">09:00</span>
+                <div>
+                  <h4>María González</h4>
+                  <p>Consulta de rutina</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="state greenState">Completado</span>
+              </div>
+            </div>
+
+            <!-- Cita 2: En curso -->
+            <div class="appointment estado-encurso" id="cita2">
+              <div class="left">
+                <span class="hour hour-encurso">10:25</span>
+                <div>
+                  <h4>María González</h4>
+                  <p>Consulta post-operatoria</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="state yellowState">En curso</span>
+              </div>
+              <div class="btn-full-row">
+                <button class="btn-consulta btn-finalizar" onclick="finalizarConsulta('cita2')">Finalizar
+                  Consulta</button>
+              </div>
+            </div>
+
+            <!-- Cita 3: Pendiente -->
+            <div class="appointment estado-pendiente" id="cita3">
+              <div class="left">
+                <span class="hour">10:00</span>
+                <div>
+                  <h4>María González</h4>
+                  <p>Consulta post-operatoria</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="state greyState">Pendiente</span>
+              </div>
+              <div class="btn-full-row">
+                <button class="btn-consulta btn-iniciar" onclick="iniciarConsulta('cita3')">Iniciar Consulta</button>
+              </div>
+            </div>
+
+          </div>
+          </section>
 
 
       </section><!-- fin agendaView -->
