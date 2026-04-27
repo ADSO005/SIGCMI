@@ -58,3 +58,14 @@ function finalizarConsulta(id) {
   cita.querySelector(".hour").classList.remove("hour-encurso");
   cita.querySelector(".btn-full-row").style.display = "none";
 }
+
+// MODAL GESTIÒN CITAS // 
+
+function abrirModal() {
+  document.getElementById("modalGestionCitas").classList.add("abierto");
+  actualizarSubtitulo();
+}
+
+function cerrarModal() {
+  document.getElementById("modalGestionCitas").classList.remove("abierto");
+}
