@@ -118,3 +118,49 @@ function cerrarReprogramar() {
 function cerrarReprogramarFuera(event) {
   if (event.target.id === "modalReprogramar") cerrarReprogramar();
 }
+
+// FUNCIONES MODAL HORARIO //
+
+function abrirModalHorarios() {
+  document.getElementById("modalHorarios").classList.add("abierto");
+}
+
+function cerrarModalHorarios() {
+  document.getElementById("modalHorarios").classList.remove("abierto");
+}
+
+function cerrarModalHorariosFuera(e) {
+  if (e.target.id === "modalHorarios") cerrarModalHorarios();
+}
+
+function toggleDia(diaId, checkbox) {
+  const dia = document.getElementById(diaId);
+  const btn = dia.querySelector(".btn-agregar-hora");
+  if (checkbox.checked) {
+    dia.classList.add("activo");
+    btn.style.display = "block";
+    agregarHora(diaId);
+  } else {
+    dia.classList.remove("activo");
+    btn.style.display = "none";
+    dia.querySelector(".dia-horas").innerHTML = "";
+  }
+}
+
+function agregarHora(diaId) {
+  const contenedor = document.querySelector(`#${diaId} .dia-horas`);
+  const fila = document.createElement("div");
+  fila.className = "hora-row";
+  fila.innerHTML = `
+    <input type="time" value="08:00">
+    <span>a</span>
+    <input type="time" value="12:00">
+    <button class="btn-eliminar-hora" onclick="this.parentElement.remove()">&#128465;</button>
+  `;
+  contenedor.appendChild(fila);
+}
+
+function guardarHorarios() {
+  alert("Horario guardado correctamente.");
+  cerrarModalHorarios();
+}
