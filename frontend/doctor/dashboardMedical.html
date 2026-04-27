@@ -58,15 +58,15 @@
 
     <!-- MAIN -->
     <main class="main" id="mainContent">
-      <div>
-        <h1>Portal Médico</h1>
-        <span class="fecha-header">3 de Abril del 2026</span>
-      </div>
+
       <!-- VISTA: AGENDA -->
       <section id="agendaView" class="view active">
 
         <header class="header">
-
+          <div>
+            <h1>Portal Médico</h1>
+            <span class="fecha-header">3 de Abril del 2026</span>
+          </div>
         </header>
 
         <section class="cards">
@@ -107,6 +107,7 @@
             </div>
           </div>
         </section>
+
         <section class="content">
 
           <!-- AGENDA DEL DÍA -->
@@ -140,8 +141,7 @@
                 <span class="state yellowState">En curso</span>
               </div>
               <div class="btn-full-row">
-                <button class="btn-consulta btn-finalizar" onclick="finalizarConsulta('cita2')">Finalizar
-                  Consulta</button>
+                <button class="btn-consulta btn-finalizar" onclick="finalizarConsulta('cita2')">Finalizar Consulta</button>
               </div>
             </div>
 
@@ -163,11 +163,13 @@
             </div>
 
           </div>
-                    <!-- ACCIONES RÁPIDAS -->
+
+          <!-- ACCIONES RÁPIDAS -->
           <div class="actions">
             <h3>Acciones Rápidas</h3>
             <button class="btnActions btnActionBlue" onclick="abrirModal()">Gestionar Citas</button>
             <button class="btnActions btnActionGreen" onclick="abrirModalHorarios()">Configurar Horarios</button>
+
             <div class="proxima-cita">
               <div class="proxima-cita-header">
                 <img src="../img/Icon.png" alt="Reloj" class="proxima-icon">
@@ -178,9 +180,8 @@
               <div class="proxima-motivo">Medicina interna</div>
             </div>
           </div>
-          
-          </section>
 
+        </section>
 
       </section><!-- fin agendaView -->
 
@@ -252,7 +253,7 @@
             <div class="cita-fecha"><img src="../img/Calendar22.png" alt=""> 18 abr 2026</div>
             <span class="pill pill-completado">Completado</span>
           </div>
-          <div class="cita-info"><img src=../img/Clock.png" alt=""> 14:00</div>
+          <div class="cita-info"><img src="../img/Clock.png" alt=""> 14:00</div>
           <div class="cita-info"><img src="../img/person.png" alt=""> Ana Rodríguez Silva</div>
           <div class="cita-info"><img src="../img/image 218.png" alt=""> Dr. Luis García</div>
           <div class="cita-motivo">Vacunación pediátrica</div>
@@ -261,6 +262,170 @@
       </div>
     </div>
   </div>
+
+  <!-- MODAL REPROGRAMAR -->
+  <div class="modal-overlay" id="modalReprogramar" onclick="cerrarReprogramarFuera(event)">
+    <div class="modal-gc" style="width:420px;" onclick="event.stopPropagation()">
+
+      <div class="modal-gc-header">
+        <div class="modal-gc-header-left">
+          <div>
+            <h2>Reprogramar Cita</h2>
+            <p id="reprogramarNombre"></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 24px; display:flex; flex-direction:column; gap:16px;">
+        <div>
+          <label class="repro-label">Reprogramar Cita</label>
+          <input type="date" class="repro-input">
+        </div>
+        <div>
+          <label class="repro-label">Reprogramar Hora</label>
+          <input type="time" class="repro-input">
+        </div>
+        <div style="display:flex; gap:12px; margin-top:8px;">
+          <button class="btn-cancel-cita" style="flex:1; padding:11px;" onclick="cerrarReprogramar()">Cancelar</button>
+          <button class="btn-repro" style="flex:1; padding:11px;" onclick="guardarReprogramar()">Guardar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL CONFIGURAR HORARIOS -->
+  <div class="modal-overlay" id="modalHorarios" onclick="cerrarModalHorariosFuera(event)">
+    <div class="modal-gc" style="width:520px;" onclick="event.stopPropagation()">
+
+      <div class="modal-gc-header">
+        <div class="modal-gc-header-left">
+          <div class="modal-gc-icon"><img src="../img/Calendar22.png" alt=""></div>
+          <div>
+            <h2>Mi Horario de Atención</h2>
+            <p>Configura tus días y horarios disponibles</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="horarios-body">
+
+        <div class="dia-row" id="diaLunes">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaLunes', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Lunes</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaLunes')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaMartes">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaMartes', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Martes</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMartes')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaMiercoles">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaMiercoles', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Miércoles</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMiercoles')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaJueves">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaJueves', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Jueves</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaJueves')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaViernes">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaViernes', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Viernes</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaViernes')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaSabado">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaSabado', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Sábado</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaSabado')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaDomingo">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaDomingo', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Domingo</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaDomingo')">Agregar Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="info-box">
+          <span>&#9432;</span>
+          <div>
+            <strong>Información Importante</strong>
+            <p>Los pacientes solo podrán agendar citas en los horarios que configures aquí. Puedes tener múltiples horarios por día (por ejemplo, mañana y tarde).</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-gc-footer">
+        <button class="btn-cancel-cita" style="flex:1; padding:11px;" onclick="cerrarModalHorarios()">Cancelar</button>
+        <button class="btn-repro" style="flex:1; padding:11px;" onclick="guardarHorarios()">Guardar Horario</button>
+      </div>
+
+    </div>
+  </div>
+
   <script src="../javascript/dashboardMedical.js"></script>
 </body>
 

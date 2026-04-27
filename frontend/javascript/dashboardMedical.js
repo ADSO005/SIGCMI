@@ -99,3 +99,22 @@ function actualizarSubtitulo(n) {
   const total = n !== undefined ? n : document.querySelectorAll(".cita-card").length;
   document.getElementById("modalSubtitulo").textContent = `Total de citas ${total}`;
 }
+
+// FUNCIONES REPROGRAMAR CITA // 
+
+function abrirReprogramar(btn) {
+  const card = btn.closest(".cita-card");
+  const nombre = card.querySelector(".cita-info:nth-child(4)").textContent.replace("👤","").trim();
+  document.getElementById("reprogramarNombre").textContent = nombre;
+
+  // Oculta solo el contenido del modal de gestión, NO el overlay
+  document.getElementById("modalGestionCitas").classList.remove("abierto");
+  document.getElementById("modalReprogramar").classList.add("abierto");
+}
+function cerrarReprogramar() {
+  document.getElementById("modalReprogramar").classList.remove("abierto");
+  document.getElementById("modalGestionCitas").classList.add("abierto");
+}
+function cerrarReprogramarFuera(event) {
+  if (event.target.id === "modalReprogramar") cerrarReprogramar();
+}
