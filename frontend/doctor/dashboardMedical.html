@@ -141,7 +141,8 @@
                 <span class="state yellowState">En curso</span>
               </div>
               <div class="btn-full-row">
-                <button class="btn-consulta btn-finalizar" onclick="finalizarConsulta('cita2')">Finalizar Consulta</button>
+                <button class="btn-consulta btn-finalizar" onclick="finalizarConsulta('cita2')">Finalizar
+                  Consulta</button>
               </div>
             </div>
 
@@ -184,6 +185,104 @@
         </section>
 
       </section><!-- fin agendaView -->
+
+      <section id="pacientesView" class="view">
+
+        <header class="header">
+          <div>
+            <h1>Mis Pacientes</h1>
+            <span class="fecha-header">3 de Abril del 2026</span>
+          </div>
+        </header>
+
+        <div class="pacientes-layout">
+
+          <!-- COLUMNA IZQUIERDA: lista -->
+          <div class="pacientes-lista">
+            <div class="pacientes-search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Buscar paciente..." oninput="filtrarPacientes(this.value)">
+            </div>
+
+            <div class="paciente-item activo" onclick="seleccionarPaciente(this)">
+              <img src="../img/icono-medico-avatar.svg" alt="">
+              <div>
+                <h4>María González Pérez</h4>
+                <span><img  class="NegroCalen" src="../img/CalendarNegro.png" alt="Imagen Calendario"> 5 citas</span>
+                <span><img  class="NegroCalen" src="../img/Google-Docs Negro.png" alt="Imagen archivo"> 3 diagnósticos</span>
+              </div>
+              <span class="paciente-arrow">›</span>
+            </div>
+
+            <div class="paciente-item" onclick="seleccionarPaciente(this)">
+              <img class="NegroCalen" src="../img/icono-medico-avatar.svg" alt="">
+              <div>
+                <h4>María González Pérez</h4>
+                <span> <img class="NegroCalen" src="../img/CalendarNegro.png" alt="Imagen Calendario"> 5 citas</span>
+                <span><img class="NegroCalen" src="../img/Google-Docs Negro.png" alt=""> 3 diagnósticos</span>
+              </div>
+              <span class="paciente-arrow">›</span>
+            </div>
+
+          </div>
+
+          <!-- COLUMNA DERECHA: detalle -->
+          <div class="paciente-detalle">
+
+            <div class="detalle-header">
+              <img src="../img/icono-medico-avatar.svg" alt="" class="detalle-avatar">
+              <div class="detalle-info">
+                <h2>María González Pérez</h2>
+                <p>Email: <a href="mailto:sigcmi@gmail.com">sigcmi@gmail.com</a></p>
+                <p>Teléfono: 3137482412</p>
+              </div>
+              <div class="detalle-meta">
+                <p>Edad: 35 años</p>
+                <p>Última Visita: 9/04/2026</p>
+              </div>
+            </div>
+
+            <div class="detalle-badges">
+              <span class="badge badge-blue"> <img src="../img/CalendarPaciente.png" alt="Imagen Calendario"> Citas: 5</span>
+              <span class="badge badge-purple"> <img src="../img/google-docs 2.png" alt="Imagen archivo"> Diagnósticos: 3</span>
+            </div>
+
+            <div class="historial">
+              <h3>Historial Médico</h3>
+
+              <div class="historial-card">
+                <h4>Gripe común con síntomas de congestión nasal:</h4>
+                <p class="historial-fecha">9/abr/2026</p>
+                <p><strong>Síntomas:</strong></p>
+                <p>Fiebre de 38C, congestion nasal, dolor de garganta.</p>
+                <p><strong>Tratamiento:</strong></p>
+                <p>Reposo, hidratacion abundante y acetaminofen cada 6 horas.</p>
+              </div>
+
+              <div class="historial-card">
+                <h4>Gastritis aguda por estrés</h4>
+                <p class="historial-fecha">11 de marzo de 2026</p>
+                <p><strong>Síntomas:</strong></p>
+                <p>Dolor epigástrico intenso, náuseas</p>
+                <p><strong>Tratamiento:</strong></p>
+                <p>Omeprazol 20mg en ayunas por 14 días, dieta blanda</p>
+              </div>
+
+              <div class="historial-card">
+                <h4>Control general anual - Paciente sano</h4>
+                <p class="historial-fecha">19 de enero de 2026</p>
+                <p><strong>Síntomas:</strong></p>
+                <p>Sin síntomas, control preventivo</p>
+                <p><strong>Tratamiento:</strong></p>
+                <p>Vitamina D 1000 UI diaria como suplemento preventivo</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
 
 
     </main>
@@ -319,7 +418,8 @@
               </label>
               <span class="dia-nombre">Lunes</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaLunes')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaLunes')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -333,7 +433,8 @@
               </label>
               <span class="dia-nombre">Martes</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMartes')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMartes')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -347,7 +448,8 @@
               </label>
               <span class="dia-nombre">Miércoles</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMiercoles')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMiercoles')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -361,7 +463,8 @@
               </label>
               <span class="dia-nombre">Jueves</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaJueves')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaJueves')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -375,7 +478,8 @@
               </label>
               <span class="dia-nombre">Viernes</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaViernes')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaViernes')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -389,7 +493,8 @@
               </label>
               <span class="dia-nombre">Sábado</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaSabado')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaSabado')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -403,7 +508,8 @@
               </label>
               <span class="dia-nombre">Domingo</span>
             </div>
-            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaDomingo')">Agregar Horario</button>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaDomingo')">Agregar
+              Horario</button>
           </div>
           <div class="dia-horas"></div>
         </div>
@@ -412,7 +518,8 @@
           <span>&#9432;</span>
           <div>
             <strong>Información Importante</strong>
-            <p>Los pacientes solo podrán agendar citas en los horarios que configures aquí. Puedes tener múltiples horarios por día (por ejemplo, mañana y tarde).</p>
+            <p>Los pacientes solo podrán agendar citas en los horarios que configures aquí. Puedes tener múltiples
+              horarios por día (por ejemplo, mañana y tarde).</p>
           </div>
         </div>
 
