@@ -69,3 +69,33 @@ function abrirModal() {
 function cerrarModal() {
   document.getElementById("modalGestionCitas").classList.remove("abierto");
 }
+
+function filtrarCitas() {
+  const texto  = document.querySelector(".modal-gc-search").value.toLowerCase();
+  const estado = document.querySelector(".modal-gc-select").value;
+  let visibles  = 0;
+
+  document.querySelectorAll(".cita-card").forEach(card => {
+    const coincide = card.textContent.toLowerCase().includes(texto) &&
+                     (!estado || card.dataset.estado === estado);
+    card.style.display = coincide ? "" : "none";
+    if (coincide) visibles++;
+  });
+
+  const sinRes = document.querySelector(".sin-resultados");
+  if (sinRes) sinRes.remove();
+
+  if (visibles === 0) {
+    const msg = document.createElement("p");
+    msg.className  = "sin-resultados";
+    msg.textContent = "No se encontraron citas.";
+    document.getElementById("listaCitas").appendChild(msg);
+  }
+
+  actualizarSubtitulo(visibles);
+}
+
+function actualizarSubtitulo(n) {
+  const total = n !== undefined ? n : document.querySelectorAll(".cita-card").length;
+  document.getElementById("modalSubtitulo").textContent = `Total de citas ${total}`;
+}
