@@ -58,7 +58,7 @@
                     <div class="nav-item">Medicos</div>
                 </a>
 
-                <a href="#" aria-label="Ir a WhatsApp" class="nav-link" data-view="whatsappADMIN">
+                <a href="#" aria-label="Ir a WhatsApp" class="nav-link" data-view="whatsAppADMIN">
                     <img src="../imgSIGCMI/img/chat_bubble.png" alt="Icono WhatsApp">
                     <div class="nav-item">WhatsApp</div>
                 </a>
@@ -166,8 +166,6 @@
                             data-open-modal="modalSheduleA">+ Nueva Cita</button>
                         <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
                         <button class="btnActions btnActionPurple">Gestionar Citas</button>
-                        <button class="btnActions btnActionDark">Ver Métricas</button>
-                        <button class="btnActions btnActionCyan">Ver Calendario</button>
                         <button class="btnActions btnActionOrange">Enviar Recordatorios</button>
                         <div class="whatsAppNoti">
                             <h2>WhatsApp <span>Activo</span></h2>
@@ -428,12 +426,11 @@
 
                     <div class="patients__header">
                         <h1>Gestión de Pacientes</h1>
-                        <p>Administra el registro de pacientes del centro</p>
                     </div>
 
                     <div class="patientCardHeader">
-
-                        <button id="btnNewPatient">+ Nuevo Médico</button>
+                        <p>Administra el registro de pacientes del centro</p>
+                        <button id="btnNewPatient" class="btn-primary">+ Nuevo Médico</button>
                     </div>
 
 
@@ -1026,15 +1023,17 @@
                 </div>
             </div>
 
+
+            <!-- ==================== MEDICS ADMIN VIEW ==================== -->
             <section class="view" id="medicsADMIN">
 
                 <div class="actionsMedicADMIN">
                     <h2>Gestión de Médicos</h2>
-                    <button class="btn-primary btnMedicsAction">+ Nuevo Médico</button>
+                    <button id="btnMedicsAction" class="btn-primary">+ Nuevo Médico</button>
                 </div>
                 <p>Administra el personal médico del centro</p>
 
-                <div class="medicsFormADMIN hidden">
+                <div class="medicsFormADMIN hiddenMedics">
 
                     <form class="patients__form" id="formMedicsADMIN">
                         <!-- INFORMACIÓN PERSONAL -->
@@ -1238,6 +1237,108 @@
 
             </section>
 
+            <section class="waDashboard view" id="whatsAppADMIN">
+                <div>
+
+                    <!-- HEADER -->
+                    <div class="waHeader">
+                        <div>
+                            <h1>Integración WhatsApp</h1>
+                            <p>Gestiona notificaciones y recordatorios automáticos</p>
+                        </div>
+                        <button class="waBtnConfig">⚙ Configurar API</button>
+                    </div>
+
+                    <!-- STATS -->
+                    <div class="waStats">
+
+                        <div class="waCardStat">
+                            <span>📤 Enviados Hoy</span>
+                            <h2>24</h2>
+                        </div>
+
+                        <div class="waCardStat">
+                            <span>✅ Entregados</span>
+                            <h2>22</h2>
+                        </div>
+
+                        <div class="waCardStat">
+                            <span>🕓 Pendientes</span>
+                            <h2>8</h2>
+                        </div>
+
+                        <div class="waCardStat">
+                            <span>🔔 Programados</span>
+                            <h2>15</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- MAIN -->
+                    <div class="waMain">
+
+                        <!-- LEFT -->
+                        <div class="waNotifications">
+
+                            <div class="waSectionHeader">
+                                <h3>Notificaciones Enviadas</h3>
+                                <a href="#">Ver Todas</a>
+                            </div>
+
+                            <div class="waItem">
+                                <div>
+                                    <strong>María González</strong>
+                                    <p>Su cita con Dr. Pérez es mañana a las 09:00 ✔</p>
+                                </div>
+                                <span class="status enviado">Enviado</span>
+                            </div>
+
+                            <div class="waItem">
+                                <div>
+                                    <strong>Juan Martínez</strong>
+                                    <p>Su cita ha sido confirmada ✔</p>
+                                </div>
+                                <span class="status leido">Leído</span>
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="waTemplates">
+
+                            <div class="waSectionHeader">
+                                <h3>Plantillas de Mensajes</h3>
+                                <button class="waBtnPrimary">+ Nueva Plantilla</button>
+                            </div>
+
+                            <div class="waTemplate">
+                                <div>
+                                    <strong>Recordatorio 24h</strong>
+                                    <p>"Hola {paciente}, le recordamos su cita..."</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+                            </div>
+
+                            <div class="waTemplate">
+                                <div>
+                                    <strong>Confirmación de Cita</strong>
+                                    <p>"Su cita ha sido confirmada..."</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
         </main>
 
     </div>

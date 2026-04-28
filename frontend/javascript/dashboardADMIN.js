@@ -365,7 +365,7 @@ depto.addEventListener("change", () => {
 document.addEventListener("DOMContentLoaded", () => {
 
   const formulary = document.getElementById("formPaciente");
-  const btnGuardar = document.getElementById("btnGuardar");
+  const btnGuardarPacient = document.getElementById("btnGuardar");
   const mensaje = document.getElementById("mensajeGlobal");
   const card = document.getElementById("patientCard");
   const btnCancelar = document.getElementById("btnCancelar");
@@ -382,7 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    btnGuardar.disabled = !lleno;
+    btnGuardarPacient.disabled = !lleno;
   }
 
   campos.forEach(campo => {
@@ -466,9 +466,16 @@ btnGuardar.addEventListener("click", (e) => {
   document.querySelector("form").reset();
 });
 
-const btnMedic = document.querySelector(".btnMedicsAction");
-const formularyDoctor  = document.querySelector(".medicsFormADMIN");
+document.addEventListener("click", (e) => {
 
-btnMedic.addEventListener("click", () => {
-    formularyDoctor.classList.toggle("hidden");
+  if (e.target.id === "btnMedicsAction") {
+
+    const form = document.querySelector(".medicsFormADMIN");
+
+    if (form) {
+      form.classList.toggle("hiddenMedics");
+    }
+
+  }
+
 });
