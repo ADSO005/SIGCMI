@@ -681,9 +681,7 @@ nav a:hover {
 
 /**/
 
-/* =============================================
-   MODAL GESTIÓN DE CITAS
-   ============================================= */
+/* -----------------------MODAL GESTIÓN DE CITAS ------------------ */
 
 .modal-overlay {
   position: fixed;
@@ -947,9 +945,7 @@ nav a:hover {
   box-shadow: 0 0 0 3px rgba(70,93,229,0.1);
 }
 
-/* =============================================
-   MODAL HORARIOS
-   ============================================= */
+/* ------------------- MODAL HORARIOS------------------ */
 
 .horarios-body {
   padding: 16px 24px;
@@ -1128,7 +1124,7 @@ nav a:hover {
   border-top: 1px solid #eee;
 }
 
-/* ===================== VISTA PACIENTES ===================== */
+/* ------------------ VISTA PACIENTES ------------------ */
 .pacientes-layout {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -1332,4 +1328,53 @@ nav a:hover {
   min-width: 15px;
   height: 15px !important;
   width: 15px !important;
+}
+
+/* ---------------- MOBILE ------------- */
+@media (max-width: 768px) {
+
+  /* Sidebar oculto por defecto */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 260px;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Overlay oscuro */
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    display: none;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
+  /* Main ocupa todo */
+  .main {
+    width: 100%;
+  }
+
+  /* Botón visible siempre */
+  #toggleBtn {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
