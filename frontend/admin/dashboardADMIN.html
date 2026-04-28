@@ -26,7 +26,7 @@
             <hr class="line-1" aria-hidden="true">
 
             <div class="user" aria-label="Información del usuario">
-                <p>Bienvenido</p>
+                <p aria-label="Bienvenido">Bienvenido</p>
                 <h4>montoyajuanes11</h4>
                 <span>Administrador</span>
             </div>
@@ -36,7 +36,7 @@
             <nav aria-label="Opciones principales">
                 <a href="#" class="dashboard preActive nav-link" id="dashboard" aria-label="Ir al Dashboard"
                     data-view="dashboardADMIN">
-                    <img src="../imgSIGCMI/img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere"
+                    <img alt src="../imgSIGCMI/img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere"
                         alt="Icono Dashboard">
                     <div class="nav-item">Dashboard</div>
                 </a>
@@ -74,15 +74,14 @@
 
         <!-- ========================MAIN======================== -->
         <main class="main">
-
+            <header class="header">
+                <h1 aria-label="Sistema Integral de Gestión de Citas Médicas ">Sistema Integral de Gestión de Citas
+                    Médicas</h1>
+                <span aria-label="martes, 7 de abril de 2026">martes, 7 de abril de 2026</span>
+            </header>
+            <hr>
             <section id="dashboardADMIN" class="view active">
 
-                <!-- HEADER -->
-                <header class="header">
-                    <h1 aria-label="Sistema Integral de Gestión de Citas Médicas ">Sistema Integral de Gestión de Citas
-                        Médicas</h1>
-                    <span aria-label="martes, 7 de abril de 2026">martes, 7 de abril de 2026</span>
-                </header>
 
                 <!-- ========================CARDS======================== -->
                 <section class="cards">
@@ -340,11 +339,7 @@
             <!-- CONTENT -->
             <section id="appointmentsADMIN" class="view ">
 
-                <div class="sectionDos">
-                    <h1 aria-label="Sistema Integral de Gestión de Citas Médicas ">Sistema Integral de Gestión de Citas
-                        Médicas</h1>
-                    <span aria-label="martes, 7 de abril de 2026">martes, 7 de abril de 2026</span>
-                </div>
+
 
                 <div class="containerDos">
                     <div class="containerDosHeader">
@@ -438,7 +433,6 @@
 
                     <div class="patientCardHeader">
 
-                        <h2>Registrar Personal</h2>
                         <button id="btnNewPatient">+ Nuevo Médico</button>
                     </div>
 
@@ -446,7 +440,7 @@
                     <div class="patients__card" id="patientCard">
 
                         <form class="patients__form" id="formPaciente">
-
+                            <h2>Registrar Personal</h2>
                             <!-- INFORMACIÓN PERSONAL -->
                             <h3>Información Personal</h3>
                             <hr class="lineFormGrid">
@@ -896,7 +890,7 @@
 
 
             <!-- ==================== PATIENT HISTORY MODAL ==================== -->
-            <div id="patientHistoryModal" class="modalHistory">
+            <div id="medicsHistoryModal" class="modalHistory">
 
                 <div class="modalHistory-content">
 
@@ -1031,6 +1025,219 @@
 
                 </div>
             </div>
+
+            <section class="view" id="medicsADMIN">
+
+                <div class="actionsMedicADMIN">
+                    <h2>Gestión de Médicos</h2>
+                    <button class="btn-primary btnMedicsAction">+ Nuevo Médico</button>
+                </div>
+                <p>Administra el personal médico del centro</p>
+
+                <div class="medicsFormADMIN hidden">
+
+                    <form class="patients__form" id="formMedicsADMIN">
+                        <!-- INFORMACIÓN PERSONAL -->
+                        <h3>Información Personal</h3>
+                        <hr class="lineFormGrid">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Nombres*</label>
+                                <input type="text" name="nombres" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apellidos*</label>
+                                <input type="text" name="apellidos" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Especialidad*</label>
+                                <input type="text" name="fecha" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Documento Profesional*</label>
+                                <input type="text" name="profesional" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Teléfono*</label>
+                                <input type="tel" name="profesional" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Correo Electrónico*</label>
+                                <input type="email" name="correoElectronico" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Horario de Atención*</label>
+                                <input type="text" name="horarioAtencion" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Contraseña*</label>
+                                <input type="password" name="contraseña" id="">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="cardsMedics">
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
         </main>
 
     </div>

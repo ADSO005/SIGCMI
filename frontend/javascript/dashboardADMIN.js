@@ -423,3 +423,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+const btnGuardar = document.getElementById("btnGuardarMedico");
+const contenedor = document.getElementById("contenedorMedicos");
+
+btnGuardar.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  // Obtener valores
+  const nombre = document.getElementById("nombre").value;
+  const especialidad = document.getElementById("especialidad").value;
+  const cedula = document.getElementById("cedula").value;
+  const experiencia = document.getElementById("experiencia").value;
+  const telefono = document.getElementById("telefono").value;
+  const correo = document.getElementById("correo").value;
+  const horario = document.getElementById("horario").value;
+
+  // Validación
+  if (!nombre || !especialidad || !cedula || !experiencia || !telefono || !correo || !horario) {
+    alert("⚠️ Llena todos los campos");
+    return;
+  }
+
+  // Crear tarjeta
+  const card = document.createElement("div");
+  card.classList.add("card-medico");
+
+  card.innerHTML = `
+    <h3>${nombre}</h3>
+    <p><strong>Especialidad:</strong> ${especialidad}</p>
+    <p><strong>Cédula:</strong> ${cedula}</p>
+    <p><strong>Experiencia:</strong> ${experiencia} años</p>
+    <p><strong>Teléfono:</strong> ${telefono}</p>
+    <p><strong>Correo:</strong> ${correo}</p>
+    <p><strong>Horario:</strong> ${horario}</p>
+  `;
+
+  // Agregar al contenedor
+  contenedor.appendChild(card);
+
+  // Limpiar formulario
+  document.querySelector("form").reset();
+});
+
+const btnMedic = document.querySelector(".btnMedicsAction");
+const formularyDoctor  = document.querySelector(".medicsFormADMIN");
+
+btnMedic.addEventListener("click", () => {
+    formularyDoctor.classList.toggle("hidden");
+});
