@@ -31,7 +31,7 @@ Does NOT include:
 The system implements a **Client-Server N-Tier Architecture**:
 
 - 🎨 Frontend: Web/Mobile (React / Angular)  
-- ⚙️ Backend: REST API (Node.js / Python)  
+- ⚙️ Backend: REST API (Node.js)  
 - 🗄️ Database: PostgreSQL  
 - 🔔 Notifications: Simulated SMTP Service  
 
