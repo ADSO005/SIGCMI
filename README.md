@@ -16,7 +16,7 @@ The system allows:
 - Cancellation and rescheduling  
 - Automatic notifications  
 - Administrative panel  
-- Metrics dashboard  
+
 
 Does NOT include:
 
@@ -30,9 +30,9 @@ Does NOT include:
 
 The system implements a **Client-Server N-Tier Architecture**:
 
-- 🎨 Frontend: Web/Mobile (React / Angular)  
-- ⚙️ Backend: REST API (Node.js / Python)  
-- 🗄️ Database: PostgreSQL  
+- 🎨 Frontend: Web/Mobile (React )  
+- ⚙️ Backend: REST API (Node.js )  
+- 🗄️ Database: MySQL  
 - 🔔 Notifications: Simulated SMTP Service  
 
 ### System Layers
@@ -75,27 +75,10 @@ Additionally, the system integrates with an external notification service.
 
 ---
 
-## 🧠 Data Model
-
-Main entities:
-
-- Patient  
-- Doctor  
-- Specialty  
-- Appointment  
-- MedicalRecord  
-- Role  
-- User  
-
-All entities use **UUID as primary key**.
-
----
-
 ## 🌿 Methodology
 
 - Scrum  
 - Git Flow  
-- Fibonacci sprint estimation  
 - Mandatory Pull Requests before merging into `main`  
 
 ---
@@ -123,36 +106,11 @@ SIGCMI/
 ├── LICENSE
 └── README.md
 
-## 🛠️ Installation (Backend Example)
-
-`\`\`bash
-git clone https://github.com/DeltaG8109/SIGCMI.git
-cd backend
-npm install
-npm run dev
-`\`\`
-
 ---
 
 ## 📚 Documentation
 
 Complete technical documentation (UML diagrams, ER diagrams, detailed architecture, and requirements) can be found on the project <a href="https://github.com/ADSO005/ADSO_3231252_005/wiki">Wiki</a>.
-
----
-
-## 🎓 Academic Context
-
-Project developed for the ADSO – SENA program.
-
-Includes:
-
-- Architecture Diagram
-- Component Diagram
-- Deployment Diagram
-- Class Diagram
-- Entity-Relationship Model
-- Sequence Diagrams
-- Functional and Non-Functional Requirements
 
 ---
 ## 📌 Development Team
