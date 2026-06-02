@@ -16,7 +16,7 @@ The system allows:
 - Cancellation and rescheduling  
 - Automatic notifications  
 - Administrative panel  
-- Metrics dashboard  
+
 
 Does NOT include:
 
