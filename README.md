@@ -33,7 +33,7 @@ The system implements a **Client-Server N-Tier Architecture**:
 - 🎨 Frontend: Web/Mobile (React )  
 - ⚙️ Backend: REST API (Node.js )  
 - 🗄️ Database: MySQL  
-- 🔔 Notifications: Simulated SMTP Service  
+- 🔔 Notifications: Simulated Service  
 
 ### System Layers
 
@@ -48,9 +48,7 @@ Additionally, the system integrates with an external notification service.
 ## 🔐 Security
 
 - Password encryption using bcrypt  
-- JWT-based authentication  
 - Role-based access control  
-- Protection against SQL injection  
 - Sensitive medical data handling  
 
 ---
@@ -66,7 +64,7 @@ Additionally, the system integrates with an external notification service.
 ## 📊 Main Features
 
 - Patient and doctor registration  
-- Secure JWT login  
+- Secure login  
 - Medical availability management  
 - Appointment booking  
 - Cancellation and rescheduling  
@@ -78,19 +76,7 @@ Additionally, the system integrates with an external notification service.
 ## 🌿 Methodology
 
 - Scrum  
-- Git Flow  
 - Mandatory Pull Requests before merging into `main`  
-
----
-
-## 🌱 Branch Strategy
-
-\`\`\`bash
-main      → Production
-release     → Stable versions
-develop     → Main development branch
-feature/*   → New features
-\`\`\`
 
 ---
 ## 📂 Project Structure
