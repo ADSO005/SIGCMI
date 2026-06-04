@@ -1,0 +1,55 @@
+[33m01a7162[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/user-history-003-recover-password[m[33m)[m feat: Allow email input (UH-003 criterion)
+[33mcdbfc25[m fix: Correction of errors in index.html and style.css for login operation
+[33m2a964f2[m[33m ([m[1;31morigin/feature/user-history-002-login[m[33m, [m[1;32mfeature/user-history-002-login[m[33m)[m Merge branch 'feature/user-history-002-login' of https://github.com/ADSO005/SIGCMI into feature/user-history-002-login
+[33m6bcaedd[m Update login based on acceptance criteria: add password recovery option
+[33mea19ebc[m I upload update second acceptance criterion uh-002 patient login The user must be redirected to the main panel upon successful login.
+[33m16ea7c4[m I upload acceptance criterion uh-002 patient the system must allow the entry of email and passowrd
+[33m1b2c9e0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mremotes/origin/feature/user-history-002-login[m[33m, [m[1;32mmain[m[33m)[m Change names admin, doctor and patient
+[33m6773bbf[m I move folders
+[33mb563e24[m upload folder for archives
+[33m788c7ec[m Delete photos diagrams
+[33m3deea9c[m Merge pull request #26 from ADSO005/DeltaG8109-patch-1
+[33me3f9f71[m Update development team section in README
+[33m42d32c6[m Revise branch strategy and add project structure details
+[33m104e526[m Delete docs/diagrams/registration.jpeg
+[33md727298[m Delete docs/diagrams/login.jpeg
+[33mff1464c[m Merge pull request #18 from ADSO005/develop
+[33m65f851e[m I am uploading the sequence diagrams for assignment 8, point 1 (Login) and point 2 (User registration). Their respective explanations in the wiki are still pending.
+[33m290e30a[m[33m ([m[1;31morigin/develop[m[33m)[m Rename login.jpeg to DIAG-06-2.jpeg
+[33md231d4e[m Rename registration.jpeg to DIAG-06-1.jpeg
+[33m050262b[m Delete docs/.gitkeep
+[33mdc77e88[m Delete docs/diagrams/pngtree-artificial-intelligence-logo-png-image_15034965.png
+[33m6c65d02[m Delete docs/diagrams/.gitkeep
+[33ma026374[m Rename DIAG-07.png.png to DIAG-07.png
+[33m4b0c620[m Rename DIAG-05.png.png to DIAG-05.png
+[33m753aee3[m Rename DIAG-6-2.jpeg to DIAG-02.jpeg
+[33m0a95986[m Rename DIAG-6-1.jpeg to DIAG-01.jpeg
+[33me2077b3[m Rename diagrams to DIAG-6 format
+[33m627c4a3[m Im uploading an image DIAG-05 and DIAG-07
+[33m0957ca1[m Below i will upload the context diagram and the architecture diagram
+[33mc701f9e[m i uploaded MER DIAGRAM
+[33m34d4131[m I am uploading the sequence diagrams for assignment 8, point 1 (Login) and point 2 (User registration). Their respective explanations in the wiki are still pending.
+[33m8f5e7d5[m Rename login.jpeg to DIAG-06-2.jpeg
+[33ma065d19[m Rename registration.jpeg to DIAG-06-1.jpeg
+[33m3d7084b[m Delete docs/.gitkeep
+[33m8145ec3[m Delete docs/diagrams/pngtree-artificial-intelligence-logo-png-image_15034965.png
+[33m0a69f52[m Delete docs/diagrams/.gitkeep
+[33md194f08[m Rename DIAG-07.png.png to DIAG-07.png
+[33m27c3e20[m Rename DIAG-05.png.png to DIAG-05.png
+[33m4b6d1d6[m Rename DIAG-6-2.jpeg to DIAG-02.jpeg
+[33m6d0584f[m Rename DIAG-6-1.jpeg to DIAG-01.jpeg
+[33m67fd698[m Rename diagrams to DIAG-6 format
+[33m2b647f7[m Im uploading an image DIAG-05 and DIAG-07
+[33mc492629[m Below i will upload the context diagram and the architecture diagram
+[33m602968b[m i uploaded MER DIAGRAM
+[33m6430789[m I am uploading the sequence diagrams for assignment 8, point 1 (Login) and point 2 (User registration). Their respective explanations in the wiki are still pending.
+[33m7f919b9[m Subo diag
+[33m8c29e7e[m new folder
+[33m7677445[m Add LICENSE file
+[33m7cefb31[m Update README to include link to project Wiki
+[33m03dbc51[m Add development team section to README
+[33mfae544a[m I'm adding folders for our project; in the previous commit I only uploaded two files.
+[33m4ed1ad2[m I'm adding folders for our project.
+[33mffc0d85[m I organize the project readme.
+[33md2200ef[m I organize the project readme.
+[33m765cfbe[m Initial commit
