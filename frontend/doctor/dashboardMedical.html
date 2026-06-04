@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGCMI - Portal Médico</title>
+  <link rel="stylesheet" href="../styles/dashboardMedical.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="logo">
+        <span class="logo-text">SIGCMI</span>
+        <button id="toggleBtn" onclick="toggleSidebar()" aria-label="Abrir o cerrar menú">☰</button>
+      </div>
+
+      <hr class="line-1">
+
+      <div class="user">
+        <div class="avatar">
+          <img src="../img/icono-medico-avatar.svg" alt="Avatar médico" class="avatar-img">
+        </div>
+        <div>
+          <p class="bienvenido-txt">Bienvenido</p>
+          <h4>montoyajuanes11</h4>
+          <span>Médico General</span>
+          <button class="btn-ver-perfil" onclick="alert('Ir a: Mi Perfil')">Ver Mi Perfil</button>
+        </div>
+      </div>
+
+      <hr class="line-2">
+
+      <nav>
+        <a href="#" class="nav-link preActive" onclick="cambiarVista(event,'agendaView',this)">
+          <img src="../img/icono-agenda.svg" alt="Agenda">
+          <div class="nav-item">Agenda</div>
+        </a>
+        <a href="#" class="nav-link" onclick="cambiarVista(event,'pacientesView',this)">
+          <img src="../img/icono-pacientes.svg" alt="Mis Pacientes">
+          <div class="nav-item">Mis Pacientes</div>
+        </a>
+      </nav>
+
+      <hr class="line-3">
+
+      <div class="logout" onclick="cerrarSesion()">
+        <img src="../img/icono-salir.svg" class="log-out" alt="Cerrar sesión">
+        <span class="sesionlogout">Cerrar Sesión</span>
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main" id="mainContent">
+
+      <!-- VISTA: AGENDA -->
+      <section id="agendaView" class="view active">
+
+        <header class="header">
+          <div>
+            <h1>Portal Médico</h1>
+            <span class="fecha-header">3 de Abril del 2026</span>
+          </div>
+        </header>
+
+        <section class="cards">
+          <div class="card">
+            <p>Citas Hoy</p>
+            <div class="card-body">
+              <div class="card-left">
+                <h2>48</h2><span class="card-sub">2 completadas</span>
+              </div>
+              <div class="card-icon icono-azul"><img src="../img/blueCalendar.png" alt="Citas"></div>
+            </div>
+          </div>
+          <div class="card">
+            <p>Pacientes Activos</p>
+            <div class="card-body">
+              <div class="card-left">
+                <h2>48</h2><span class="card-sub">+3 este mes</span>
+              </div>
+              <div class="card-icon icono-verde"><img src="../img/usderGreen.png" alt="Pacientes"></div>
+            </div>
+          </div>
+          <div class="card">
+            <p>Consultas Esta Semana</p>
+            <div class="card-body">
+              <div class="card-left">
+                <h2>48</h2><span class="card-sub">Promedio: 9/día</span>
+              </div>
+              <div class="card-icon icono-morado"><img src="../img/historyUser.png" alt="Consultas"></div>
+            </div>
+          </div>
+          <div class="card">
+            <p>Tiempo Promedio</p>
+            <div class="card-body">
+              <div class="card-left">
+                <h2>48</h2><span class="card-sub">Por consulta</span>
+              </div>
+              <div class="card-icon icono-naranja"><img src="../img/clockUserADMIN.png" alt="Tiempo"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="content">
+
+          <!-- AGENDA DEL DÍA -->
+          <div class="appointments">
+            <h3>Mi Agenda de hoy</h3>
+
+            <!-- Cita 1: Completada -->
+            <div class="appointment estado-completada">
+              <div class="left">
+                <span class="hour">09:00</span>
+                <div>
+                  <h4>María González</h4>
+                  <p>Consulta de rutina</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="state greenState">Completado</span>
+              </div>
+            </div>
+
+            <!-- Cita 2: En curso -->
+            <div class="appointment estado-encurso" id="cita2">
+              <div class="left">
+                <span class="hour hour-encurso">10:25</span>
+                <div>
+                  <h4>María González</h4>
+                  <p>Consulta post-operatoria</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="state yellowState">En curso</span>
+              </div>
+              <div class="btn-full-row">
+                <button class="btn-consulta btn-finalizar" onclick="finalizarConsulta('cita2')">Finalizar
+                  Consulta</button>
+              </div>
+            </div>
+
+            <!-- Cita 3: Pendiente -->
+            <div class="appointment estado-pendiente" id="cita3">
+              <div class="left">
+                <span class="hour">10:00</span>
+                <div>
+                  <h4>María González</h4>
+                  <p>Consulta post-operatoria</p>
+                </div>
+              </div>
+              <div class="right">
+                <span class="state greyState">Pendiente</span>
+              </div>
+              <div class="btn-full-row">
+                <button class="btn-consulta btn-iniciar" onclick="iniciarConsulta('cita3')">Iniciar Consulta</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ACCIONES RÁPIDAS -->
+          <div class="actions">
+            <h3>Acciones Rápidas</h3>
+            <button class="btnActions btnActionBlue" onclick="abrirModal()">Gestionar Citas</button>
+            <button class="btnActions btnActionGreen" onclick="abrirModalHorarios()">Configurar Horarios</button>
+
+            <div class="proxima-cita">
+              <div class="proxima-cita-header">
+                <img src="../img/Icon.png" alt="Reloj" class="proxima-icon">
+                <span>Próxima Cita</span>
+              </div>
+              <div class="proxima-hora">11:00 AM</div>
+              <div class="proxima-paciente">Ana Rodríguez</div>
+              <div class="proxima-motivo">Medicina interna</div>
+            </div>
+          </div>
+
+        </section>
+
+      </section><!-- fin agendaView -->
+
+      <section id="pacientesView" class="view">
+
+        <header class="header">
+          <div>
+            <h1>Mis Pacientes</h1>
+            <span class="fecha-header">3 de Abril del 2026</span>
+          </div>
+        </header>
+
+        <div class="pacientes-layout">
+
+          <!-- COLUMNA IZQUIERDA: lista -->
+          <div class="pacientes-lista">
+            <div class="pacientes-search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" placeholder="Buscar paciente..." oninput="filtrarPacientes(this.value)">
+            </div>
+
+            <div class="paciente-item activo" onclick="seleccionarPaciente(this)">
+              <img src="../img/icono-medico-avatar.svg" alt="">
+              <div>
+                <h4>María González Pérez</h4>
+                <span><img  class="NegroCalen" src="../img/CalendarNegro.png" alt="Imagen Calendario"> 5 citas</span>
+                <span><img  class="NegroCalen" src="../img/Google-Docs Negro.png" alt="Imagen archivo"> 3 diagnósticos</span>
+              </div>
+              <span class="paciente-arrow">›</span>
+            </div>
+
+            <div class="paciente-item" onclick="seleccionarPaciente(this)">
+              <img class="NegroCalen" src="../img/icono-medico-avatar.svg" alt="">
+              <div>
+                <h4>María González Pérez</h4>
+                <span> <img class="NegroCalen" src="../img/CalendarNegro.png" alt="Imagen Calendario"> 5 citas</span>
+                <span><img class="NegroCalen" src="../img/Google-Docs Negro.png" alt=""> 3 diagnósticos</span>
+              </div>
+              <span class="paciente-arrow">›</span>
+            </div>
+
+          </div>
+
+          <!-- COLUMNA DERECHA: detalle -->
+          <div class="paciente-detalle">
+
+            <div class="detalle-header">
+              <img src="../img/icono-medico-avatar.svg" alt="" class="detalle-avatar">
+              <div class="detalle-info">
+                <h2>María González Pérez</h2>
+                <p>Email: <a href="mailto:sigcmi@gmail.com">sigcmi@gmail.com</a></p>
+                <p>Teléfono: 3137482412</p>
+              </div>
+              <div class="detalle-meta">
+                <p>Edad: 35 años</p>
+                <p>Última Visita: 9/04/2026</p>
+              </div>
+            </div>
+
+            <div class="detalle-badges">
+              <span class="badge badge-blue"> <img src="../img/CalendarPaciente.png" alt="Imagen Calendario"> Citas: 5</span>
+              <span class="badge badge-purple"> <img src="../img/google-docs 2.png" alt="Imagen archivo"> Diagnósticos: 3</span>
+            </div>
+
+            <div class="historial">
+              <h3>Historial Médico</h3>
+
+              <div class="historial-card">
+                <h4>Gripe común con síntomas de congestión nasal:</h4>
+                <p class="historial-fecha">9/abr/2026</p>
+                <p><strong>Síntomas:</strong></p>
+                <p>Fiebre de 38C, congestion nasal, dolor de garganta.</p>
+                <p><strong>Tratamiento:</strong></p>
+                <p>Reposo, hidratacion abundante y acetaminofen cada 6 horas.</p>
+              </div>
+
+              <div class="historial-card">
+                <h4>Gastritis aguda por estrés</h4>
+                <p class="historial-fecha">11 de marzo de 2026</p>
+                <p><strong>Síntomas:</strong></p>
+                <p>Dolor epigástrico intenso, náuseas</p>
+                <p><strong>Tratamiento:</strong></p>
+                <p>Omeprazol 20mg en ayunas por 14 días, dieta blanda</p>
+              </div>
+
+              <div class="historial-card">
+                <h4>Control general anual - Paciente sano</h4>
+                <p class="historial-fecha">19 de enero de 2026</p>
+                <p><strong>Síntomas:</strong></p>
+                <p>Sin síntomas, control preventivo</p>
+                <p><strong>Tratamiento:</strong></p>
+                <p>Vitamina D 1000 UI diaria como suplemento preventivo</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </main>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="cerrarSidebarMovil()"></div>
+
+  <!-- MODAL GESTIÓN DE CITAS -->
+  <div class="modal-overlay" id="modalGestionCitas" onclick="cerrarModalFuera(event)">
+    <div class="modal-gc" onclick="event.stopPropagation()">
+
+      <div class="modal-gc-header">
+        <div class="modal-gc-header-left">
+          <div class="modal-gc-icon"><img src="../img/Calendar22.png" alt=""></div>
+          <div>
+            <h2>Gestión de Citas</h2>
+            <p id="modalSubtitulo">Total de citas 3</p>
+          </div>
+        </div>
+        <button class="modal-gc-close" onclick="cerrarModal()">&#x2715;</button>
+      </div>
+
+      <div class="modal-gc-filtros">
+        <input type="text" class="modal-gc-search" placeholder="Buscar por paciente." oninput="filtrarCitas()">
+        <select class="modal-gc-select" onchange="filtrarCitas()">
+          <option value="">Todos los estados</option>
+          <option value="Pendiente">Pendiente</option>
+          <option value="Completado">Completado</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+      </div>
+
+      <div class="modal-gc-body" id="listaCitas">
+
+        <div class="cita-card" data-estado="Pendiente">
+          <div class="cita-card-top">
+            <div class="cita-fecha"><img src="../img/Calendar22.png" alt=""> 14 abr 2026</div>
+            <span class="pill pill-pendiente">Pendiente</span>
+          </div>
+          <div class="cita-info"><img src="../img/Clock.png" alt=""> 09:00</div>
+          <div class="cita-info"><img src="../img/person.png" alt=""> Juan Martínez López</div>
+          <div class="cita-info"><img src="../img/image 218.png" alt=""> Dra. Ana López</div>
+          <div class="cita-motivo">Control cardiológico</div>
+          <div class="cita-btns">
+            <button class="btn-repro" onclick="event.stopPropagation(); abrirReprogramar(this)">Reprogramar</button>
+            <button class="btn-cancel-cita">Cancelar</button>
+          </div>
+        </div>
+
+        <div class="cita-card" data-estado="Pendiente">
+          <div class="cita-card-top">
+            <div class="cita-fecha"><img src="../img/Calendar22.png" alt=""> 18 abr 2026</div>
+            <span class="pill pill-pendiente">Pendiente</span>
+          </div>
+          <div class="cita-info"><img src="../img/Clock.png" alt=""> 10:00</div>
+          <div class="cita-info"><img src="../img/person.png" alt=""> María González Pérez</div>
+          <div class="cita-info"><img src="../img/image 218.png" alt=""> Dr. Carlos Pérez</div>
+          <div class="cita-motivo">Consulta general - Control de rutina</div>
+          <div class="cita-btns">
+            <button class="btn-repro" onclick="event.stopPropagation(); abrirReprogramar(this)">Reprogramar</button>
+            <button class="btn-cancel-cita">Cancelar</button>
+          </div>
+        </div>
+
+        <div class="cita-card" data-estado="Completado">
+          <div class="cita-card-top">
+            <div class="cita-fecha"><img src="../img/Calendar22.png" alt=""> 18 abr 2026</div>
+            <span class="pill pill-completado">Completado</span>
+          </div>
+          <div class="cita-info"><img src="../img/Clock.png" alt=""> 14:00</div>
+          <div class="cita-info"><img src="../img/person.png" alt=""> Ana Rodríguez Silva</div>
+          <div class="cita-info"><img src="../img/image 218.png" alt=""> Dr. Luis García</div>
+          <div class="cita-motivo">Vacunación pediátrica</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL REPROGRAMAR -->
+  <div class="modal-overlay" id="modalReprogramar" onclick="cerrarReprogramarFuera(event)">
+    <div class="modal-gc" style="width:420px;" onclick="event.stopPropagation()">
+
+      <div class="modal-gc-header">
+        <div class="modal-gc-header-left">
+          <div>
+            <h2>Reprogramar Cita</h2>
+            <p id="reprogramarNombre"></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 24px; display:flex; flex-direction:column; gap:16px;">
+        <div>
+          <label class="repro-label">Reprogramar Cita</label>
+          <input type="date" class="repro-input">
+        </div>
+        <div>
+          <label class="repro-label">Reprogramar Hora</label>
+          <input type="time" class="repro-input">
+        </div>
+        <div style="display:flex; gap:12px; margin-top:8px;">
+          <button class="btn-cancel-cita" style="flex:1; padding:11px;" onclick="cerrarReprogramar()">Cancelar</button>
+          <button class="btn-repro" style="flex:1; padding:11px;" onclick="guardarReprogramar()">Guardar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL CONFIGURAR HORARIOS -->
+  <div class="modal-overlay" id="modalHorarios" onclick="cerrarModalHorariosFuera(event)">
+    <div class="modal-gc" style="width:520px;" onclick="event.stopPropagation()">
+
+      <div class="modal-gc-header">
+        <div class="modal-gc-header-left">
+          <div class="modal-gc-icon"><img src="../img/Calendar22.png" alt=""></div>
+          <div>
+            <h2>Mi Horario de Atención</h2>
+            <p>Configura tus días y horarios disponibles</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="horarios-body">
+
+        <div class="dia-row" id="diaLunes">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaLunes', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Lunes</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaLunes')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaMartes">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaMartes', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Martes</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMartes')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaMiercoles">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaMiercoles', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Miércoles</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaMiercoles')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaJueves">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaJueves', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Jueves</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaJueves')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaViernes">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaViernes', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Viernes</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaViernes')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaSabado">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaSabado', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Sábado</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaSabado')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="dia-row" id="diaDomingo">
+          <div class="dia-top">
+            <div class="dia-left">
+              <label class="switch">
+                <input type="checkbox" onchange="toggleDia('diaDomingo', this)">
+                <span class="slider"></span>
+              </label>
+              <span class="dia-nombre">Domingo</span>
+            </div>
+            <button class="btn-agregar-hora" style="display:none;" onclick="agregarHora('diaDomingo')">Agregar
+              Horario</button>
+          </div>
+          <div class="dia-horas"></div>
+        </div>
+
+        <div class="info-box">
+          <span>&#9432;</span>
+          <div>
+            <strong>Información Importante</strong>
+            <p>Los pacientes solo podrán agendar citas en los horarios que configures aquí. Puedes tener múltiples
+              horarios por día (por ejemplo, mañana y tarde).</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-gc-footer">
+        <button class="btn-cancel-cita" style="flex:1; padding:11px;" onclick="cerrarModalHorarios()">Cancelar</button>
+        <button class="btn-repro" style="flex:1; padding:11px;" onclick="guardarHorarios()">Guardar Horario</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../javascript/dashboardMedical.js"></script>
+</body>
+
+</html>
