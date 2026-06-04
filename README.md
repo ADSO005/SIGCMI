@@ -33,7 +33,7 @@ The system implements a **Client-Server N-Tier Architecture**:
 - 🎨 Frontend: Web/Mobile (React )  
 - ⚙️ Backend: REST API (Node.js )  
 - 🗄️ Database: MySQL  
-- 🔔 Notifications: Simulated Service  
+- 🔔 Notifications Service  
 
 ### System Layers
 
