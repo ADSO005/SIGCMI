@@ -1740,7 +1740,7 @@ textarea {
 
     .patients-module .cards-container {
         display: grid;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         height: 480px;
         gap: 20px;
     }
