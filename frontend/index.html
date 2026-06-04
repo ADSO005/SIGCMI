@@ -10,79 +10,79 @@
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="header">
-        <div class="minHeader">
-            <h1>SIGCMI</h1>
-            <p>Sistema Integral de Gestión<br>de Citas Médicas</p>
+        <div class="header">
+            <div class="minHeader">
+                <h1>SIGCMI</h1>
+                <p>Sistema Integral de Gestión de Citas <br>Médicas</p>
+            </div>
+            <div class="curva">
+            <img src="imgSIGCMI/img/CurvaTerrestre.png" alt="">
+            </div>
         </div>
-        <img src="imgSIGCMI/img/CurvaTerrestre.png" class="curva">
-    </div>
 
-    <div class="tarjeta">
-        <h2>Iniciar Sesión</h2>
-        <p class="subtitulo">Ingresa a tu cuenta para continuar</p>
+        <div class="tarjeta">
+            <h2>Iniciar Sesión</h2>
+            <p class="subtitulo">Ingresa a tu cuenta para continuar</p>
 
-        <form>
-            <label>Correo Electronico*</label>
-            <div class="input-box">
-                <img src="imgSIGCMI/img/email.svg" class="icon" alt="email">
-                <input type="email" placeholder="correro@ejemplo.com">
-            </div>
-
-            <label>Contraseña*</label>
-            <div class="input-box">
-                <img src="imgSIGCMI/img/lock.svg" class="icon" alt="contraseña">
-                <input type="password" placeholder="*********">
-            </div>
-
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-    </div>
-
-    <div class="links">
-        <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
-        <p id="abrirRecuperar">¿Olvidaste tu contraseña?</p>
-    </div>
-
-    <div class="whatsapp">
-        <img src="imgSIGCMI/img/WhatsApp.svg.png" alt="WhatsApp">
-    </div>
-</div>
-
-
-<!--  CODIGO SANTIAGO: IMPLEMENTACION DE LOS MODULOS DE RECUPERACION DE CONTRASEÑA -->
-<!--  MODAL 1 -->
-<div class="modal" id="modal1">
-    <div class="modal-box">
-
-        <div class="modal-header">
-            <div class="titulo">
-                <div>
-                    <h4>Recuperar Contraseña</h4>
-                    <p>Ingresa tu correo electrónico</p>
+            <form>
+                <label>Correo Electronico*</label>
+                <div class="input-box">
+                    <img src="imgSIGCMI/img/email.svg" class="icon" alt="email">
+                    <input type="email" placeholder="correro@ejemplo.com">
                 </div>
-            </div>
-            <span onclick="cerrarModal('modal1')">✕</span>
-        </div>
-<!--  CONTENEDOR CAMPO CORREO -->
-        <div class="modal-body">
-            <p>
-                Ingresa tu correo electrónico y te enviaremos un código de verificación para restablecer tu contraseña.
-            </p>
 
-            <input type="email" placeholder="correo@ejemplo.com">
+                <label>Contraseña*</label>
+                <div class="input-box">
+                    <img src="imgSIGCMI/img/lock.svg" class="icon" alt="contraseña">
+                    <input type="password" placeholder="*********">
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+
+            </form>
+              <p class="registro">¿No tienes cuenta? <a href="#">Regístrate</a></p>
+            <p class="olvido">¿Olvidaste tu contraseña?</p>
         </div>
-<!--  CONTENEDOR DE BOTONES -->
-        <div class="modal-footer">
-            <button class="cancelar" onclick="cerrarModal('modal1')">Cancelar</button>
-            <button onclick="siguiente('modal1','modal2')">Enviar Código</button>
+
+        <div class="whatsapp">
+            <img src="imgSIGCMI/img/whatsapp.svg" alt="WhatsApp" width="28" height="28">
+
+        </div>
+
+                </div>
+
+<!-- MODAL 1 (se abrirá automáticamente) -->
+<div class="modal" id="modal1">
+<div class="modal-box">
+    
+    <div class="modal-header">
+    <div class="titulo">
+        <div>
+        <h4>Recuperar Contraseña</h4>
+        <p>Ingresa tu correo electrónico</p>
         </div>
     </div>
+    <span onclick="cerrarModal('modal1')">✕</span>
+    </div>
+
+    <div class="modal-body">
+    <p>
+        Ingresa tu correo electrónico y te enviaremos un código de verificación para restablecer tu contraseña.
+    </p>
+
+    <input type="email" placeholder="correo@ejemplo.com">
+    </div>
+
+    <div class="modal-footer">
+    <button class="cancelar" onclick="cerrarModal('modal1')">Cancelar</button>
+    <button onclick="siguiente('modal1','modal2')">Enviar Código</button>
+    </div>
+
+</div>
 </div>
 
-<!--  MODAL 2 -->
+<!-- MODAL 2 -->
 <div class="modal" id="modal2">
 <div class="modal-box">
 
@@ -138,7 +138,6 @@
 </div>
 </div>
 
-<script src="javascript/script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
