@@ -1,0 +1,381 @@
+/* ── Variables globales ─────── */
+:root {
+  --color-primario: #4F6BFF;
+  --color-primario-oscuro: #3a56e8;
+  --color-fondo-app: #e8ecf9;
+  --color-fondo-modal: #fff;
+  --color-fondo-cuerpo: #edf0fb;
+  --color-fondo-franja: #f4f6ff;
+  --color-fondo-eliminar: #fde8e8;
+  --color-fondo-eliminar-hover: #f9c9c9;
+  --color-texto-primario: #1a1d2e;
+  --color-texto-secundario: #8a93c0;
+  --color-texto-eliminar: #c0392b;
+  --color-borde: rgba(79, 107, 255, 0.1);
+  --color-borde-input: #dde1f0;
+  --color-interruptor-apagado: #d0d4e8;
+  --radio-tarjeta: 14px;
+  --radio-modal: 20px;
+  --radio-boton: 8px;
+  --radio-input: 8px;
+  --fuente-principal: 'DM Sans', sans-serif;
+  --sombra-modal: 0 12px 40px rgba(79, 107, 255, 0.15);
+}
+
+/* ── Reset ────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background: var(--color-fondo-app);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* ── Contenedor y Modal ─────── */
+.contenedor-app {
+  width: 100%;
+  max-width: 380px;
+}
+
+.modal {
+  background: var(--color-fondo-modal);
+  border-radius: var(--radio-modal);
+  overflow: hidden;
+  box-shadow: var(--sombra-modal);
+}
+
+/* ── Encabezado ─────────── */
+.modal-encabezado {
+  background: var(--color-primario);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.encabezado-icono {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.encabezado-icono img {
+  display: block;
+}
+
+.encabezado-texto h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.encabezado-texto p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.boton-cerrar {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radio-boton);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.boton-cerrar:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* ── Cuerpo del modal ───── */
+.modal-cuerpo {
+  background: var(--color-fondo-cuerpo);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Tarjeta de día──────── */
+.tarjeta-dia {
+  background: var(--color-fondo-modal);
+  border-radius: var(--radio-tarjeta);
+  padding: 14px;
+  border: 1px solid var(--color-borde);
+  transition: opacity 0.25s;
+}
+
+.tarjeta-dia.inactivo {
+  opacity: 0.55;
+}
+
+.tarjeta-dia.inactivo .contenedor-franjas,
+.tarjeta-dia.inactivo .boton-agregar-franja {
+  pointer-events: none;
+}
+
+/* ── Encabezado de tarjeta ───── */
+.encabezado-dia {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.nombre-dia {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-texto-primario);
+  flex: 1;
+}
+
+/* ── Interruptor (Toggle) ────── */
+.interruptor {
+  position: relative;
+  width: 44px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.interruptor input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.interruptor-pista {
+  position: absolute;
+  inset: 0;
+  background: var(--color-interruptor-apagado);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.interruptor-pista::before {
+  content: '';
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.25s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.interruptor input:checked + .interruptor-pista {
+  background: var(--color-primario);
+}
+
+.interruptor input:checked + .interruptor-pista::before {
+  transform: translateX(19px);
+}
+
+/* ── Botón agregar franja ─────── */
+.boton-agregar-franja {
+  width: 30px;
+  height: 30px;
+  background: var(--color-primario);
+  border: none;
+  border-radius: var(--radio-boton);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.boton-agregar-franja img {
+  display: block;
+  filter: brightness(10);
+}
+
+.boton-agregar-franja:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.boton-agregar-franja:active {
+  transform: scale(0.94);
+}
+
+/* ── Franjas horarias ── */
+.contenedor-franjas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.franja-horaria {
+  background: var(--color-fondo-franja);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: deslizarEntrada 0.2s ease;
+}
+
+@keyframes deslizarEntrada {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.franja-icono-reloj {
+  color: var(--color-texto-secundario);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.franja-icono-reloj img {
+  display: block;
+  opacity: 0.6;
+}
+
+.franja-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.franja-inputs label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.input-hora {
+  border: 1px solid var(--color-borde-input);
+  border-radius: var(--radio-input);
+  padding: 7px 10px;
+  font-size: 13px;
+  font-family: var(--fuente-principal);
+  color: var(--color-texto-primario);
+  background: var(--color-fondo-modal);
+  width: 100%;
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+
+.input-hora:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(79, 107, 255, 0.12);
+}
+
+/* ── Botón eliminar franja ────── */
+.boton-eliminar-franja {
+  background: var(--color-fondo-eliminar);
+  border: none;
+  border-radius: var(--radio-boton);
+  color: var(--color-texto-eliminar);
+  font-size: 12px;
+  font-family: var(--fuente-principal);
+  font-weight: 500;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.boton-eliminar-franja img {
+  display: block;
+}
+
+.boton-eliminar-franja:hover {
+  background: var(--color-fondo-eliminar-hover);
+}
+
+/* ── Botón eliminar día ────── */
+.boton-eliminar-dia {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--color-fondo-eliminar);
+  border: none;
+  border-radius: 10px;
+  color: var(--color-texto-eliminar);
+  font-size: 13px;
+  font-family: var(--fuente-principal);
+  font-weight: 500;
+  padding: 9px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.boton-eliminar-dia img {
+  display: block;
+}
+
+.boton-eliminar-dia:hover {
+  background: var(--color-fondo-eliminar-hover);
+}
+
+/* ── Botón agregar día ────────── */
+.boton-agregar-dia {
+  width: 100%;
+  background: var(--color-primario);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  font-family: var(--fuente-principal);
+  font-weight: 600;
+  padding: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.2px;
+}
+
+.boton-agregar-dia img {
+  display: block;
+  filter: brightness(10);
+}
+
+.boton-agregar-dia:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.boton-agregar-dia:active {
+  transform: scale(0.98);
+}
