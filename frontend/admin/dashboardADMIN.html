@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGCMI</title>
+    <link rel="stylesheet" href="../styles/dashboardADMIN.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========================SIDEBAR======================== -->
+        <aside class="sidebar" id="sidebar" aria-label="Menú lateral de navegación">
+
+            <div class="logo">
+                <span class="logo-text">SIGCMI</span>
+
+                <button id="toggleBtn" aria-label="Abrir o cerrar menú">
+                    ☰
+                </button>
+            </div>
+
+            <hr class="line-1" aria-hidden="true">
+
+            <div class="user" aria-label="Información del usuario">
+                <p aria-label="Bienvenido">Bienvenido</p>
+                <h4>montoyajuanes11</h4>
+                <span>Administrador</span>
+            </div>
+
+            <hr class="line-2" aria-hidden="true">
+
+            <nav aria-label="Opciones principales">
+                <a href="#" class="dashboard preActive nav-link" id="dashboard" aria-label="Ir al Dashboard"
+                    data-view="dashboardADMIN">
+                    <img alt src="../imgSIGCMI/img/CDCFerriere-removebg-preview (1) 36.png" class="ferriere"
+                        alt="Icono Dashboard">
+                    <div class="nav-item">Dashboard</div>
+                </a>
+
+                <a href="#" class="nav-link" id="appointmentsDash" aria-label="Ir a Citas"
+                    data-view="appointmentsADMIN">
+                    <img src="../imgSIGCMI/img/Calendar.png" alt="Icono Citas">
+                    <div class="nav-item">Citas</div>
+                </a>
+
+                <a href="#" class="nav-link" id="pacientsDashboard" aria-label="Ir a Pacientes"
+                    data-view="pacientsADMIN">
+                    <img src="../imgSIGCMI/img/Users.png" alt="Icono Pacientes">
+                    <div class="nav-item">Pacientes</div>
+                </a>
+
+                <a href="#" class="nav-link" id="doctorsDashboard" aria-label="Ir a Médicos" data-view="medicsADMIN">
+                    <img src="../imgSIGCMI/img/image_86.png" alt="Icono Médicos">
+                    <div class="nav-item">Medicos</div>
+                </a>
+
+                <a href="#" aria-label="Ir a WhatsApp" class="nav-link" data-view="whatsappADMIN">
+                    <img src="../imgSIGCMI/img/chat_bubble.png" alt="Icono WhatsApp">
+                    <div class="nav-item">WhatsApp</div>
+                </a>
+            </nav>
+
+            <hr class="line-3" aria-hidden="true">
+
+            <div class="logout" role="button" tabindex="0" aria-label="Cerrar sesión">
+                <img src="../imgSIGCMI/img/Logout.png" class="log-out" alt="Icono cerrar sesión">
+                <span class="sesionlogout">Cerrar Sesión</span>
+            </div>
+        </aside>
+
+        <!-- ========================MAIN======================== -->
+        <main class="main">
+            <header class="header">
+                <h1 aria-label="Sistema Integral de Gestión de Citas Médicas ">Sistema Integral de Gestión de Citas
+                    Médicas</h1>
+                <span aria-label="martes, 7 de abril de 2026">martes, 7 de abril de 2026</span>
+            </header>
+            <hr>
+            <section id="dashboardADMIN" class="view active">
+
+
+                <!-- ========================CARDS======================== -->
+                <section class="cards">
+                    <div class="card">
+                        <p aria-label="Cistas de Hoy">Citas Hoy</p>
+                        <div>
+                            <h2>24</h2>
+                            <img src="../imgSIGCMI/img/blueCalendar.png" alt="Imagen de Calendario">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p aria-label="Pacientes Activos">Pacientes Activos</p>
+                        <div>
+                            <h2>1248</h2>
+                            <img src="../imgSIGCMI/img/usderGreen.png" alt="Imagen de Pacientes Activos">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p>Médicos Disponibles</p>
+                        <div>
+                            <h2>18</h2>
+                            <img src="../imgSIGCMI/img/historyUser.png" alt="Imagen de Historias de Usuario">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p>Tiempo Promedio</p>
+                        <div>
+                            <h2>15 min</h2>
+                            <img src="../imgSIGCMI/img/clockUserADMIN.png" alt="Imagen de timpo promedio de consulta">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CONTENIDO -->
+                <section class="content">
+
+                    <!-- ========================APPOINMENTS======================== -->
+                    <div class="appointments">
+                        <h3>Citas Hoy</h3>
+
+                        <div class="appointment">
+                            <div class="left">
+                                <span class="hour">09:00</span>
+                                <h4>María González</h4>
+                                <p><span>Dr.</span> Pérez</p>
+                            </div>
+
+                            <div class="right">
+                                <span class="state greenState">Completado</span>
+                            </div>
+                        </div>
+
+                        <div class="appointment">
+                            <div class="left">
+                                <span class="hour">10:00</span>
+                                <h4>Juan Martínez</h4>
+                                <p><span>Dr.</span> Pérez</p>
+                            </div>
+                            <div class="right">
+                                <span class="state yellowState">En curso</span>
+                            </div>
+                        </div>
+
+                        <div class="appointment">
+                            <div class="left">
+                                <span class="hour">11:00</span>
+                                <h4>Ana Rodríguez</h4>
+                                <p><span>Dr.</span> Pérez</p>
+                            </div>
+                            <div class="right">
+                                <span class="state greyState">Pendiente</span>
+                                <button class="btnManageAppointment" onclick="openModal()">Click para gestionar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ========================ACTIONS======================== -->
+                    <div class="actions">
+                        <h3>Acciones Rápidas</h3>
+                        <button class="btnActions btnActionBlue" id="openModalSheduleA"
+                            data-open-modal="modalSheduleA">+ Nueva Cita</button>
+                        <button class="btnActions btnActionGreen">+ Registrar Paciente</button>
+                        <button class="btnActions btnActionPurple">Gestionar Citas</button>
+                        <button class="btnActions btnActionDark">Ver Métricas</button>
+                        <button class="btnActions btnActionCyan">Ver Calendario</button>
+                        <button class="btnActions btnActionOrange">Enviar Recordatorios</button>
+                        <div class="whatsAppNoti">
+                            <h2>WhatsApp <span>Activo</span></h2>
+                            <p><span>24 </span>notificaciones enviadas hoy.</p>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
+
+            </section>
+
+            <!-- =================================MODAL MANAGE APPOINMENT================================= -->
+            <div class="modal" id="modal">
+
+                <!-- Modal container -->
+                <div class="modal-content">
+
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <h2>Gestionar Cita</h2>
+                        <span class="close" id="closeModal">X</span>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <span>Paciente:</span>
+                            <strong>Ana Rodríguez</strong>
+                        </div>
+
+                        <div class="row">
+                            <span>Médico:</span>
+                            <strong>Dr. Pérez</strong>
+                        </div>
+
+                        <div class="row">
+                            <span>Hora:</span>
+                            <strong>09:00</strong>
+                        </div>
+
+
+
+                        <!-- BUTTONS -->
+                        <button type="button" class="btn btn-blue" onclick="openRepro()">Reprogramar Cita</button>
+                        <button class="btn btn-red btnCancel btnEstado" id="btnCancel">Cancelar Cita</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL REPROGRAMING -->
+            <div class="modal" id="modalRepro">
+
+                <div class="modal-content">
+
+                    <!-- HEADER -->
+                    <div class="modal-header">
+                        <h2>Reprogramar Cita</h2>
+                        <span class="close" id="closeRepro">X</span>
+                    </div>
+
+                    <!-- BODY -->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <span>Paciente:</span>
+                            <strong>María González</strong>
+                        </div>
+
+                        <div class="row">
+                            <span>Médico:</span>
+                            <strong>Dr. Pérez</strong>
+                        </div>
+
+                        <div class="row">
+                            <span>Hora:</span>
+                            <strong>09:00</strong>
+                        </div>
+
+
+
+                        <!-- INPUT DATE -->
+                        <label class="dateRepro">Nueva Fecha*</label>
+                        <input type="date" id="dateRepro" class="input" required>
+
+                        <!-- INPUT HOUR -->
+                        <label class="timeRepro">Nueva Hora*</label>
+                        <input type="time" id="timeRepro" class="input" required>
+
+                        <!-- BUTTONS -->
+                        <div class="btn-group">
+                            <button class="btn btn-blue" onclick="saveChanges()">Guardar Cambios</button>
+                            <button class="btn btn-gray" id="cancelRepro">Cancelar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--SHOW MESSAGE SAVE WITH EXIT-->
+            <div id="mesaggeSaveChanges" class="mesaggeSaveChanges">Cambios guardados con éxito.</div>
+
+            <!--It displays an error if the date and time inputs are empty. -->
+            <p id="errorMessageRepro" class="errorMessageRepro"></p>
+
+
+            <!--MODAL SHEDULE APPOINMENT-->
+            <div id="modalSheduleA" class="modalSheduleA">
+                <div class="modalSheduleA-content">
+
+                    <div class="modalSheduleA-header">
+                        <h2>Nueva Cita</h2>
+                        <span data-close-modal="modalSheduleA">X</span>
+                    </div>
+                    <hr class="lineModalSheduleA">
+                    <form id="formCita">
+
+                        <label class="data">Paciente:</label>
+                        <select id="pacienteModalSheduleA" required>
+                            <option value="">Seleccionar</option>
+                            <option>Juan</option>
+                            <option>Maria</option>
+                        </select>
+
+                        <label class="data">Médico:</label required>
+                        <select id="medicoModalSheduleA">
+                            <option value="">Seleccionar</option>
+                            <option>Dr. Perez</option>
+                            <option>Dr. Lopez</option>
+                        </select>
+
+                        <label class="data">Fecha:</label>
+                        <input type="date" id="dateModalSheduleA">
+
+                        <label class="data">Hora:</label>
+                        <select id="timeModalSheduleA" required>
+                            <option value="">Seleccionar</option>
+                            <option>08:00</option>
+                            <option>09:00</option>
+                        </select>
+
+                        <label class="data">Motivo de consulta:</label>
+                        <textarea id="reasonModalSheduleA" placeholder="Ej: Consulta..."></textarea>
+
+                        <div class="buttonsModalSheduleA">
+                            <div>
+                                <button type="submit" class="createModalSheduleA" id="createModalSheduleA">Crear
+                                    Cita</button>
+                            </div>
+                            <div>
+                                <button type="button" class="cancelModalSheduleA" id="cancelModalSheduleA"
+                                    data-close-modal="modalSheduleA">Cancelar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- MESSAGE SHEDULE APPOINMENT CONFIRMATION -->
+            <div id="messageModalSheduleA" class="messageModalSheduleA"></div>
+
+            <!--DASHBOARD ADMIN QUOTES SECTION -->
+
+            <!-- CONTENT -->
+            <section id="appointmentsADMIN" class="view ">
+
+
+
+                <div class="containerDos">
+                    <div class="containerDosHeader">
+                        <h2>Gestión de Citas</h2>
+                        <button class="btn-primary" id="btnSectionApp" data-open-modal="modalSheduleA">+ Nueva
+                            cita</button>
+                    </div>
+
+                    <!-- FILTERS -->
+                    <div class="filters">
+
+                        <div class="filter">
+                            <label>Fecha</label>
+                            <input type="date" value="2026-04-10">
+                        </div>
+
+                        <div class="filter">
+                            <label>Médico</label>
+                            <select>
+                                <option>Todos</option>
+                            </select>
+                        </div>
+
+                        <div class="filter">
+                            <label>Estado</label>
+                            <select>
+                                <option>Todos</option>
+                                <option>Cancelado</option>
+                                <option>Completado</option>
+                                <option>Pendiente</option>
+                                <option>En curso</option>
+                            </select>
+                        </div>
+
+                        <div class="filter">
+                            <label>Buscar</label>
+                            <input type="text" placeholder="Buscar Paciente">
+                        </div>
+
+                    </div>
+
+                    <div class="tableContainer">
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Hora</th>
+                                    <th>Paciente</th>
+                                    <th>Médico</th>
+                                    <th>Especialidad</th>
+                                    <th>Motivo</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>APT-001</td>
+                                    <td>09:00</td>
+                                    <td>María González Pérez</td>
+                                    <td>Dr. Carlos Pérez</td>
+                                    <td><span class="badge">Medicina General</span></td>
+                                    <td>Consulta de rutina y chequeo general</td>
+                                    <td class="newStated"><span class="status completado">Completada</span></td>
+                                    <td class="actions">
+                                        <button class="btnEstado action viewTableContainer open-modal">Ver</button>
+                                        <button class="btnEstado action completeTableContainer">Completar</button>
+                                        <button class="btnEstado action cancelTableContainer"
+                                            id="btnCancelTable">Cancelar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--DASHBOARD ADMIN PACIENTS SECTION -->
+            <section id="pacientsADMIN" class="view">
+
+                <div class="patients">
+
+                    <div class="patients__header">
+                        <h1>Gestión de Pacientes</h1>
+                        <p>Administra el registro de pacientes del centro</p>
+                    </div>
+
+                    <div class="patientCardHeader">
+
+                        <button id="btnNewPatient">+ Nuevo Médico</button>
+                    </div>
+
+
+                    <div class="patients__card" id="patientCard">
+
+                        <form class="patients__form" id="formPaciente">
+                            <h2>Registrar Personal</h2>
+                            <!-- INFORMACIÓN PERSONAL -->
+                            <h3>Información Personal</h3>
+                            <hr class="lineFormGrid">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Nombres*</label>
+                                    <input type="text" name="nombres" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Apellidos*</label>
+                                    <input type="text" name="apellidos" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Fecha de nacimiento*</label>
+                                    <input type="date" name="fecha" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Género*</label>
+                                    <select name="genero" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="femenino">Femenino</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- DOCUMENTO -->
+                            <h3>Documento de Identidad</h3>
+                            <hr class="lineFormGrid">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Tipo de Documento*</label>
+                                    <select name="tipoDocumento" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="RC">Registro Civil</option>
+                                        <option value="TI">Tarjeta de Identidad</option>
+                                        <option value="CC">Cédula</option>
+                                        <option value="CE">Cédula Extranjería</option>
+                                        <option value="PP">Pasaporte</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Número de Documento*</label>
+                                    <input type="text" name="documento" required>
+                                </div>
+                            </div>
+
+                            <!-- CONTACTO -->
+                            <h3>Información de Contacto</h3>
+                            <hr class="lineFormGrid">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Correo*</label>
+                                    <input type="email" name="correo" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Teléfono*</label>
+                                    <input type="text" name="telefono" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Departamento*</label>
+                                    <select id="departamento" name="departamento" required>
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Ciudad*</label>
+                                    <select id="ciudad" name="ciudad" required>
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Dirección*</label>
+                                    <input type="text" name="direccion" required>
+                                </div>
+                            </div>
+
+                            <!-- MÉDICA -->
+                            <h3>Información Médica</h3>
+                            <hr class="lineFormGrid">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Tipo de sangre*</label>
+                                    <select name="sangre" required>
+                                        <option value="">Seleccionar</option>
+                                        <option value="O+">O+</option>
+                                        <option value="O-">O-</option>
+                                        <option value="A+">A+</option>
+                                        <option value="A-">A-</option>
+                                        <option value="B+">B+</option>
+                                        <option value="B-">B-</option>
+                                        <option value="AB+">AB+</option>
+                                        <option value="AB-">AB-</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Alergias</label>
+                                    <input type="text" name="alergias">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Condición médica</label>
+                                    <input type="text" name="condicion">
+                                </div>
+                            </div>
+
+                            <!-- EMERGENCIA -->
+                            <h3>Contacto de Emergencia</h3>
+                            <hr class="lineFormGrid">
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Nombres</label>
+                                    <input type="text" name="emergenciaNombre">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Teléfono</label>
+                                    <input type="tel" name="emergenciaTelefono">
+                                </div>
+                            </div>
+
+                            <!-- SEGURIDAD -->
+                            <h3>Seguridad</h3>
+                            <hr class="lineFormGrid">
+
+                            <div class="form-grid">
+                                <div class="form-group full">
+                                    <label>Contraseña*</label>
+                                    <input type="password" name="password" required minlength="6">
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="form-actions">
+                                <button type="submit" id="btnGuardar" class="btn-primary" disabled>
+                                    Guardar Cambios
+                                </button>
+
+                                <button type="button" class="btn-secondary" id="btnCancelar">
+                                    Cancelar
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div id="mensajeGlobal"></div>
+
+
+                    <div class="patients-module">
+
+                        <!--  SHEARCH -->
+                        <div class="search-container">
+                            <label for="search" class="sr-only">Buscar pacientes</label>
+                            <input type="text" id="search"
+                                placeholder="Buscar por nombre, documento, teléfono, email, ciudad"
+                                aria-label="Buscar pacientes por nombre, documento, teléfono, correo o ciudad">
+                        </div>
+
+                        <!--  CARS-->
+                        <div class="cards-container" aria-label="Lista de pacientes">
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="cardPacients" role="article" aria-labelledby="paciente-1">
+
+                                <div class="card-header">
+                                    <div class="header-left">
+                                        <div class="avatar" aria-hidden="true">👤</div>
+                                        <div>
+                                            <h2 id="paciente-1">María Gonzáles Pérez</h2>
+                                        </div>
+                                    </div>
+
+                                    <span class="badge" aria-label="Tipo de sangre O positivo">O+</span>
+                                </div>
+
+                                <ul class="info-list">
+                                    <li><img src="../imgSIGCMI/img/iconUser.png" alt="Icono de Usuario"> Femenino, 35
+                                        años</li>
+                                    <li><img src="../imgSIGCMI/img/creditCard.png" alt="Icono de Usuario"> 123456789
+                                    </li>
+                                    <li><img src="../imgSIGCMI/img/phone.png" alt="Icono de Usuario"> 300 123 4567</li>
+                                    <li><img src="../imgSIGCMI/img/mail.png" alt="Icono de Usuario" class="iconEmail">
+                                        maria.gonzales@email.com</li>
+                                    <li><img src="../imgSIGCMI/img/location.png" alt="Icono de Usuario"> Medellín,
+                                        Antioquia</li>
+                                </ul>
+
+                                <div class="status green" aria-label="Última visita y total de citas">
+                                    <p>Última visita: 08 abr 2026</p>
+                                    <p>Total de citas: 5</p>
+                                </div>
+
+                                <div class="status blue" aria-label="Próxima cita">
+                                    <p>Próxima cita: 15 abr 2026 11:00</p>
+                                </div>
+
+                                <div class="actionsModulePacients">
+                                    <button class="btnModulPacients primary" aria-label="Ver historial del paciente"
+                                        onclick="openPatientHistory()">Historial</button>
+                                    <button class="btnModulPacients outline"
+                                        aria-label="Editar paciente">Editar</button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ==================== PATIENT HISTORY MODAL ==================== -->
+            <div id="medicsHistoryModal" class="modalHistory">
+
+                <div class="modalHistory-content">
+
+                    <!-- HEADER -->
+                    <div class="modalHistory-header">
+                        <h2 id="patientNameTitle">Historial de María González Pérez</h2>
+                        <span id="closePatientHistoryModal">✖</span>
+                    </div>
+
+                    <!-- PATIENT INFO -->
+                    <div class="patient-info">
+
+                        <div class="info-header">
+                            <span class="icon">👤</span>
+                            <h3>Información del Paciente</h3>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-box">
+                                <span>EMAIL</span>
+                                <p id="patientEmail">pacient@gmail.com</p>
+                            </div>
+
+                            <div class="info-box">
+                                <span>PHONE</span>
+                                <p id="patientPhone">300 123 4567</p>
+                            </div>
+
+                            <div class="info-box">
+                                <span>AGE</span>
+                                <p id="patientAge">35 años</p>
+                            </div>
+
+                            <div class="info-box">
+                                <span>GENDER</span>
+                                <p id="patientGender">Femenino</p>
+                            </div>
+
+                            <div class="info-box">
+                                <span>BLOOD TYPE</span>
+                                <p id="patientBlood">O+</p>
+                            </div>
+
+                            <div class="info-box">
+                                <span>CITY</span>
+                                <p id="patientCity">Medellín</p>
+                            </div>
+                        </div>
+
+                        <!-- ALERT -->
+                        <div class="alert-box">
+                            <strong>ALERGIAS IMPORTANTES</strong>
+                            <p id="patientAllergy">Polen</p>
+                        </div>
+
+                    </div>
+
+                    <!-- MEDICAL HISTORY -->
+                    <div class="medical-history">
+
+                        <div class="history-header">
+                            <h3>Historial Médico Detallado</h3>
+                            <span class="badgeHistoryModal">1 Registro</span>
+                        </div>
+
+                        <div class="history-item">
+
+                            <!-- DATE -->
+                            <div class="history-date">
+                                <span><img src="../imgSIGCMI/img/iconCalendar.png" alt=""></span>
+                                <div>
+                                    <p id="historyDate">10 de Abril de 2026</p>
+                                    <small>MR-001</small>
+
+                                </div>
+                            </div>
+                            <div class="lineModalMD">
+                                <hr class="line-4">
+
+                            </div>
+                            <!-- DIAGNOSIS -->
+                            <div class="history-box diagnosis">
+
+                                <div>
+                                    <div class="diagnosisTransparent">
+                                        <strong>DIAGNOSTICO</strong>
+                                        <p id="diagnosisText">Gripe común con síntomas de congestión nasal y fiebre leve
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TREATMENT -->
+                            <div class="history-box treatment">
+                                <div>
+                                    <div class="treatmentTransparent">
+
+                                        <strong>TRATAMIENTO</strong>
+                                        <p id="treatmentText">Gripe común con síntomas de congestión nasal y fiebre leve
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PRESCRIPTION -->
+                            <div class="history-box prescription">
+                                <div>
+                                    <div class="prescriptionTransparent">
+                                        <strong>PRESCRIPCIÓN</strong>
+                                        <p id="prescriptionText">Paciente presentó fiebre de 38.5°C. Se recomienda
+                                            seguimiento
+                                            en 3 días si los síntomas persisten.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- NOTES -->
+                            <div class="history-box notes">
+                                <div>
+                                    <div class="notesTransparent">
+                                        <strong>NOTAS MÉDICAS</strong>
+                                        <p id="notesText">Paciente presentó fiebre de 38.5°C. Se recomienda seguimiento
+                                            en 3
+                                            días si los síntomas persisten.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <section class="view" id="medicsADMIN">
+
+                <div class="actionsMedicADMIN">
+                    <h2>Gestión de Médicos</h2>
+                    <button class="btn-primary btnMedicsAction">+ Nuevo Médico</button>
+                </div>
+                <p>Administra el personal médico del centro</p>
+
+                <div class="medicsFormADMIN hidden">
+
+                    <form class="patients__form" id="formMedicsADMIN">
+                        <!-- INFORMACIÓN PERSONAL -->
+                        <h3>Información Personal</h3>
+                        <hr class="lineFormGrid">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Nombres*</label>
+                                <input type="text" name="nombres" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Apellidos*</label>
+                                <input type="text" name="apellidos" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Especialidad*</label>
+                                <input type="text" name="fecha" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Documento Profesional*</label>
+                                <input type="text" name="profesional" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Teléfono*</label>
+                                <input type="tel" name="profesional" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Correo Electrónico*</label>
+                                <input type="email" name="correoElectronico" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Horario de Atención*</label>
+                                <input type="text" name="horarioAtencion" id="">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Contraseña*</label>
+                                <input type="password" name="contraseña" id="">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="cardsMedics">
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+                    <div class="medicCard">
+
+                        <div class="medicCard-header">
+                            <div class="medicCard-icon">🩺</div>
+
+                            <div class="medicCard-info">
+                                <h3 class="medicCard-name">Dr. Carlos Pérez Martínez</h3>
+                                <span class="medicCard-code">D-001</span>
+                            </div>
+
+                            <span class="medicCard-status">Disponible</span>
+                        </div>
+
+                        <span class="medicCard-specialty">Medicina General</span>
+
+                        <div class="medicCard-body">
+                            <p><strong>Cédula:</strong> CED-12345678</p>
+                            <p><strong>Experiencia:</strong> 15 años</p>
+
+                            <p>📞 +52 555 111 2222</p>
+                            <p>✉️ carlos.perez@sigcmi.com</p>
+                            <p>⏰ Lun-Vie 8:00-16:00</p>
+                            <p>👥 8 pacientes hoy</p>
+                        </div>
+
+                        <div class="medicCard-appointments">
+                            Total de citas atendidas: <strong>145</strong>
+                        </div>
+
+                        <div class="medicCard-actions">
+                            <button class="medicCard-btnPrimary">Ver Agenda</button>
+                            <button class="medicCard-btnOutline">Editar</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <script src="../javascript/dashboardADMIN.js"></script>
+</body>
+
+</html>
