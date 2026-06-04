@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal del Paciente</title>
+    <link rel="stylesheet" href="dashboardPatient.css">
+</head>
+
+<body>
+
+    <header class="contenedor">
+        <div class="left">
+            <div class="portal">
+                <img src="img/Group 6.png">
+            </div>
+            <div class="bienvenida">
+                <h3>Portal del Paciente</h3>
+                <p>Bienvenido, Usuario</p>
+            </div>
+        </div>
+        <div class="right">
+            <button type="button" class="cerrar_sesion">
+                <img src="img/exit.png">
+            </button>
+            <a>Cerrar Sesión</a>
+        </div>
+    </header>
+
+<!-- INICIO DEL MAIN -->
+    <!-- MAIN IZQUIERDO -->
+    <main class="contenedor_2">
+
+        <!-- MAIN BOTONES -->
+        <section class="contenedor_hijo_1">
+
+            <div class="acciones">
+                <a href="https://wa.me/573105212658" target="blank"></a>
+                    <button type="button" class="btn_azul" onclick="abrirmodal()"> + <br> Nueva Cita Web</button>
+                    <button type="button" class="btn_verde"> <img src="img/Subtract.png"> <br> Agendar por WhatsApp</button>
+                </a>
+            </div>
+            <button type="button" class="btn_diagnostico" onclick="abrirDiag()">Ver Diagnósticos</button>
+
+
+
+<!-- MODAL DESPLEGABLE -->
+<div class="form_cita" id="modal_oculto">
+
+        <h2>Agendar Nueva Cita</h2>
+
+        <label>Especialidad</label>
+            <select>
+                <option>Seleccionar especialidad</option>
+                <option>Cardiología</option>
+                <option>Pediatría</option>
+                <option>Dermatología</option>
+                <option>Ginecología</option>
+                <option>Neurología</option>
+                <option>Psiquiatría</option>
+                <option>Medicina General</option>
+                <option>Oftalmología</option>
+                <option>Oncología</option>
+                <option>Endocrinología</option>
+            </select>
+
+        <label>Médico</label>
+            <select>
+                <option>Seleccionar médico</option>
+                <option>Dra. Elena Villamil (Cardióloga)</option>
+                <option>Dra. Nicoll Sierra (Pediatra)</option>
+                <option>Dra. Sofía Montenegro (Dermatóloga)</option>
+                <option>Dr. Mateo Salazar (Neurologo)</option>
+                <option>Dra. Valeria Holguín (Ginecóloga)</option>
+                <option>Dr. Camilo Echeverry (Medicina General)</option>
+                <option>Dra. Beatriz Arango (Endocrinóloga)</option>
+                <option>Dr. Santiago Bermúdez (Oftalmólogo)</option>
+                <option>Dra. Lucía Caviedes (Oncóloga)</option>
+                <option>Dr. Andrés Portilla (Psiquiatra)</option>
+            </select>
+
+        <div class="fila_2">
+            <div>
+                <label>Fecha</label>
+                <input class="input" type="date">
+            </div>
+
+            <div>
+                <label>Hora</label>
+                    <select>
+                        <option>6:00 AM</option>
+                        <option>7:00 AM</option>
+                        <option>8:00 AM</option>
+                        <option>9:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>12:00 PM</option>
+                        <option>1:00 PM</option>
+                        <option>2:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>4:00 PM</option>
+                        <option>5:00 PM</option>
+                        <option>6:00 PM</option>
+                    </select>
+            </div>
+        </div>
+
+        <div class="botones_form">
+            <button class="confirmar_2">Confirmar Cita</button>
+            <button type="button" class="cancelar_2" onclick="cerrarmodal()">Cancelar</button>
+        </div>
+</div>
+
+            <!-- MAIN CITAS -->
+            <div class="card_citas">
+                <h2>Mis Citas</h2>
+
+                <!-- CITA 1 -->
+                <div class="cita">
+                    <div class="info">
+                        <div class="icono"><img src="img/Calendar.png"></div>
+                        <div>
+                            <p><strong>Miércoles, 4 de Junio de 2026</strong></p>
+                            <span>10:00 - Consultorio 101</span>
+                            <p class="doctor">Dr. Carlos Pérez</p>
+                        </div>
+                    </div>
+
+                    <!-- ESTADO -->
+                    <div class="acciones_cita">
+                        <span class="estado confirmada">Confirmada</span>
+                        <button type="button" class="reprogramar" onclick="abrirRepro()" >Reprogramar</button>
+                        <button class="cancelar" onclick="cancelar_cita()">Cancelar</button>
+                    </div>
+                </div>
+
+                <!-- CITA 2 -->
+                <div class="cita">
+                    <div class="info">
+                        <div class="icono"><img src="img/Calendar.png"></div>
+                        <div>
+                            <p><strong>Miércoles, 4 de Junio de 2026</strong></p>
+                            <span>10:00 - Consultorio 101</span>
+                            <p class="doctor">Dr. Carlos Pérez</p>
+                        </div>
+                    </div>
+
+                    <!-- ESTADO -->
+                    <div class="acciones_cita">
+                        <span class="estado pendiente">Pendiente</span>
+                        <button type="button" class="reprogramar" onclick="abrirRepro()" >Reprogramar</button>
+                        <button class="cancelar" onclick="cancelar_cita()">Cancelar</button>
+                    </div>
+                </div>
+
+                <!-- CITA 3 -->
+                <div class="cita">
+                    <div class="info">
+                        <div class="icono"><img src="img/Calendar.png"></div>
+                        <div>
+                            <p><strong>Miércoles, 4 de Junio de 2026</strong></p>
+                            <span>10:00 - Consultorio 101</span>
+                            <p class="doctor">Dr. Carlos Pérez</p>
+                        </div>
+                    </div>
+
+                    <!-- ESTADO -->
+                    <div class="acciones_cita">
+                        <span class="estado completada">Completada</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MAIN DERECHO -->
+        <aside class="contenedor_hijo_2">
+
+            <div class="card_1">
+                <div class="user">
+                    <img src="img/Generic avatar.png">
+                    <h1>Usuario</h1>
+                </div>
+                <div>
+                    <button type="button" class="btn_perfil" onclick="irPerfil()">Ver Mi Perfil</button>
+                </div>
+            </div>
+
+            <div class="card_2">
+                <div class="noti">
+                    <img src="img/notifications.png">
+                    <h2>Notificaciones</h2>
+                </div>
+                <p>Configura cómo deseas recibir notificaciones <br> sobre tus citas</p>
+                <button type="button" class="btn_noti" onclick="abrirNoti()">Configurar Notificaciones</button>
+            </div>
+
+            <div class="card_3">
+                <div class="p-0">
+                    <h4>¿Necesitas Ayuda?</h4>
+                </div>
+                <p>Nuestro equipo está disponible para <br> asistirte</p>
+                <div class="p-1">
+                    <img src="img/Phone.png">
+                    <p>+52 555 123 4567</p>
+                </div>
+                <div class="p-2">
+                    <img src="img/mail_gris.png">
+                    <p>soporte@sigcmi.com</p>
+                </div>
+                <div class="p-3">
+                    <img src="img/Clock.png">
+                    <p>Lun-Vie 8:00 - 20:00</p>
+                </div>
+            </div>
+
+        </aside>
+    </main>
+
+
+
+<!-- MODAL PERFIL -->
+<section class="perfil oculto" id="perfil">
+
+    <!-- HEADER PERFIL -->
+    <div class="perfil_header">
+        <button class="btn_mi_perfil" onclick="volverInicio()">← Mi Perfil</button>
+        <button class="btn_editar" onclick="abrirModal()">Editar Perfil</button>
+    </div>
+
+<div class="contenedor_perfil">
+    <!-- CONTENIDO -->
+    <div class="perfil_contenido">
+
+        <!-- CARD USUARIO -->
+        <div class="perfil_card">
+            <img src="img/Group 6.png"> <br>
+            <h3>Juan Esteban Montoya Marín</h3>
+        </div>
+
+        <!-- IZQUIERDA -->
+        <div class="perfil_izq">
+
+            <div class="perfil_card_2">
+                <div class="cabecera">
+                    <img src="img/person.png">
+                    <h4>Información Personal</h4>
+                </div>
+                <div class="formulario">
+                    <img src="img/Group 6.png">
+                    <input placeholder="Nombres">
+                </div>
+                <div class="formulario">
+                    <img src="img/Group 6.png">
+                    <input placeholder="Apellidos">
+                </div>
+                <div class="formulario">
+                    <img src="img/mail.png"> 
+                    <input placeholder="Correo">
+                </div>
+                <div class="formulario">
+                    <img src="img/Phone_azul.png"> 
+                    <input placeholder="Teléfono">
+                </div>
+                <div class="formulario">
+                    <img src="img/Calendar.png"> 
+                    <input placeholder="Fecha de nacimiento">
+                </div>
+                <div class="formulario">
+                    <img src="img/Credit card.png"> 
+                    <input placeholder="Tipo de documento">
+                </div>
+                <div class="formulario">
+                    <img src="img/Credit card.png">
+                    <input placeholder="Numero de Documento">
+                </div>
+
+<!-- MODAL CAMBIAR CONTRASEÑA -->
+                <div class="contenedor_contra">
+                    <h4 onclick="perfilContraseña(this)">Cambiar contraseña 
+                        <span class="cambiarContraseña">▼</span> 
+                    </h4>
+                
+                    <div class="perfilDesplegable">
+                        <p>La contraseña debe tener al menos 6 caracteres e incluir <br>
+                        una combinación de números, letras y caracteres especiales(!$@%).</p>
+                        <input type="password" placeholder="Contraseña actual">
+                        <input type="password" placeholder="Contraseña nueva">
+                        <input type="password" placeholder="Confirme la contraseña">
+                        <div>
+                            <button type="button" class="btn_contra">Cambiar Contraseña</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- MODAL EDITAR -->
+<div class="modal_editar" id="modalConfirmar">
+
+    <div class="modal_box">
+
+        <!-- HEADER -->
+        <div class="modal_header_2">
+            <div class="span_2">
+                <h2>Confirmar Identidad</h2>
+                <p>
+                    Por seguridad, ingresa tu contraseña <br> para guardar los cambios en tu perfil.
+                </p>
+            </div>
+            <div class="span">
+                <span class="cerrar" onclick="cerrarModal()">✖</span>
+            </div>
+        </div>
+
+        <!-- INPUT -->
+        <div class="modal_body_2">
+            <label>Contraseña</label>
+            <input type="password" placeholder="Ingresa tu contraseña">
+
+            <!-- BOTONES -->
+            <button class="btn_confirmar" onclick="confirmar()">Confirmar</button>
+            <button class="btn_cancelar_3" onclick="cerrarModal()">Cancelar</button>
+        </div>
+    </div>
+
+</div>
+
+
+    <div class="perfil_contenido_2">
+        <!-- DERECHA -->
+        <div class="perfil_der">
+
+            <div class="perfil_card_3">
+                <div class="cabecera">
+                    <img src="img/Heart.png" alt="">
+                    <h4>Información Médica</h4>
+                </div>
+                <div class="formulario">
+                    <img src="img/image 139.png"> 
+                    <input placeholder="Tipo de sangre">
+                </div>
+                <div class="formulario">
+                    <img src="img/image 140.png"> 
+                    <input placeholder="Alergias">
+                </div>
+                <div class="formulario">
+                    <img src="img/image 141.png"> 
+                    <input placeholder="Condiciones médicas">
+                </div>
+            </div>
+
+            <div class="perfil_card_3">
+                <div class="cabecera">
+                    <img src="img/Home.png"> 
+                    <h4>Dirección de Residencia</h4>
+                </div>
+                <div class="formulario">
+                    <img src="img/image 158.png"> 
+                    <input placeholder="Dirección Completa">
+                </div>
+                <div class="formulario">
+                    <img src="img/image 156.png"> 
+                    <input placeholder="Departamento">
+                </div>
+                <div class="formulario">
+                    <img src="img/image 156.png"> 
+                    <input placeholder="Ciudad">
+                </div>
+            </div>
+
+            <div class="perfil_card_3">
+                <div class="cabecera">
+                    <img src="img/Phone_rojo.png">
+                    <h4>Contacto de Emergencia</h4>
+                </div>
+                <div class="formulario">
+                    <img src="img/Group 6.png"> 
+                    <input placeholder="Nombre">
+                </div>
+                <div class="formulario">
+                    <img src="img/Phone_azul.png"> 
+                    <input placeholder="Teléfono">
+                </div>
+                <div class="formulario">
+                    <img src="img/mail.png"> 
+                    <input placeholder="Correo">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="perfil_card_4">
+            <h4>Seguridad y Privacidad</h4>
+            <p><br>Tu información esta protegida con los mas altos estándares de <br>
+                seguridad. Cualquier modificación requiere confirmación de <br>
+                contraseña para garantizar que solo tú puedas realizar cambios.
+            </p>
+        </div>
+    </div>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- MODAL NOTIFICACIONES -->
+<div class="modal_noti" id="modalNoti">
+
+    <div class="modal_contenido">
+
+        <!-- HEADER -->
+        <div class="modal_header">
+            <div class="minicontenedor">
+                <img src="img/notifications.png">
+                <h4>Configuración de Notificaciones <br> <p> Personaliza cómo recibir notificacones</p></h4>
+            </div>
+                <span type="button" class="cerrar" onclick="cerrarNoti()">✖</span>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="modal_body">
+
+            <div class="titulos">
+                <img src="img/chat_bubble.png"> 
+                <h5> Canales de Notificación</h5> 
+            </div>
+
+            <!-- item canales -->
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/mail.png">
+                    <h5>Correo Electrónico <br> <p>Recibe notificaciones por correo electrónico</p></h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/chat_bubble.png">
+                    <h5>SMS <br> <p>Recibe notificaciones por mensaje de texto</p></h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/Subtract.png">
+                    <h5>WhatsApp <br> <p> Recibe mensajes por WhatsApp </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <!-- item recordatorio -->
+            <div class="titulos">
+                <img src="img/schedule.png">
+                <h5>Recordatorios</h5>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/Calendario.png">
+                    <h5> Recordatorio 24 horas antes <br> <p> Un día antes de tu cita </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/schedule.png">
+                    <h5>Recordatorio 1 horas antes <br> <p> 1 hora antes de tu cita </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <!-- item notificaciones -->
+            <div class="titulos">
+                <img src="img/error.png">
+                <h5>Notificaciones de Eventos</h5>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/schedule.png">
+                    <h5>Confirmación de citas <br> <p> Cuando se confirme una cita </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/schedule.png">
+                    <h5>Cancelación de citas<br> <p>Cuando se cancela una cita </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/Calendario.png">
+                    <h5>Reprogramación de citas <br> <p>Cuando se reprograma una cita </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/mail.png">
+                    <h5>Nuevos diagnósticos <br> <p>Cuando hay un diagnóstico </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="item">
+                <div class="minicontenedor_2">
+                    <img src="img/mail.png">
+                    <h5>Actualizaciones generales <br> <p>Noticias y actualizaciones del sistema </p> </h5>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        <!-- item informacion -->
+        <div class="info_box">
+            <div class="info_text">
+                <strong>Información importante</strong>
+                <p>
+                    Las notificaciones te ayudan a estar informado sobre tus citas y diagnósticos.
+                    Puedes cambiar estas preferencias en cualquier momento.
+                </p>
+            </div>
+        </div>
+
+        <div class="modal_footer">
+            <button type="button" class="btn_cancelar" onclick="cerrarNoti()">Cancelar</button>
+            <button class="btn_guardar">Guardar Cambios</button>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- MODAL REPROGRAMAR -->
+<div class="modal_repro" id="modalRepro">
+    <div class="modal_repro_box">
+
+        <h2>Reprogramar Cita</h2>
+        <label>Especialidad</label>
+        <select>
+            <option>Seleccionar especialidad</option>
+            <option>Cardiología</option>
+            <option>Pediatría</option>
+            <option>Dermatología</option>
+            <option>Ginecología</option>
+            <option>Neurología</option>
+            <option>Psiquiatría</option>
+            <option>Medicina General</option>
+            <option>Oftalmología</option>
+            <option>Oncología</option>
+            <option>Endocrinología</option>
+        </select>
+
+        <label>Médico</label>
+        <select>
+            <option>Seleccionar médico</option>
+            <option>Dra. Elena Villamil (Cardióloga)</option>
+            <option>Dra. Nicoll Sierra (Pediatra)</option>
+            <option>Dra. Sofía Montenegro (Dermatóloga)</option>
+            <option>Dr. Mateo Salazar (Neurologo)</option>
+            <option>Dra. Valeria Holguín (Ginecóloga)</option>
+            <option>Dr. Camilo Echeverry (Medicina General)</option>
+            <option>Dra. Beatriz Arango (Endocrinóloga)</option>
+            <option>Dr. Santiago Bermúdez (Oftalmólogo)</option>
+            <option>Dra. Lucía Caviedes (Oncóloga)</option>
+            <option>Dr. Andrés Portilla (Psiquiatra)</option>
+        </select>
+
+        <div class="fila_3">
+            <div>
+                <label>Fecha</label>
+                <input type="date" placeholder="dd / mm / aaaa">
+            </div>
+
+            <div>
+                <label>Hora</label>
+                <select>
+                    <option>6:00 AM</option>
+                    <option>7:00 AM</option>
+                    <option>8:00 AM</option>
+                    <option>9:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>1:00 PM</option>
+                    <option>2:00 PM</option>
+                    <option>3:00 PM</option>
+                    <option>4:00 PM</option>
+                    <option>5:00 PM</option>
+                    <option>6:00 PM</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="botones_modal">
+            <button class="btn_reprogramar">Reprogramar</button>
+            <button type="button" class="btn_cancelar_2" onclick="cerrarRepro()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- MODAL DIAGNOSTICOS -->
+<div class="modal_diag" id="modalDiag">
+    <div class="modal_diag_box">
+
+        <!-- HEADER -->
+        <div class="modal_diag_header">
+            <div class="titulo">
+                <div class="contenedor_img">
+                    <img src="img/image 109.png">
+                </div>
+                <div class="sub_titulo">
+                    <h2>Historial de <br> Diagnósticos</h2>
+                    <p> Todos tus diagnósticos médicos.</p>
+                </div>
+            </div>
+            <span type="button" class="cerrar" onclick="cerrarDiag()">✖</span>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="modal_diag_body">
+            <!-- ITEM 1 -->
+            <div class="diag_item" onclick="toggleDiag(this)">
+                <div class="diag_top">
+                    <div class="contenedor_img_2">
+                        <img src="img/image 107.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Migraña crónica</h3>
+                        <span>28 / 02 / 2026</span>
+                        <p>Dr. Carlos Pérez</p>
+                    </div>
+                    <span class="flecha">▼</span>
+                </div>
+                <div class="diag_content">
+                    <p>Síntomas: dolor de cabeza persistente...</p>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="diag_item activo" onclick="toggleDiag(this)">
+                <div class="diag_top">
+                    <div class="contenedor_img_2">
+                        <img src="img/image 107.png" alt="">
+                    </div>
+                    <div>
+                        <h3>Resfriado Común</h3>
+                        <span>28 / 03 / 2026</span>
+                        <p>Dr. Juan Hernández</p>
+                    </div>
+                    <span class="flecha">▲</span>
+                </div>
+                <div class="diag_content">
+                    <p>Síntomas: dolor de cabeza, garganta, siente hinchazón en el cuello...</p>
+                    <h4>Signos Vitales</h4>
+                    <div class="grid">
+                        <div><strong>Temperatura</strong><br>37.2°C</div>
+                        <div><strong>Presión Arterial</strong><br>120/78 mmHg</div>
+                        <div><strong>Frecuencia Cardíaca</strong><br>82 bpm</div>
+                        <div><strong>Peso</strong><br>72 kg</div>
+                    </div>
+
+                    <h4>Diagnóstico Completo</h4>
+                    <div class="box">Resfriado común (Rinofaringitis viral aguda)</div>
+
+                    <h4>Tratamiento</h4>
+                    <div class="box">Reposo, líquidos, gárgaras con agua tibia y sal</div>
+
+                    <h4>Prescripción Médica</h4>
+                    <div class="box">
+                        <strong>Paracetamol</strong><br>
+                        Dosis: 500mg | Cada 6 horas | 3-5 días
+                    </div>
+
+                    <h4>Notas Adicionales</h4>
+                    <div class="box">Cuadro viral típico. No requiere antibióticos.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="dashboardPatient.js"></script>
+</body>
+</html>
